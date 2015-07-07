@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: date-today-nepali\n"
+"POT-Creation-Date: 2013-10-22 07:31+0545\n"
+"PO-Revision-Date: 2013-10-22 07:34+0545\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ne_NP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../date-today-nepali\n"
+
+#: ../../date-today-nepali/class-date-today-nepali-admin.php:170
+msgid "Nepali Date Settings Page"
+msgstr "नेपाली मिति व्यवस्थापन पृष्ठ"
+
+#: ../../date-today-nepali/class-date-today-nepali-admin.php:171
+msgid "Nepali Date"
+msgstr "नेपाली मिति"
+
+#: ../../date-today-nepali/class-date-today-nepali-admin.php:197
+msgid "Settings"
+msgstr "व्यवस्थापनहरु"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:18
+msgid "Date Today Nepali Widget"
+msgstr "मिति प्रदर्शन विजेट"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:22
+msgid "Date Display Widget"
+msgstr "प्रदर्शन भाषा विजेट"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:131
+msgid "Title:"
+msgstr "शिर्षक:"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:133
+msgid "Display Language"
+msgstr "प्रदर्शन भाषा"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:135
+msgid "Nepali"
+msgstr "नेपाली"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:136
+msgid "English"
+msgstr "अङ्ग्रेजी"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:137
+msgid "Date Format"
+msgstr "मिति ढाँचा"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:150
+msgid "Date Separator"
+msgstr "मिति छुट्याउने"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:152
+msgid "Space"
+msgstr "खाली"
+
+#: ../../date-today-nepali/widgets/date-today-nepali.php:153
+msgid "Dash"
+msgstr "ड्यास"
