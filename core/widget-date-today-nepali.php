@@ -6,21 +6,15 @@
 class DTN_Widget extends WP_Widget
 {
 
-    protected $plugin_slug = null;
+  function __construct()
+  {
+    $opts = array(
+        'classname'   => 'dtn_widget',
+        'description' => __( 'Date Today Nepali Widget', 'date-today-nepali' )
+    );
 
-    function __construct()
-    {
-        $pa = Date_Today_Nepali::get_instance();
-        $this->plugin_slug = $pa->get_plugin_slug();
-
-        $opts = array(
-            'classname' => 'dtn_widget',
-            'description' => __('Date Today Nepali Widget', $this->plugin_slug)
-        );
-
-
-        $this->WP_Widget('dtn-date-display-widget', '[DTN]   ' . __('Date Display Widget', $this->plugin_slug), $opts);
-    }
+    parent::__construct( 'dtn-date-display-widget', __('Date Display Widget', 'date-today-nepali' ), $opts );
+  }
 
     function widget($args, $instance)
     {
@@ -122,19 +116,25 @@ class DTN_Widget extends WP_Widget
 
     function form($instance)
     {
-        $title = isset($instance['title']) ? esc_attr($instance['title']) : '';
-        $display_language = isset($instance['display_language']) ? esc_attr($instance['display_language']) : '';
-        $date_format = isset($instance['date_format']) ? esc_attr($instance['date_format']) : '';
-        $date_separator = isset($instance['date_separator']) ? esc_attr($instance['date_separator']) : '';
-        ?>
+      $instance = wp_parse_args( (array) $instance, array(
+        'title'            =>  '',
+        'display_language' =>  'en',
+        'date_format'      =>  4,
+        'date_separator'   =>  'space',
+      ) );
+      $title            = htmlspecialchars( $instance['title'] );
+      $display_language = esc_attr( $instance['display_language'] );
+      $date_format      = absint( $instance['date_format'] );
+      $date_separator   = esc_attr( $instance['date_separator'] );
+      ?>
 
-        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', $this->plugin_slug); ?></label>
+        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'date-today-nepali'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
-        <p><?php _e('Display Language', $this->plugin_slug); ?> :
+        <p><?php _e('Display Language', 'date-today-nepali'); ?> :
             <select id="<?php echo $this->get_field_id('display_language'); ?>" name="<?php echo $this->get_field_name('display_language'); ?>">
-                <option value="np" <?php echo selected($display_language, 'np'); ?>><?php _e('Nepali', $this->plugin_slug); ?></option>
-                <option value="en" <?php echo selected($display_language, 'en'); ?>><?php _e('English', $this->plugin_slug); ?></option>                    </select></p>
-        <p><?php _e('Date Format', $this->plugin_slug); ?> :
+                <option value="np" <?php echo selected($display_language, 'np'); ?>><?php _e('Nepali', 'date-today-nepali'); ?></option>
+                <option value="en" <?php echo selected($display_language, 'en'); ?>><?php _e('English', 'date-today-nepali'); ?></option>                    </select></p>
+        <p><?php _e('Date Format', 'date-today-nepali'); ?> :
             <select id="<?php echo $this->get_field_id('date_format'); ?>" name="<?php echo $this->get_field_name('date_format'); ?>">
                 <option value="1" <?php echo selected($date_format, '1'); ?>>21 04 2070</option>
                 <option value="2" <?php echo selected($date_format, '2'); ?>>2070 21 04</option>
@@ -147,10 +147,10 @@ class DTN_Widget extends WP_Widget
                 <option value="9" <?php echo selected($date_format, '9'); ?>>Monday, 2070 Shrawan 21</option>
 
             </select></p>
-        <p><?php _e('Date Separator', $this->plugin_slug); ?> :
+        <p><?php _e('Date Separator', 'date-today-nepali'); ?> :
             <select id="<?php echo $this->get_field_id('date_separator'); ?>" name="<?php echo $this->get_field_name('date_separator'); ?>">
-                <option value="space" <?php echo selected($date_separator, 'space'); ?>>&nbsp; (<?php _e('Space', $this->plugin_slug); ?>)</option>
-                <option value="dash" <?php echo selected($date_separator, 'dash'); ?>>- (<?php _e('Dash', $this->plugin_slug); ?>)</option>
+                <option value="space" <?php echo selected($date_separator, 'space'); ?>>&nbsp; (<?php _e('Space', 'date-today-nepali'); ?>)</option>
+                <option value="dash" <?php echo selected($date_separator, 'dash'); ?>>- (<?php _e('Dash', 'date-today-nepali'); ?>)</option>
             </select></p>
         <?php
     }
