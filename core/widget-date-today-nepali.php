@@ -46,8 +46,8 @@ class DTN_Widget extends WP_Widget
         echo $before_title . $title . $after_title;
       }
 
-      include(plugin_dir_path(__FILE__) . '../includes/nepali_calendar.php');
-      include(plugin_dir_path(__FILE__) . '../includes/date_functions.php');
+      // include( DATE_TODAY_NEPALI_LIB_DIR . '/nepali_calendar.php');
+      // include( DATE_TODAY_NEPALI_LIB_DIR . '/date_functions.php');
       $cal = new Nepali_Calendar();
       $date_arr = explode('-', date('Y-m-d'));
 
