@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: date-today-nepali\n"
-"POT-Creation-Date: 2015-07-11 18:05+0530\n"
-"PO-Revision-Date: 2015-07-11 18:05+0530\n"
+"POT-Creation-Date: 2015-07-11 18:06+0530\n"
+"PO-Revision-Date: 2015-07-11 18:06+0530\n"
 "Last-Translator: Nilambar Sharma <nilambar@outlook.com>\n"
 "Language-Team: \n"
-"Language: ne_NP\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,49 +16,40 @@ msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:16
 msgid "Date Today Nepali Widget"
-msgstr "मिति प्रदर्शन विजेट"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:19
 msgid "Date Display Widget"
-msgstr "प्रदर्शन भाषा विजेट"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:138
 msgid "Title:"
-msgstr "शिर्षक:"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:142
 msgid "Display Language:"
-msgstr "प्रदर्शन भाषा:"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:144
 msgid "Nepali"
-msgstr "नेपाली"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:145
 msgid "English"
-msgstr "अङ्ग्रेजी"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:149
 msgid "Date Format:"
-msgstr "मिति ढाँचा:"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:163
 msgid "Date Separator:"
-msgstr "मिति छुट्याउने:"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:165
 msgid "Space"
-msgstr "खाली"
+msgstr ""
 
 #: ../../date-today-nepali/core/widget-date-today-nepali.php:166
 msgid "Dash"
-msgstr "ड्यास"
-
-#~ msgid "Nepali Date Settings Page"
-#~ msgstr "नेपाली मिति व्यवस्थापन पृष्ठ"
-
-#~ msgid "Nepali Date"
-#~ msgstr "नेपाली मिति"
-
-#~ msgid "Settings"
-#~ msgstr "व्यवस्थापनहरु"
+msgstr ""
