@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name:       Date Today Nepali
  * Plugin URI:        http://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
- * Description:       A small plugin to display Nepali date.
+ * Description:       A small widget plugin to display Nepali date.
  * Version:           1.0.2
  * Author:            Nilambar Sharma
  * Author URI:        http://nilambar.net/
