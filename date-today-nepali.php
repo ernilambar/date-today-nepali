@@ -25,6 +25,19 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+// Define
+define( 'DATE_TODAY_NEPALI_NAME', 'Date Today Nepali' );
+define( 'DATE_TODAY_NEPALI_SLUG', 'date-today-nepali' );
+define( 'DATE_TODAY_NEPALI_VERSION', '2.0.0' );
+define( 'DATE_TODAY_NEPALI_BASENAME', basename( dirname( __FILE__ ) ) );
+define( 'DATE_TODAY_NEPALI_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
+define( 'DATE_TODAY_NEPALI_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
+define( 'DATE_TODAY_NEPALI_LIB_DIR', DATE_TODAY_NEPALI_DIR . '/lib' );
+define( 'DATE_TODAY_NEPALI_CORE_DIR', DATE_TODAY_NEPALI_DIR . '/core' );
+
+// Include core
+require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
+return;
 
 require_once( plugin_dir_path( __FILE__ ) . 'class-date-today-nepali.php' );
 
