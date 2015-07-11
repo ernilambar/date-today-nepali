@@ -37,3 +37,16 @@ define( 'DATE_TODAY_NEPALI_CORE_DIR', DATE_TODAY_NEPALI_DIR . '/core' );
 
 // Include core
 require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
+
+
+/**
+ * Load plugin textdomain.
+ */
+function date_today_nepali_load_textdomain() {
+
+  load_plugin_textdomain( 'date-today-nepali', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
+}
+
+add_action( 'plugins_loaded', 'date_today_nepali_load_textdomain' );
+

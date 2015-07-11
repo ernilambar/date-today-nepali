@@ -7,18 +7,6 @@ require_once( DATE_TODAY_NEPALI_LIB_DIR . '/nepali_calendar.php' );
 require_once( DATE_TODAY_NEPALI_LIB_DIR . '/date_functions.php' );
 
 /**
- * Load plugin textdomain.
- */
-function date_today_nepali_load_textdomain() {
-
-  load_plugin_textdomain( 'date-today-nepali', false, DATE_TODAY_NEPALI_DIR . '/languages' );
-
-}
-
-add_action( 'plugins_loaded', 'date_today_nepali_load_textdomain' );
-
-
-/**
  * Register widgets.
  */
 function date_today_nepali_load_widgets()
