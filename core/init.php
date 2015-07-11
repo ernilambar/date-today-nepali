@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Load libraries.
+ */
+require_once( DATE_TODAY_NEPALI_LIB_DIR . '/nepali_calendar.php' );
+require_once( DATE_TODAY_NEPALI_LIB_DIR . '/date_functions.php' );
+
+/**
  * Load plugin textdomain.
  */
 function date_today_nepali_load_textdomain() {
@@ -17,8 +23,10 @@ add_action( 'plugins_loaded', 'date_today_nepali_load_textdomain' );
  */
 function date_today_nepali_load_widgets()
 {
-    include DATE_TODAY_NEPALI_CORE_DIR . '/widget-date-today-nepali.php';
-    // include(plugin_dir_path( __FILE__ ) . "widgets/date-today-nepali.php");
-    register_widget( 'DTN_Widget' );
+
+  include DATE_TODAY_NEPALI_CORE_DIR . '/widget-date-today-nepali.php';
+  register_widget( 'DTN_Widget' );
+
 }
+
 add_action('widgets_init', 'date_today_nepali_load_widgets');

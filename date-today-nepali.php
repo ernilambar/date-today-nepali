@@ -37,22 +37,3 @@ define( 'DATE_TODAY_NEPALI_CORE_DIR', DATE_TODAY_NEPALI_DIR . '/core' );
 
 // Include core
 require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
-return;
-
-require_once( plugin_dir_path( __FILE__ ) . 'class-date-today-nepali.php' );
-
-/*
- * Register hooks that are fired when the plugin is activated or deactivated.
- * When the plugin is deleted, the uninstall.php file is loaded.
- */
-register_activation_hook( __FILE__, array( 'Date_Today_Nepali', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Date_Today_Nepali', 'deactivate' ) );
-
-add_action( 'plugins_loaded', array( 'Date_Today_Nepali', 'get_instance' ) );
-
-function load_date_today_nepali_widgets()
-{
-    include(plugin_dir_path( __FILE__ ) . "widgets/date-today-nepali.php");
-    register_widget('DTN_Widget');
-}
-add_action('widgets_init', 'load_date_today_nepali_widgets');

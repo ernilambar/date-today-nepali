@@ -24,21 +24,21 @@ class DTN_Widget extends WP_Widget
 
       extract( $args , EXTR_SKIP );
 
-      $title            = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-      $display_language = ! empty( $instance['display_language'] ) ? $instance['display_language'] : 'en' ;
-      $date_format      = ! empty( $instance['date_format'] ) ? $instance['date_format'] : 4 ;
-      $date_separator   = ! empty( $instance['date_separator'] ) ? $instance['date_separator'] : 'space' ;
+      $title                = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+      $display_language     = ! empty( $instance['display_language'] ) ? $instance['display_language'] : 'en' ;
+      $date_format          = ! empty( $instance['date_format'] ) ? $instance['date_format'] : 4 ;
+      $date_separator = ! empty( $instance['date_separator'] ) ? $instance['date_separator'] : 'space' ;
 
-      switch ($date_separator_value)
+      switch ( $date_separator )
       {
-          case 'space':
-              $date_separator = ' ';
-              break;
-          case 'dash':
-              $date_separator = '-';
-              break;
-          default:
-              break;
+        case 'space':
+          $date_separator_value = ' ';
+          break;
+        case 'dash':
+          $date_separator_value = '-';
+          break;
+        default:
+          break;
       }
 
       echo $before_widget;
@@ -46,57 +46,55 @@ class DTN_Widget extends WP_Widget
         echo $before_title . $title . $after_title;
       }
 
-      // include( DATE_TODAY_NEPALI_LIB_DIR . '/nepali_calendar.php');
-      // include( DATE_TODAY_NEPALI_LIB_DIR . '/date_functions.php');
       $cal = new Nepali_Calendar();
-      $date_arr = explode('-', date('Y-m-d'));
+      $date_arr = explode( '-', date( 'Y-m-d' ) );
 
-      $newd = $cal->eng_to_nep($date_arr[0], $date_arr[1], $date_arr[2]);
+      $newd = $cal->eng_to_nep( $date_arr[0], $date_arr[1], $date_arr[2] );
 
-      if ($display_language == 'np')
+      if ( 'np' == $display_language )
       {
-          $newd = convertToNepali($newd);
+        $newd = convertToNepali( $newd );
       }
-      $today_date = "";
+      $today_date = '';
       switch ($date_format)
       {
           case 1:
               //21 04 2070
-              $today_date .= $newd['date'] . $date_separator . $newd['month']. $date_separator . $newd['year'];
+              $today_date .= $newd['date'] . $date_separator_value . $newd['month']. $date_separator_value . $newd['year'];
               break;
           case 2:
               //2070 21 04
-              $today_date .= $newd['year'] . $date_separator . $newd['date'] . $date_separator . $newd['month'];
+              $today_date .= $newd['year'] . $date_separator_value . $newd['date'] . $date_separator_value . $newd['month'];
               break;
           case 3:
               //2070 04 21
-              $today_date .= $newd['year'] . $date_separator . $newd['month'] . $date_separator . $newd['date'] ;
+              $today_date .= $newd['year'] . $date_separator_value . $newd['month'] . $date_separator_value . $newd['date'] ;
               break;
           case 4:
               //21 Shrawan 2070
-              $today_date .= $newd['date'] . $date_separator . $newd['month_name'] . $date_separator . $newd['year'] ;
+              $today_date .= $newd['date'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['year'] ;
               break;
           case 5:
               //2070 Shrawan 21
-              $today_date .= $newd['year'] . $date_separator . $newd['month_name'] . $date_separator . $newd['date'] ;
+              $today_date .= $newd['year'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['date'] ;
               break;
           case 6:
               //21 Shrawan 2070, Monday
-              $today_date .= $newd['date'] . $date_separator . $newd['month_name'] .
-                  $date_separator . $newd['year']. ', ' . $newd['day'] ;
+              $today_date .= $newd['date'] . $date_separator_value . $newd['month_name'] .
+                  $date_separator_value . $newd['year']. ', ' . $newd['day'] ;
               break;
           case 7:
               //Monday, 21 Shrawan 2070
-              $today_date .= $newd['day'] . ', '. $newd['date'] . $date_separator . $newd['month_name'] .
-                  $date_separator . $newd['year'] ;
+              $today_date .= $newd['day'] . ', '. $newd['date'] . $date_separator_value . $newd['month_name'] .
+                  $date_separator_value . $newd['year'] ;
               break;
           case 8:
               //2070 Shrawan 21, Monday
-              $today_date .= $newd['year'] . $date_separator . $newd['month_name'] . $date_separator . $newd['date'] . ', ' . $newd['day'] ;
+              $today_date .= $newd['year'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['date'] . ', ' . $newd['day'] ;
               break;
           case 9:
               //Monday, 2070 Shrawan 21
-              $today_date .=  $newd['day'].', '.$newd['year'] . $date_separator . $newd['month_name'] . $date_separator . $newd['date'] ;
+              $today_date .=  $newd['day'].', '.$newd['year'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['date'] ;
               break;
 
           default:
