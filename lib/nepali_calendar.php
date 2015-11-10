@@ -349,14 +349,17 @@
 		}
 
 		/**
-		 * currently can only calculate the date between AD 1944-2033...
+		 * Convert English date to Nepali.
 		 *
-		 * @param unknown_type $yy
-		 * @param unknown_type $mm
-		 * @param unknown_type $dd
-		 * @return unknown
+		 * Currently can only calculate the date between AD 1944-2033.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param int $yy Year.
+		 * @param int $mm Month.
+		 * @param int $dd Day.
+		 * @return array Converted date.
 		 */
-
 		public function eng_to_nep($yy,$mm,$dd){
 			if ($this->is_range_eng($yy, $mm, $dd) == false){
 				return false;
@@ -452,32 +455,47 @@
 			}
 		}
 
-
 		/**
-		 * currently can only calculate the date between BS 2000-2089
+		 * Convert Nepali date to English.
 		 *
-		 * @param unknown_type $yy
-		 * @param unknown_type $mm
-		 * @param unknown_type $dd
-		 * @return unknown
+		 * Currently can only calculate the date between BS 2000-2089.
+		 *
+		 * @since 1.0.0
+		 * @access private
+		 *
+		 * @param int $yy Year.
+		 * @param int $mm Month.
+		 * @param int $dd Day.
+		 * @return array Converted date.
 		 */
 		private function n_to_e($yy,$mm,$dd){
 
-			$def_eyy = 1943	; $def_emm=4 ; $def_edd=14-1;		// init english date.
-			$def_nyy = 2000; $def_nmm = 1; $def_ndd = 1;		// equivalent nepali date.
-			$total_eDays=0; $total_nDays=0; $a=0; $day=4-1;		// initializations...
-			$m = 0; $y = 0; $i=0;
-			$k = 0;	$numDay = 0;
+			// Init english date.
+			$def_eyy = 1943	;
+			$def_emm=4 ;
+			$def_edd=14-1;
+			// Equivalent nepali date.
+			$def_nyy = 2000;
+			$def_nmm = 1;
+			$def_ndd = 1;
+			// Initializations.
+			$total_eDays=0;
+			$total_nDays=0;
+			$a=0;
+			$day=4-1;
+			$m = 0;
+			$y = 0;
+			$i=0;
+			$k = 0;
+			$numDay = 0;
 
 			$month = array(0,31,28,31,30,31,30,31,31,30,31,30,31);
  			$lmonth = array(0,31,29,31,30,31,30,31,31,30,31,30,31);
 
 			if($this->is_range_nep($yy, $mm, $dd)===false){
 				return false;
-
 			} else {
-
-				// count total days in-terms of year
+				// Count total days in-terms of year.
 				for($i=0; $i<($yy-$def_nyy); $i++){
 					for($j=1; $j<=12; $j++){
 						$total_nDays += $this->bs[$k][$j];
@@ -485,25 +503,24 @@
 					$k++;
 				}
 
-				// count total days in-terms of month
+				// Count total days in-terms of month.
 				for($j=1; $j<$mm; $j++){
 					$total_nDays += $this->bs[$k][$j];
 				}
 
-				// count total days in-terms of dat
+				// Count total days in-terms of day.
 				$total_nDays += $dd;
 
-				//calculation of equivalent english date...
+				// Calculation of equivalent English date.
 				$total_eDays = $def_edd;
 				$m = $def_emm;
 				$y = $def_eyy;
 				while($total_nDays != 0){
-					if($this->is_leap_year($y))
-					{
+
+					if($this->is_leap_year($y)) {
 						$a = $lmonth[$m];
 					}
-					else
-					{
+					else {
 						$a = $month[$m];
 					}
 					$total_eDays++;
@@ -516,21 +533,23 @@
 							$m = 1;
 						}
 					}
-					if($day > 7)
+					if($day > 7){
 						$day = 1;
+					}
 					$total_nDays--;
-				}
+
+				} // End while.
+
 				$numDay = $day;
 
-				$this->eng_date["year"] = $y;
-				$this->eng_date["month"] = $m;
-				$this->eng_date["date"] = $total_eDays;
-				$this->eng_date["day"] = $this->get_day_of_week($day);
+				$this->eng_date["year"]       = $y;
+				$this->eng_date["month"]      = $m;
+				$this->eng_date["date"]       = $total_eDays;
+				$this->eng_date["day"]        = $this->get_day_of_week($day);
 				$this->eng_date["month_name"] = $this->get_english_month($m);
-				$this->eng_date["num_day"] = $numDay;
+				$this->eng_date["num_day"]    = $numDay;
 
 				return $this->eng_date;
-
 			}
 		}
 
