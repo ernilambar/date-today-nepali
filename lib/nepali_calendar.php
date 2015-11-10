@@ -1,5 +1,15 @@
 <?php
+/**
+ * Calendar Class.
+ *
+ * @package Date_Today_Nepali
+ */
 
+/**
+ * Nepali Calendar class.
+ *
+ * @since 1.0.0
+ */
 	class Nepali_Calendar {
 		private $bs = array(
 			0=>array(2000,30,32,31,32,31,30,30,30,29,30,29,31),
@@ -64,7 +74,7 @@
 			59=>array(2059,31,31,32,31,31,31,30,29,30,29,30,30),
 			60=>array(2060,31,31,32,32,31,30,30,29,30,29,30,30),
 			61=>array(2061,31,32,31,32,31,30,30,30,29,29,30,31),
-		    62=>array(2062,30,32,31,32,31,31,29,30,29,30,29,31),
+		  62=>array(2062,30,32,31,32,31,31,29,30,29,30,29,31),
 			63=>array(2063,31,31,32,31,31,31,30,29,30,29,30,30),
 			64=>array(2064,31,31,32,32,31,30,30,29,30,29,30,30),
 			65=>array(2065,31,32,31,32,31,30,30,30,29,29,30,31),
@@ -99,28 +109,24 @@
 	 	private $eng_date = array('year'=>'', 'month'=>'', 'date'=>'', 'day'=>'','emonth'=>'','num_day'=>'');
 	 	public $debug_info = "";
 
-
 		/**
-		 * Calculates wheather english year is leap year or not
+		 * Check if english year is leap year or not.
 		 *
-		 * @param integer $year
-		 * @return boolean
+		 * @since 1.0.0
+		 *
+		 * @param integer $year Year.
+		 * @return boolean TRUE if leap year, else FALSE.
 		 */
-		public function is_leap_year($year)
-		{
+		public function is_leap_year( $year ) {
 			$a = $year;
-			if ($a%100==0)
-			{
-			 if($a%400==0)
-			 {
+			if ($a%100==0) {
+			 if($a%400==0) {
 				return true;
 			 } else {
 			 	return false;
 			 }
-
 			} else {
-				if ($a%4==0)
-				{
+				if ($a%4==0) {
 					return true;
 				} else {
 					return false;
@@ -128,6 +134,15 @@
 			}
 		}
 
+		/**
+		 * Get Nepali month text.
+		 *
+		 * @since 1.0.0
+		 * @access private
+		 *
+		 * @param int $m Month in number.
+		 * @return string Month name.
+		 */
 		private function get_nepali_month($m){
 			$n_month = false;
 
@@ -180,9 +195,18 @@
 					$n_month = "Chaitra";
 					break;
 			}
-			return  $n_month;
+			return $n_month;
 		}
 
+		/**
+		 * Get English month text.
+		 *
+		 * @since 1.0.0
+		 * @access private
+		 *
+		 * @param int $m Month in number.
+		 * @return string Month name.
+		 */
 		private function get_english_month($m){
 			$eMonth = false;
 			switch($m){
@@ -225,6 +249,15 @@
 			return $eMonth;
 		}
 
+		/**
+		 * Get English Day text.
+		 *
+		 * @since 1.0.0
+		 * @access private
+		 *
+		 * @param int $day Day in number.
+		 * @return string Day name.
+		 */
 		private function get_day_of_week($day){
 			switch($day){
 				case 1:
@@ -256,8 +289,8 @@
 					break;
 			}
 			return $day;
-		}
 
+		}
 
 		public function is_range_eng($yy, $mm, $dd){
 			if($yy<1944 || $yy>2033){
@@ -464,22 +497,30 @@
 
 			}
 		}
-		///////////////////////////////////////////////
+
+		/**
+		 * Convert Nepali date to English.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param  int $yy Year.
+		 * @param  int $mm Month.
+		 * @param  int $dd Day.
+		 * @return array Converted date.
+		 */
 		public function nep_to_eng($yy,$mm,$dd)
 		{
 			$arr=$this->n_to_e($yy,$mm,$dd);
-			$et_year=$arr['year'];
-			$et_month=$arr['month'];
-			$et_date=$arr['date'];
-			$new_nep=$this->eng_to_nep($et_year,$et_month,$et_date);
-			if($new_nep['year']==$yy && $new_nep['month']==$mm && $new_nep['date']==$dd)
-			{
+			$et_year  =$arr['year'];
+			$et_month =$arr['month'];
+			$et_date  =$arr['date'];
+			$new_nep = $this->eng_to_nep($et_year,$et_month,$et_date);
+			if($new_nep['year']===$yy && $new_nep['month']===$mm && $new_nep['date']===$dd) {
 				return $arr;
 			}
-			else
-			{
-				$err_arr['error']=1;
-				$err_arr['error_message']='Invalid Date';
+			else {
+				$err_arr['error']         =1;
+				$err_arr['error_message'] ='Invalid Date';
 				return $err_arr;
 			}
 		}

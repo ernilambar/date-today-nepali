@@ -6,7 +6,7 @@
  */
 
 /**
- * Convert date to Nepali
+ * Convert date to Nepali.
  *
  * @since 1.0.0
  *
