@@ -1,5 +1,7 @@
 <?php
 /**
+ * Main plugin file.
+ *
  * @package   Date_Today_Nepali
  * @author    Nilambar Sharma<nilambar@outlook.com>
  * @license   GPL-2.0+
@@ -12,7 +14,7 @@
  * Version:           2.0.0
  * Author:            Nilambar Sharma
  * Author URI:        http://nilambar.net/
- * Text Domain:       date-today-nepali-locale
+ * Text Domain:       date-today-nepali
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -22,7 +24,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-// Define
 define( 'DATE_TODAY_NEPALI_NAME', 'Date Today Nepali' );
 define( 'DATE_TODAY_NEPALI_SLUG', 'date-today-nepali' );
 define( 'DATE_TODAY_NEPALI_VERSION', '2.0.0' );
@@ -32,7 +33,7 @@ define( 'DATE_TODAY_NEPALI_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 define( 'DATE_TODAY_NEPALI_LIB_DIR', DATE_TODAY_NEPALI_DIR . '/lib' );
 define( 'DATE_TODAY_NEPALI_CORE_DIR', DATE_TODAY_NEPALI_DIR . '/core' );
 
-// Include core
+// Include core.
 require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
 
 
@@ -41,7 +42,7 @@ require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
  */
 function date_today_nepali_load_textdomain() {
 
-  load_plugin_textdomain( 'date-today-nepali', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	load_plugin_textdomain( 'date-today-nepali', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
 }
 
