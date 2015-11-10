@@ -6,8 +6,8 @@
  */
 
 // Load libraries.
-require_once( DATE_TODAY_NEPALI_LIB_DIR . '/nepali_calendar.php' );
-require_once( DATE_TODAY_NEPALI_LIB_DIR . '/date_functions.php' );
+require_once( DATE_TODAY_NEPALI_LIB_DIR . '/nepali-calendar.php' );
+require_once( DATE_TODAY_NEPALI_LIB_DIR . '/date-functions.php' );
 
 /**
  * Register widgets.
