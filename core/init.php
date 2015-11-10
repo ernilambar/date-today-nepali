@@ -15,7 +15,7 @@ require_once( DATE_TODAY_NEPALI_LIB_DIR . '/date_functions.php' );
  * @since 1.0.0
  */
 function date_today_nepali_load_widgets() {
-	include DATE_TODAY_NEPALI_CORE_DIR . '/widget-date-today-nepali.php';
+	require DATE_TODAY_NEPALI_CORE_DIR . '/widget-date-today-nepali.php';
 	register_widget( 'DTN_Widget' );
 }
 

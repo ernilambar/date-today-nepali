@@ -66,7 +66,7 @@ class DTN_Widget extends WP_Widget {
 		$newd = $cal->eng_to_nep( $date_arr[0], $date_arr[1], $date_arr[2] );
 
 		if ( 'np' === $display_language ) {
-			$newd = convertToNepali( $newd );
+			$newd = dtn_convert_to_nepali( $newd );
 		}
 		$today_date = '';
 		switch ( $date_format ) {

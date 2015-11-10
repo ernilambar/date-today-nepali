@@ -13,12 +13,12 @@
  * @param  array $date Date to be converted.
  * @return array Converted date.
  */
-function convertToNepali( $date ) {
-	$date['year']       = getNepaliNumber( $date['year'] );
-	$date['month_name'] = getMahina( $date['month'] );
-	$date['month']      = getNepaliNumber( $date['month'] );
-	$date['day']        = getBaar( $date['num_day'] );
-	$date['date']       = getNepaliNumber( $date['date'] );
+function dtn_convert_to_nepali( $date ) {
+	$date['year']       = dtn_get_nepali_number( $date['year'] );
+	$date['month_name'] = dtn_get_mahina( $date['month'] );
+	$date['month']      = dtn_get_nepali_number( $date['month'] );
+	$date['day']        = dtn_get_baar( $date['num_day'] );
+	$date['date']       = dtn_get_nepali_number( $date['date'] );
 	return $date;
 }
 
@@ -30,7 +30,7 @@ function convertToNepali( $date ) {
  * @param int $num Number.
  * @return string Translated number.
  */
-function getNepaliNumber( $num ) {
+function dtn_get_nepali_number( $num ) {
 	$str = array();
 	$numarr = str_split( $num );
 	if ( 1 === count( $numarr ) ) {
@@ -52,7 +52,7 @@ function getNepaliNumber( $num ) {
  * @param int $num Number for month.
  * @return string Month text in Nepali.
  */
-function getMahina( $num ) {
+function dtn_get_mahina( $num ) {
 	$bar = array( 'बैशाख','जेठ','असार','साउन','भदौ','असोज','कार्तिक','मङि्सर','पुष','माघ','फागुन','चैत' );
 	$ret = $bar[ $num -1 ];
 	return  $ret;
@@ -66,7 +66,7 @@ function getMahina( $num ) {
  * @param int $num Number for day.
  * @return string Day text in Nepali.
  */
-function getBaar( $num ) {
+function dtn_get_baar( $num ) {
 	$bar = array( 'आइतबार','सोमबार','मङ्गलबार','बुधबार','बिहिबार','शुक्रबार','शनिबार' );
 	$ret = $bar[ $num -1 ];
 	return  ($ret);
