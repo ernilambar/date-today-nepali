@@ -5,24 +5,22 @@
  * @package   Date_Today_Nepali
  * @author    Nilambar Sharma<nilambar@outlook.com>
  * @license   GPL-2.0+
- * @link      http://nilambar.net
+ * @link      http://www.nilambar.net
  * @copyright 2013 Nilambar Sharma
  *
- * Plugin Name:       Date Today Nepali
- * Plugin URI:        http://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
- * Description:       A small widget plugin to display Nepali date.
- * Version:           2.0.0
- * Author:            Nilambar Sharma
- * Author URI:        http://nilambar.net/
- * Text Domain:       date-today-nepali
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Plugin Name: Date Today Nepali
+ * Plugin URI: http://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
+ * Description: A small widget plugin to display Nepali date.
+ * Version: 2.0.0
+ * Author: Nilambar Sharma
+ * Author URI: http://www.nilambar.net/
+ * Text Domain: date-today-nepali
+ * Domain Path: /languages
+ * License: GPL-2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 define( 'DATE_TODAY_NEPALI_NAME', 'Date Today Nepali' );
 define( 'DATE_TODAY_NEPALI_SLUG', 'date-today-nepali' );
