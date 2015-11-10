@@ -20,7 +20,10 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 define( 'DATE_TODAY_NEPALI_NAME', 'Date Today Nepali' );
 define( 'DATE_TODAY_NEPALI_SLUG', 'date-today-nepali' );
