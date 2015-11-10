@@ -292,6 +292,16 @@
 
 		}
 
+		/**
+		 * Check if given English date is in range.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param int $yy Year.
+		 * @param int $mm Month.
+		 * @param int $dd Day.
+		 * @return bool TRUE if date is in range, else FALSE.
+		 */
 		public function is_range_eng($yy, $mm, $dd){
 			if($yy<1944 || $yy>2033){
 				$this->debug_info = "Supported only between 1944-2033";
@@ -307,10 +317,19 @@
 				$this->debug_info = "Error! value 1-31 only";
 				return false;
 			}
-
 			return true;
 		}
 
+		/**
+		 * Check if given Nepali date is in range.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param int $yy Year.
+		 * @param int $mm Month.
+		 * @param int $dd Day.
+		 * @return bool TRUE if date is in range, else FALSE.
+		 */
 		public function is_range_nep($yy, $mm, $dd){
 			if($yy<2000 || $yy>2089){
 				$this->debug_info="Supported only between 2000-2089";
@@ -326,10 +345,8 @@
 				$this->debug_info="Error! value 1-31 only";
 				return false;
 			}
-
 			return true;
 		}
-
 
 		/**
 		 * currently can only calculate the date between AD 1944-2033...
@@ -349,69 +366,88 @@
 			 	$month = array(31,28,31,30,31,30,31,31,30,31,30,31);
 			 	$lmonth = array(31,29,31,30,31,30,31,31,30,31,30,31);
 
-				$def_eyy = 1944;									//spear head english date...
-				$def_nyy = 2000; $def_nmm = 9; $def_ndd = 17-1;		//spear head nepali date...
-				$total_eDays=0; $total_nDays=0; $a=0; $day=7-1;		//all the initializations...
-				$m = 0; $y = 0; $i =0; $j = 0;
-				$numDay=0;
+				$def_eyy = 1944; // Spear head english date.
+				// Spear head nepali date.
+				$def_nyy = 2000;
+				$def_nmm = 9;
+				$def_ndd = 17-1;
+				// All the initializations.
+				$total_eDays = 0;
+				$total_nDays = 0;
+				$a           = 0;
+				$day         = 7-1;
+				$m           = 0;
+				$y           = 0;
+				$i           = 0;
+				$j           = 0;
+				$numDay      = 0;
 
-				// count total no. of days in-terms of year
-				for($i=0; $i<($yy-$def_eyy); $i++){	//total days for month calculation...(english)
-					if($this->is_leap_year($def_eyy+$i)==1)
-						for($j=0; $j<12; $j++)
+				// Count total no. of days in-terms of year.
+				for($i=0; $i<($yy-$def_eyy); $i++){
+					//total days for month calculation (english).
+					if($this->is_leap_year($def_eyy+$i)==1) {
+						for($j=0; $j<12; $j++) {
 							$total_eDays += $lmonth[$j];
-					else
-						for($j=0; $j<12; $j++)
+						}
+					}
+					else {
+						for($j=0; $j<12; $j++) {
 							$total_eDays += $month[$j];
+						}
+					}
 				}
 
-				// count total no. of days in-terms of month
+				// Count total no. of days in-terms of month.
 				for($i=0; $i<($mm-1); $i++){
-					if($this->is_leap_year($yy)==1)
+					if($this->is_leap_year($yy)==1){
 						$total_eDays += $lmonth[$i];
-					else
+					}
+					else{
 						$total_eDays += $month[$i];
+					}
 				}
 
-				// count total no. of days in-terms of date
+				// Count total no. of days in-terms of date.
 				$total_eDays += $dd;
 
-
-				$i = 0; $j = $def_nmm;
+				$i           = 0;
+				$j           = $def_nmm;
 				$total_nDays = $def_ndd;
-				$m = $def_nmm;
-				$y = $def_nyy;
+				$m           = $def_nmm;
+				$y           = $def_nyy;
 
-				// count nepali date from array
+				// Count nepali date from array.
 				while($total_eDays != 0) {
-			        $a = $this->bs[$i][$j];
-					$total_nDays++;						//count the days
-					$day++;								//count the days interms of 7 days
+	        $a = $this->bs[$i][$j];
+					$total_nDays++;						// Count the days.
+					$day++;								// Count the days interms of 7 days.
 					if($total_nDays > $a){
 						$m++;
 						$total_nDays=1;
 						$j++;
 					}
-					if($day > 7)
+					if($day > 7){
 						$day = 1;
+					}
 					if($m > 12){
 						$y++;
 						$m = 1;
 					}
-				    if($j > 12){
-						$j = 1; $i++;
+			    if($j > 12){
+						$j = 1;
+						$i++;
 					}
 					$total_eDays--;
 				}
 
 				$numDay=$day;
 
-				$this->nep_date["year"] = $y;
-				$this->nep_date["month"] = $m;
-				$this->nep_date["date"] = $total_nDays;
-				$this->nep_date["day"] = $this->get_day_of_week($day);
+				$this->nep_date["year"]       = $y;
+				$this->nep_date["month"]      = $m;
+				$this->nep_date["date"]       = $total_nDays;
+				$this->nep_date["day"]        = $this->get_day_of_week($day);
 				$this->nep_date["month_name"] = $this->get_nepali_month($m);
-				$this->nep_date["num_day"] = $numDay;
+				$this->nep_date["num_day"]    = $numDay;
 				return $this->nep_date;
 			}
 		}
