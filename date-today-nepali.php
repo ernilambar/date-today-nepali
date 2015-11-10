@@ -45,4 +45,3 @@ function date_today_nepali_load_textdomain() {
 }
 
 add_action( 'plugins_loaded', 'date_today_nepali_load_textdomain' );
-
