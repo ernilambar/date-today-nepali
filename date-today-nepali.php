@@ -11,11 +11,10 @@
  * Plugin Name: Date Today Nepali
  * Plugin URI: http://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
  * Description: A small widget plugin to display Nepali date.
- * Version: 2.1
+ * Version: 2.2
  * Author: Nilambar Sharma
  * Author URI: http://www.nilambar.net/
  * Text Domain: date-today-nepali
- * Domain Path: /languages
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -27,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'DATE_TODAY_NEPALI_NAME', 'Date Today Nepali' );
 define( 'DATE_TODAY_NEPALI_SLUG', 'date-today-nepali' );
-define( 'DATE_TODAY_NEPALI_VERSION', '2.1' );
+define( 'DATE_TODAY_NEPALI_VERSION', '2.2' );
 define( 'DATE_TODAY_NEPALI_BASENAME', basename( dirname( __FILE__ ) ) );
 define( 'DATE_TODAY_NEPALI_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'DATE_TODAY_NEPALI_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
