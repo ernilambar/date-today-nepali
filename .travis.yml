@@ -5,13 +5,6 @@
 # @link http://about.travis-ci.org/docs/user/languages/php/
 language: php
 
-# Declare versions of PHP to use. Use one decimal max.
-php:
-    - "7.0"
-    - "5.3"
-    # Current $required_php_version for WordPress: 5.2.4
-    - "5.2"
-
 # Ditch sudo and use containers.
 # @link http://docs.travis-ci.com/user/migrating-from-legacy/#Why-migrate-to-container-based-infrastructure%3F
 # @link http://docs.travis-ci.com/user/workers/container-based-infrastructure/#Routing-your-build-to-container-based-infrastructure
@@ -19,10 +12,18 @@ sudo: false
 
 # Declare which versions of WordPress to test against.
 # Also declare whether or not to test in Multisite.
-env:
-    # Trunk (current version in development is 4.5)
-    # @link https://github.com/WordPress/WordPress
-    - WP_VERSION=master WP_MULTISITE=0
+matrix:
+  include:
+    - php: 5.3
+      env: WP_VERSION=4.0 DEPLOY_BRANCH=master
+    - php: 5.6
+      env: WP_VERSION=4.0
+    - php: 5.6
+      env: WP_VERSION=latest
+    - php: 5.6
+      env: WP_VERSION=trunk
+    - php: 7.0
+      env: WP_VERSION=latest
 
 # Use this to prepare your build for testing.
 # e.g. copy database configurations, environment variables, etc.
