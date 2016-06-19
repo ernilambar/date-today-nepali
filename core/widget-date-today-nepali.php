@@ -159,38 +159,38 @@ class DTN_Widget extends WP_Widget {
 		$date_format      = absint( $instance['date_format'] );
 		$date_separator   = esc_attr( $instance['date_separator'] );
 		?>
-      <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'date-today-nepali' ); ?></label>
-        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
-      </p>
-      <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'display_language' ) ); ?>"><?php _e( 'Display Language:', 'date-today-nepali' ); ?></label>
-        <select id="<?php echo esc_attr( $this->get_field_id( 'display_language' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'display_language' ) ); ?>">
-          <option value="np" <?php selected( $display_language, 'np' ); ?>><?php _e( 'Nepali', 'date-today-nepali' ); ?></option>
-          <option value="en" <?php selected( $display_language, 'en' ); ?>><?php _e( 'English', 'date-today-nepali' ); ?></option>
-        </select>
-      </p>
-      <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'date_format' ) ); ?>"><?php _e( 'Date Format:', 'date-today-nepali' ); ?></label>
-        <select id="<?php echo esc_attr( $this->get_field_id( 'date_format' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'date_format' ) ); ?>">
-          <option value="1" <?php selected( $date_format, '1' ); ?>>21 04 2070</option>
-          <option value="2" <?php selected( $date_format, '2' ); ?>>2070 21 04</option>
-          <option value="3" <?php selected( $date_format, '3' ); ?>>2070 04 21</option>
-          <option value="4" <?php selected( $date_format, '4' ); ?>>21 Shrawan 2070</option>
-          <option value="5" <?php selected( $date_format, '5' ); ?>>2070 Shrawan 21</option>
-          <option value="6" <?php selected( $date_format, '6' ); ?>>21 Shrawan 2070, Monday</option>
-          <option value="7" <?php selected( $date_format, '7' ); ?>>Monday, 21 Shrawan 2070</option>
-          <option value="8" <?php selected( $date_format, '8' ); ?>>2070 Shrawan 21, Monday</option>
-          <option value="9" <?php selected( $date_format, '9' ); ?>>Monday, 2070 Shrawan 21</option>
-        </select>
-      </p>
-      <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>"><?php _e( 'Date Separator:', 'date-today-nepali' ); ?></label>
-        <select id="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'date_separator' ) ); ?>">
-        <option value="space" <?php selected( $date_separator, 'space' ); ?>>&nbsp; (<?php _e( 'Space', 'date-today-nepali' ); ?>)</option>
-          <option value="dash" <?php selected( $date_separator, 'dash' ); ?>>- (<?php _e( 'Dash', 'date-today-nepali' ); ?>)</option>
-        </select>
-      </p>
-        <?php
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'date-today-nepali' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'display_language' ) ); ?>"><?php _e( 'Display Language:', 'date-today-nepali' ); ?></label>
+			<select id="<?php echo esc_attr( $this->get_field_id( 'display_language' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'display_language' ) ); ?>">
+				<option value="np" <?php selected( $display_language, 'np' ); ?>><?php _e( 'Nepali', 'date-today-nepali' ); ?></option>
+				<option value="en" <?php selected( $display_language, 'en' ); ?>><?php _e( 'English', 'date-today-nepali' ); ?></option>
+			</select>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'date_format' ) ); ?>"><?php _e( 'Date Format:', 'date-today-nepali' ); ?></label>
+			<select id="<?php echo esc_attr( $this->get_field_id( 'date_format' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'date_format' ) ); ?>">
+				<option value="1" <?php selected( $date_format, '1' ); ?>>21 04 2070</option>
+				<option value="2" <?php selected( $date_format, '2' ); ?>>2070 21 04</option>
+				<option value="3" <?php selected( $date_format, '3' ); ?>>2070 04 21</option>
+				<option value="4" <?php selected( $date_format, '4' ); ?>>21 Shrawan 2070</option>
+				<option value="5" <?php selected( $date_format, '5' ); ?>>2070 Shrawan 21</option>
+				<option value="6" <?php selected( $date_format, '6' ); ?>>21 Shrawan 2070, Monday</option>
+				<option value="7" <?php selected( $date_format, '7' ); ?>>Monday, 21 Shrawan 2070</option>
+				<option value="8" <?php selected( $date_format, '8' ); ?>>2070 Shrawan 21, Monday</option>
+				<option value="9" <?php selected( $date_format, '9' ); ?>>Monday, 2070 Shrawan 21</option>
+			</select>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>"><?php _e( 'Date Separator:', 'date-today-nepali' ); ?></label>
+			<select id="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'date_separator' ) ); ?>">
+				<option value="space" <?php selected( $date_separator, 'space' ); ?>>&nbsp; (<?php _e( 'Space', 'date-today-nepali' ); ?>)</option>
+				<option value="dash" <?php selected( $date_separator, 'dash' ); ?>>- (<?php _e( 'Dash', 'date-today-nepali' ); ?>)</option>
+			</select>
+		</p>
+		<?php
 	}
 }
