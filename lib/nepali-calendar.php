@@ -143,7 +143,7 @@ if ( ! class_exists( 'Nepali_Calendar' ) ) :
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param integer $year Year.
+		 * @param int $year Year.
 		 * @return boolean TRUE if leap year, else FALSE.
 		 */
 		public function is_leap_year( $year ) {

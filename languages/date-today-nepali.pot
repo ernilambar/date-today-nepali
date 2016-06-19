@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Date Today Nepali 2.2\n"
+"Project-Id-Version: Date Today Nepali 2.2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-19 08:22:33+00:00\n"
 "MIME-Version: 1.0\n"
