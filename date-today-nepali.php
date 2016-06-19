@@ -36,7 +36,7 @@ require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
  */
 function date_today_nepali_load_textdomain() {
 
-	load_plugin_textdomain( 'date-today-nepali', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	load_plugin_textdomain( 'date-today-nepali' );
 
 }
 
