@@ -23,39 +23,39 @@ msgstr ""
 msgid "Date Today Nepali Widget"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:26
+#: core/widget-date-today-nepali.php:27
 msgid "Date Display Widget"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:164
+#: core/widget-date-today-nepali.php:163
 msgid "Title:"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:168
+#: core/widget-date-today-nepali.php:167
 msgid "Display Language:"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:170
+#: core/widget-date-today-nepali.php:169
 msgid "Nepali"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:171
+#: core/widget-date-today-nepali.php:170
 msgid "English"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:175
+#: core/widget-date-today-nepali.php:174
 msgid "Date Format:"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:189
+#: core/widget-date-today-nepali.php:188
 msgid "Date Separator:"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:191
+#: core/widget-date-today-nepali.php:190
 msgid "Space"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:192
+#: core/widget-date-today-nepali.php:191
 msgid "Dash"
 msgstr ""
 
