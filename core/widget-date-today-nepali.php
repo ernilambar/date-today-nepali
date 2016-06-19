@@ -20,9 +20,10 @@ class DTN_Widget extends WP_Widget {
 	function __construct() {
 
 		$opts = array(
-		'classname'   => 'dtn_widget',
-		'description' => __( 'Date Today Nepali Widget', 'date-today-nepali' ),
-		);
+			'classname'                   => 'dtn_widget',
+			'description'                 => __( 'Date Today Nepali Widget', 'date-today-nepali' ),
+			'customize_selective_refresh' => true,
+			);
 		parent::__construct( 'dtn-date-display-widget', __( 'Date Display Widget', 'date-today-nepali' ), $opts );
 	}
 
@@ -36,8 +37,6 @@ class DTN_Widget extends WP_Widget {
 	 * @param array $instance The settings for the particular instance of the widget.
 	 */
 	function widget( $args, $instance ) {
-
-		extract( $args , EXTR_SKIP );
 
 		$title            = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$display_language = ! empty( $instance['display_language'] ) ? $instance['display_language'] : 'en' ;
@@ -55,9 +54,10 @@ class DTN_Widget extends WP_Widget {
 			break;
 		}
 
-		echo $before_widget;
+		echo $args['before_widget'];
+
 		if ( $title ) {
-			echo $before_title . $title . $after_title;
+			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
 		$cal = new Nepali_Calendar();
@@ -114,7 +114,7 @@ class DTN_Widget extends WP_Widget {
 		}
 		echo $today_date;
 
-		echo $after_widget;
+		echo $args['after_widget'];
 
 	}
 
@@ -123,8 +123,7 @@ class DTN_Widget extends WP_Widget {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param array $new_instance New settings for this instance as input by the user via
-	 *                            {@see WP_Widget::form()}.
+	 * @param array $new_instance New settings for this instance.
 	 * @param array $old_instance Old settings for this instance.
 	 * @return array Settings to save or bool false to cancel saving.
 	 */

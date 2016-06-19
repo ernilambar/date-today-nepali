@@ -1,4 +1,3 @@
-/* jshint node:true */
 module.exports = function( grunt ) {
 	'use strict';
 
@@ -177,19 +176,6 @@ module.exports = function( grunt ) {
 					]
 				}
 			}
-		},
-
-		// CSS minification.
-		cssmin: {
-			target: {
-				files: [{
-					expand: true,
-					cwd: '<%= dirs.css %>',
-					src: ['*.css', '!*.min.css'],
-					dest: '<%= dirs.css %>',
-					ext: '.min.css'
-				}]
-			}
 		}
 
 	});
@@ -207,14 +193,11 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [] );
 
 	grunt.registerTask( 'build', [
-		'cssmin',
-		'uglify',
 		'addtextdomain',
 		'makepot'
 	]);
 
 	grunt.registerTask( 'precommit', [
-		'jshint',
 		'checktextdomain'
 	]);
 
