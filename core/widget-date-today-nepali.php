@@ -132,9 +132,9 @@ class DTN_Widget extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['title']            = sanitize_text_field( $new_instance['title'] );
-		$instance['display_language'] = esc_attr( $new_instance['display_language'] );
+		$instance['display_language'] = sanitize_text_field( $new_instance['display_language'] );
 		$instance['date_format']      = absint( $new_instance['date_format'] );
-		$instance['date_separator']   = esc_attr( $new_instance['date_separator'] );
+		$instance['date_separator']   = sanitize_text_field( $new_instance['date_separator'] );
 
 		return $instance;
 
