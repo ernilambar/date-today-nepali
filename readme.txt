@@ -1,6 +1,6 @@
 === Date Today Nepali ===
 Contributors: rabmalin
-Donate link: http://nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
+Donate link: https://nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
 Tags: nepali, date, widget,
 Requires at least: 4.0
 Tested up to: 4.5
