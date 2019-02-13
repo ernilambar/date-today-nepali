@@ -4,7 +4,7 @@ Donate link: http://nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
 Tags: nepali, date, widget,
 Requires at least: 4.0
 Tested up to: 4.5
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
