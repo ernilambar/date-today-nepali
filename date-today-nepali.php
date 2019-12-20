@@ -30,7 +30,6 @@ define( 'DATE_TODAY_NEPALI_CORE_DIR', DATE_TODAY_NEPALI_DIR . '/core' );
 // Include core.
 require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
 
-
 /**
  * Load plugin textdomain.
  */

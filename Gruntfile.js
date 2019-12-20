@@ -6,6 +6,7 @@ module.exports = function( grunt ) {
 	 */
 	var deploy_files_list = [
 		'core/**',
+		'languages/**',
 		'lib/**',
 		'readme.txt',
 		'<%= pkg.main_file %>'
