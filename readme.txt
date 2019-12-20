@@ -1,11 +1,11 @@
 === Date Today Nepali ===
 Contributors: rabmalin
-Donate link: https://nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
+Donate link: https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
 Tags: nepali, date, widget,
 Requires at least: 4.5
 Requires PHP: 5.2.4
 Tested up to: 5.1
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

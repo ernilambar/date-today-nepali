@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Date Today Nepali 2.2.2\n"
+"Project-Id-Version: Date Today Nepali 2.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-19 08:22:33+00:00\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgid "Date Today Nepali"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html"
+msgid "https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -76,5 +76,5 @@ msgid "Nilambar Sharma"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://nilambar.net/"
+msgid "https://www.nilambar.net/"
 msgstr ""
