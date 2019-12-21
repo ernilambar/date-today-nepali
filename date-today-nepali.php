@@ -38,5 +38,4 @@ function date_today_nepali_load_textdomain() {
 	load_plugin_textdomain( 'date-today-nepali' );
 
 }
-
 add_action( 'plugins_loaded', 'date_today_nepali_load_textdomain' );
