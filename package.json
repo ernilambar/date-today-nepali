@@ -6,6 +6,9 @@
   "main": "Gruntfile.js",
   "main_file": "date-today-nepali.php",
   "repository": "github:ernilambar/date-today-nepali",
+  "scripts": {
+    "i18n-pot": "vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot"
+  },
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-checktextdomain": "^1.0.1",
