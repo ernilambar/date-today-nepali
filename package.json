@@ -7,13 +7,14 @@
   "main_file": "date-today-nepali.php",
   "repository": "github:ernilambar/date-today-nepali",
   "scripts": {
-    "gen-pot": "vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --slug=date-today-nepali --ignore-domain --exclude=dist,deploy --headers='{\"Last-Translator\":\"Nilambar Sharma <nilambar@outlook.com>\"}'"
+    "gen-pot": "vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --slug=date-today-nepali --ignore-domain --exclude=dist,deploy --headers='{\"Last-Translator\":\"Nilambar Sharma <nilambar@outlook.com>\"}'",
+    "textdomain": "wpi18n addtextdomain --exclude=node_modules,vendor,deploy,build,tests"
   },
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.2",
-    "grunt-wp-i18n": "^1.0.3"
+    "node-wp-i18n": "^1.2.3"
   },
   "engines": {
     "node": ">=10.15.0",
