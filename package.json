@@ -1,7 +1,7 @@
 {
   "name": "date-today-nepali",
   "title": "Date Today Nepali",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "main_file": "date-today-nepali.php",

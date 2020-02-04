@@ -5,7 +5,7 @@ Tags: nepali, date, widget,
 Requires at least: 5.0
 Requires PHP: 5.6.20
 Tested up to: 5.3
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/dat
 3. Sample display of date in front end
 
 == Changelog ==
+
+= 2.2.4 =
+* Minor bug fixes
 
 = 2.2.3 =
 * Minor bug fixes
