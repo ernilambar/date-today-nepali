@@ -25,84 +25,21 @@ module.exports = function( grunt ) {
 
 		// Other options.
 		options: {
-			text_domain: 'date-today-nepali'
+			text_domain: '<%= pkg.name %>'
 		},
 
 		// Copy folders.
 		clean: {
-			post_build: ['build'],
-			remove_trunk:['build/<%= pkg.name %>/trunk/'],
-			deploy: ['deploy'],
-			build: ['build']
+			deploy: ['deploy']
 		},
 
 		// Copy files.
 		copy: {
-			svn_trunk: {
-				options: {
-					mode: true
-				},
-				expand: true,
-				src: deploy_files_list,
-				dest: 'build/<%= pkg.name %>/trunk/'
-			},
-			svn_tag: {
-				options: {
-					mode: true
-				},
-				expand: true,
-				src: deploy_files_list,
-				dest: 'build/<%= pkg.name %>/tags/<%= pkg.version %>/'
-			},
 			deploy: {
 				src: deploy_files_list,
 				dest: 'deploy/<%= pkg.name %>',
 				expand: true,
 				dot: true
-			}
-		},
-
-		// Replace strings.
-		replace: {
-			readme_txt: {
-				src: [ 'readme.txt' ],
-				overwrite: true,
-				replacements: [{
-					from: /Stable tag: (.*)/,
-					to: 'Stable tag: <%= pkg.version %>'
-				}]
-			},
-			'plugin_file': {
-				src: [ '<%= pkg.main_file %>' ],
-				overwrite: true,
-				replacements: [{
-					from: /\*\s*Version:\s*(.*)/,
-					to: '* Version: <%= pkg.version %>'
-				}]
-			}
-		},
-
-		// Fetch from SVN.
-		svn_export: {
-			dev: {
-				options:{
-					repository: 'https://plugins.svn.wordpress.org/<%= pkg.name %>',
-					output: 'build/<%= pkg.name %>'
-				}
-			}
-		},
-
-		// Push to SVN.
-		push_svn:{
-			options: {
-				username: 'rabmalin',
-				password: 'passwordhere',
-				remove: true
-			},
-			main: {
-				src: 'build/<%= pkg.name %>',
-				dest: 'https://plugins.svn.wordpress.org/<%= pkg.name %>',
-				tmp: 'build/make_svn'
 			}
 		},
 
@@ -185,21 +122,13 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
-	grunt.loadNpmTasks( 'grunt-push-svn' );
-	grunt.loadNpmTasks( 'grunt-svn-export' );
-	grunt.loadNpmTasks( 'grunt-text-replace' );
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 
 	// Register tasks.
 	grunt.registerTask( 'default', [] );
 
 	grunt.registerTask( 'build', [
-		'addtextdomain',
-		'makepot'
-	]);
-
-	grunt.registerTask( 'precommit', [
-		'checktextdomain'
+		'textdomain'
 	]);
 
 	grunt.registerTask( 'textdomain', [
@@ -211,40 +140,4 @@ module.exports = function( grunt ) {
 		'clean:deploy',
 		'copy:deploy'
 	]);
-
-	grunt.registerTask( 'version', [
-		'replace:readme_txt',
-		'replace:plugin_file'
-	] );
-
-	grunt.registerTask( 'prerelease', [
-		'version',
-		'textdomain'
-	] );
-
-	grunt.registerTask( 'do_svn_dry', [
-		'clean:build',
-		'svn_export',
-		'clean:remove_trunk',
-		'copy:svn_trunk',
-		'copy:svn_tag'
-	] );
-
-	grunt.registerTask( 'do_svn_run', [
-		'clean:build',
-		'svn_export',
-		'clean:remove_trunk',
-		'copy:svn_trunk',
-		'copy:svn_tag',
-		'push_svn'
-	] );
-
-	grunt.registerTask( 'release', [
-		'prerelease',
-		'do_svn_run'
-	] );
-
-	grunt.registerTask( 'post_release', [
-		'clean:post_build'
-	] );
 };
