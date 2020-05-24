@@ -12,13 +12,18 @@
     "textdomain": "wpi18n addtextdomain --exclude=node_modules,vendor,deploy,build,tests"
   },
   "devDependencies": {
-    "grunt": "^1.0.4",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.2",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-svn": "^1.0.8",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.0.1",
+    "jshint": "^2.11.1",
     "node-wp-i18n": "^1.2.3"
-  },
-  "engines": {
-    "node": ">=10.15.0",
-    "npm": ">=6.4.1"
   }
 }
