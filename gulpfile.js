@@ -8,7 +8,7 @@ var gulp        = require( 'gulp' ),
 
 var fs = require('fs');
 
-var svn = require('gulp-svn');
+var svn = require('gulp-svn2');
 
 var pkg = JSON.parse(fs.readFileSync('./package.json'));
 
@@ -66,9 +66,8 @@ gulp.task('clean:deploy', function() {
     return del('deploy')
 });
 
-gulp.task('export', async function() {
-    return console.log('inside');
-    // return svn.export('https://plugins.svn.wordpress.org/date-today-nepali', 'build');
+gulp.task('export_svn', async function() {
+    return svn.export('https://plugins.svn.wordpress.org/' + pkg.name, 'build');
 });
 
 gulp.task('copy:deploy', function() {
@@ -91,6 +90,8 @@ gulp.task('copy:deploy', function() {
 
 // Tasks.
 gulp.task( 'default', gulp.series('watch'));
+
+gulp.task( 'export', gulp.series('export_svn'));
 
 gulp.task( 'textdomain', gulp.series('language', 'pot'));
 

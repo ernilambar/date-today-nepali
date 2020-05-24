@@ -20,7 +20,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-run": "^1.7.1",
-    "gulp-svn": "^1.0.8",
+    "gulp-svn2": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.0.1",
     "jshint": "^2.11.1",
