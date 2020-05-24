@@ -1,18 +1,24 @@
-// Config for theme.
-var rootPath  = './';
+// Config.
+var rootPath   = './';
 var projectURL = 'http://staging.local/';
 
-// Gulp Nodes.
-var gulp        = require( 'gulp' ),
-    gulpPlugins = require( 'gulp-load-plugins' )();
+// Gulp.
+var gulp = require( 'gulp' );
 
+// Gulp pluginns.
+var gulpPlugins = require( 'gulp-load-plugins' )();
+
+// File system.
 var fs = require('fs');
 
+// Package.
 var pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-const browserSync = require('browser-sync').create();
-
+// Delete.
 var del = require('del');
+
+// Browser sync.
+var browserSync = require('browser-sync').create();
 
 // Deploy files list.
 var deploy_files_list = [
@@ -23,6 +29,7 @@ var deploy_files_list = [
 	pkg.main_file
 ];
 
+// Watch.
 gulp.task( 'watch', function() {
     browserSync.init({
         proxy: projectURL,
@@ -33,20 +40,24 @@ gulp.task( 'watch', function() {
     gulp.watch( rootPath + '**/**/*.php' ).on('change',browserSync.reload);
 });
 
+// Make pot file.
 gulp.task('pot', function() {
 	const { run } = gulpPlugins;
 	return run('wpi18n makepot --domain-path=languages --exclude=vendors,deploy').exec();
 })
 
+// Add text domain.
 gulp.task('language', function() {
 	const { run } = gulpPlugins;
 	return run('wpi18n addtextdomain').exec();
 })
 
+// Clean deploy folder.
 gulp.task('clean:deploy', function() {
     return del('deploy')
 });
 
+// Copy to deploy folder.
 gulp.task('copy:deploy', function() {
 	const { zip } = gulpPlugins;
 	return gulp.src(deploy_files_list,{base:'.'})
