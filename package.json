@@ -5,7 +5,8 @@
   "license": "GPL-2.0+",
   "main_file": "date-today-nepali.php",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   },
   "repository": "github:ernilambar/date-today-nepali",
   "devDependencies": {
