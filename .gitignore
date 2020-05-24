@@ -24,6 +24,3 @@ project.properties
 
 # Windows junk
 Thumbs.db
-
-# Theme specific
-test.php

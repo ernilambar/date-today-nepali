@@ -5,7 +5,7 @@ Tags: nepali, date, widget,
 Requires at least: 5.0
 Requires PHP: 5.6.20
 Tested up to: 5.4
-Stable tag: 2.2.6
+Stable tag: 2.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,7 +39,6 @@ This plugin uses [Nepali-English Date conversion PHP class](http://nepalidatecon
 
 Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/date-today-nepali) and let us know.
 
-
 == Screenshots ==
 
 1. Date widget when Nepali language is used in Wordpress
@@ -47,6 +46,9 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/dat
 3. Sample display of date in front end
 
 == Changelog ==
+
+= 2.2.7 =
+* Minor bug fixes
 
 = 2.2.4 =
 * Minor bug fixes
