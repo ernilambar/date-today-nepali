@@ -5,7 +5,7 @@ var projectURL = 'http://staging.local/';
 // Gulp.
 var gulp = require( 'gulp' );
 
-// Gulp pluginns.
+// Gulp plugins.
 var gulpPlugins = require( 'gulp-load-plugins' )();
 
 // File system.
