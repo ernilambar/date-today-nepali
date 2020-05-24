@@ -17,6 +17,16 @@ const browserSync = require('browser-sync').create();
 
 var del = require('del');
 
+// Deploy files list.
+var deploy_files_list = [
+	'core/**',
+	'languages/**',
+	'lib/**',
+	'readme.txt',
+	pkg.main_file
+];
+
+
 // Error Handling.
 var onError = function( err ) {
     console.log( 'An error occurred:', err.message );
@@ -66,23 +76,31 @@ gulp.task('clean:deploy', function() {
     return del('deploy')
 });
 
-gulp.task('export_svn', async function() {
-    return svn.export('https://plugins.svn.wordpress.org/' + pkg.name, 'build');
+gulp.task('clean:build', function() {
+    return del('build')
+});
+
+gulp.task('clean:trunk', function() {
+    return del('build/' + pkg.name + '/trunk');
+});
+
+gulp.task('copy:trunk', function() {
+    return gulp.src(deploy_files_list,{base:'.'})
+        .pipe(gulp.dest('build/' + pkg.name + '/trunk'))
+});
+
+gulp.task('copy:tags', function() {
+    return gulp.src(deploy_files_list,{base:'.'})
+        .pipe(gulp.dest('build/' + pkg.name + '/tags/' + pkg.version))
+});
+
+gulp.task('export', async function() {
+    return svn.export('https://plugins.svn.wordpress.org/' + pkg.name, 'build/' + pkg.name);
 });
 
 gulp.task('copy:deploy', function() {
 	const { zip } = gulpPlugins;
-	var sourceFiles = [
-		'**/*',
-		'!gulpfile.js',
-		'!package.json',
-		'!package-lock.json',
-		'!**/node_modules/**',
-		'!**/deploy/**',
-		'!**/scripts/**'
-	];
-
-	return gulp.src(sourceFiles)
+	return gulp.src(deploy_files_list,{base:'.'})
 	    .pipe(gulp.dest('deploy/' + pkg.name))
 	    .pipe(zip(pkg.name + '.zip'))
 	    .pipe(gulp.dest('deploy'))
@@ -91,7 +109,7 @@ gulp.task('copy:deploy', function() {
 // Tasks.
 gulp.task( 'default', gulp.series('watch'));
 
-gulp.task( 'export', gulp.series('export_svn'));
+gulp.task( 'do_svn_dry', gulp.series('clean:build', 'export', 'clean:trunk', 'copy:trunk', 'copy:tags'));
 
 gulp.task( 'textdomain', gulp.series('language', 'pot'));
 
