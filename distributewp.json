@@ -1,5 +1,6 @@
 {
   "plugin_slug": "date-today-nepali",
   "deployment_folder": "deploy/date-today-nepali",
-  "deploy_assets": false
+  "deploy_assets": true,
+  "assets_folder": "plugin-assets"
 }
