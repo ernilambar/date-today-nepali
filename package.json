@@ -5,11 +5,13 @@
   "license": "GPL-2.0+",
   "main_file": "date-today-nepali.php",
   "scripts": {
+    "start": "gulp",
     "build": "gulp build",
     "deploy": "gulp deploy"
   },
   "repository": "github:ernilambar/date-today-nepali",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-load-plugins": "^1.6.0",
