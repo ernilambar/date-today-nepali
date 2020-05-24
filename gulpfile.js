@@ -98,6 +98,14 @@ gulp.task('export', async function() {
     return svn.export('https://plugins.svn.wordpress.org/' + pkg.name, 'build/' + pkg.name);
 });
 
+gulp.task('svn:add', async function() {
+    return svn.add('build/' + pkg.name);
+});
+
+gulp.task('commit', async function() {
+    return svn.commit( "Change code", {cwd: 'build',username:'rabmalin',password:'passwordhere'} );
+});
+
 gulp.task('copy:deploy', function() {
 	const { zip } = gulpPlugins;
 	return gulp.src(deploy_files_list,{base:'.'})
@@ -109,7 +117,11 @@ gulp.task('copy:deploy', function() {
 // Tasks.
 gulp.task( 'default', gulp.series('watch'));
 
-gulp.task( 'do_svn_dry', gulp.series('clean:build', 'export', 'clean:trunk', 'copy:trunk', 'copy:tags'));
+gulp.task( 'svn_export', gulp.series('clean:build', 'export'));
+
+gulp.task( 'do_svn_dry', gulp.series('clean:trunk', 'copy:trunk', 'copy:tags'));
+
+gulp.task( 'do_svn_run', gulp.series('clean:trunk', 'copy:trunk', 'copy:tags', 'svn:add', 'commit'));
 
 gulp.task( 'textdomain', gulp.series('language', 'pot'));
 
