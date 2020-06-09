@@ -1,6 +1,6 @@
 <?php
 /**
- * DTN Widget Class.
+ * Widget class
  *
  * @package Date_Today_Nepali
  */
@@ -8,7 +8,7 @@
 use Nilambar\NepaliDate\NepaliDate;
 
 /**
- * DTN widget Class.
+ * Widget class.
  *
  * @since 1.0.0
  */
