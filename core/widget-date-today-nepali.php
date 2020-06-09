@@ -45,17 +45,6 @@ class DTN_Widget extends WP_Widget {
 		$date_format      = ! empty( $instance['date_format'] ) ? $instance['date_format'] : 4 ;
 		$display_format   = ! empty( $instance['display_format'] ) ? $instance['display_format'] : 'd F Y' ;
 
-		switch ( $date_separator ) {
-			case 'space':
-				$date_separator_value = ' ';
-			break;
-			case 'dash':
-				$date_separator_value = '-';
-			break;
-			default:
-			break;
-		}
-
 		echo $args['before_widget'];
 
 		if ( $title ) {
@@ -68,7 +57,7 @@ class DTN_Widget extends WP_Widget {
 
 		$date_details = $obj->getDetails( $date_arr[0], $date_arr[1], $date_arr[2], 'ad', $display_language );
 
-		$formatted_date = $obj->getFormattedDate( $date_details, 'd F Y' );
+		$formatted_date = $obj->getFormattedDate( $date_details, esc_attr( $display_format ) );
 
 		echo $formatted_date;
 
@@ -91,7 +80,6 @@ class DTN_Widget extends WP_Widget {
 
 		$instance['title']            = sanitize_text_field( $new_instance['title'] );
 		$instance['display_language'] = sanitize_text_field( $new_instance['display_language'] );
-		$instance['date_format']      = absint( $new_instance['date_format'] );
 		$instance['display_format']   = sanitize_text_field( $new_instance['display_format'] );
 
 		return $instance;
@@ -109,12 +97,10 @@ class DTN_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array(
 			'title'            => '',
 			'display_language' => 'en',
-			'date_format'      => 4,
 			'display_format'   => 'd F Y',
 		) );
 		$title            = esc_attr( $instance['title'] );
 		$display_language = esc_attr( $instance['display_language'] );
-		$date_format      = absint( $instance['date_format'] );
 		$display_format   = esc_attr( $instance['display_format'] );
 		?>
 		<p>
@@ -129,22 +115,27 @@ class DTN_Widget extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'date_format' ) ); ?>"><?php _e( 'Date Format:', 'date-today-nepali' ); ?></label>
-			<select id="<?php echo esc_attr( $this->get_field_id( 'date_format' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'date_format' ) ); ?>">
-				<option value="1" <?php selected( $date_format, '1' ); ?>>21 04 2070</option>
-				<option value="2" <?php selected( $date_format, '2' ); ?>>2070 21 04</option>
-				<option value="3" <?php selected( $date_format, '3' ); ?>>2070 04 21</option>
-				<option value="4" <?php selected( $date_format, '4' ); ?>>21 Shrawan 2070</option>
-				<option value="5" <?php selected( $date_format, '5' ); ?>>2070 Shrawan 21</option>
-				<option value="6" <?php selected( $date_format, '6' ); ?>>21 Shrawan 2070, Monday</option>
-				<option value="7" <?php selected( $date_format, '7' ); ?>>Monday, 21 Shrawan 2070</option>
-				<option value="8" <?php selected( $date_format, '8' ); ?>>2070 Shrawan 21, Monday</option>
-				<option value="9" <?php selected( $date_format, '9' ); ?>>Monday, 2070 Shrawan 21</option>
-			</select>
-		</p>
-		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>"><?php _e( 'Date Format:', 'date-today-nepali' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>"><?php _e( 'Date Format:', 'date-today-nepali' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'display_format' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['display_format'] ); ?>" />
+
+			<?php $examples = date_today_nepali_get_example_formats(); ?>
+
+			<?php if ( ! empty( $examples ) ) : ?>
+				<table class="example">
+					<tr>
+						<td><strong>Format</strong></td>
+						<td><strong>Example</strong></td>
+					</tr>
+
+					<?php foreach ( $examples as $item ) : ?>
+						<tr>
+							<td><code><?php echo esc_html( $item['format'] ); ?></code></td>
+							<td><?php echo esc_html( $item['label'] ); ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</table><!-- .example -->
+			<?php endif; ?>
+
 		</p>
 		<?php
 	}
