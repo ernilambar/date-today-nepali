@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Date Today Nepali 2.3.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/date-today-nepali\n"
-"POT-Creation-Date: 2020-06-09 11:19:27+00:00\n"
+"POT-Creation-Date: 2020-06-09 11:50:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,44 +14,32 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: node-wp-i18n 1.2.3\n"
 
-#: core/widget-date-today-nepali.php:24
+#: core/widget-date-today-nepali.php:26
 msgid "Date Today Nepali Widget"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:27
+#: core/widget-date-today-nepali.php:29
 msgid "Date Display Widget"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:163
+#: core/widget-date-today-nepali.php:121
 msgid "Title:"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:167
+#: core/widget-date-today-nepali.php:125
 msgid "Display Language:"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:169
+#: core/widget-date-today-nepali.php:127
 msgid "Nepali"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:170
+#: core/widget-date-today-nepali.php:128
 msgid "English"
 msgstr ""
 
-#: core/widget-date-today-nepali.php:174
+#: core/widget-date-today-nepali.php:132 core/widget-date-today-nepali.php:146
 msgid "Date Format:"
-msgstr ""
-
-#: core/widget-date-today-nepali.php:188
-msgid "Date Separator:"
-msgstr ""
-
-#: core/widget-date-today-nepali.php:190
-msgid "Space"
-msgstr ""
-
-#: core/widget-date-today-nepali.php:191
-msgid "Dash"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

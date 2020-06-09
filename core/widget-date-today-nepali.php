@@ -43,7 +43,7 @@ class DTN_Widget extends WP_Widget {
 		$title            = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$display_language = ! empty( $instance['display_language'] ) ? $instance['display_language'] : 'en' ;
 		$date_format      = ! empty( $instance['date_format'] ) ? $instance['date_format'] : 4 ;
-		$date_separator   = ! empty( $instance['date_separator'] ) ? $instance['date_separator'] : 'space' ;
+		$display_format   = ! empty( $instance['display_format'] ) ? $instance['display_format'] : 'd F Y' ;
 
 		switch ( $date_separator ) {
 			case 'space':
@@ -92,7 +92,7 @@ class DTN_Widget extends WP_Widget {
 		$instance['title']            = sanitize_text_field( $new_instance['title'] );
 		$instance['display_language'] = sanitize_text_field( $new_instance['display_language'] );
 		$instance['date_format']      = absint( $new_instance['date_format'] );
-		$instance['date_separator']   = sanitize_text_field( $new_instance['date_separator'] );
+		$instance['display_format']   = sanitize_text_field( $new_instance['display_format'] );
 
 		return $instance;
 
@@ -110,12 +110,12 @@ class DTN_Widget extends WP_Widget {
 			'title'            => '',
 			'display_language' => 'en',
 			'date_format'      => 4,
-			'date_separator'   => 'space',
+			'display_format'   => 'd F Y',
 		) );
 		$title            = esc_attr( $instance['title'] );
 		$display_language = esc_attr( $instance['display_language'] );
 		$date_format      = absint( $instance['date_format'] );
-		$date_separator   = esc_attr( $instance['date_separator'] );
+		$display_format   = esc_attr( $instance['display_format'] );
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'date-today-nepali' ); ?></label>
@@ -143,11 +143,8 @@ class DTN_Widget extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>"><?php _e( 'Date Separator:', 'date-today-nepali' ); ?></label>
-			<select id="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'date_separator' ) ); ?>">
-				<option value="space" <?php selected( $date_separator, 'space' ); ?>>&nbsp; (<?php _e( 'Space', 'date-today-nepali' ); ?>)</option>
-				<option value="dash" <?php selected( $date_separator, 'dash' ); ?>>- (<?php _e( 'Dash', 'date-today-nepali' ); ?>)</option>
-			</select>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'date_separator' ) ); ?>"><?php _e( 'Date Format:', 'date-today-nepali' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'display_format' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['display_format'] ); ?>" />
 		</p>
 		<?php
 	}
