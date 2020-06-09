@@ -19,14 +19,14 @@ class DTN_Widget extends WP_Widget {
 	 *
 	 * @since 1.0.0
 	 */
-	function __construct() {
-
+	public function __construct() {
 		$opts = array(
 			'classname'                   => 'dtn_widget',
-			'description'                 => __( 'Date Today Nepali Widget', 'date-today-nepali' ),
+			'description'                 => esc_html__( 'Date Today Nepali Widget', 'date-today-nepali' ),
 			'customize_selective_refresh' => true,
-			);
-		parent::__construct( 'dtn-date-display-widget', __( 'Date Display Widget', 'date-today-nepali' ), $opts );
+		);
+
+		parent::__construct( 'dtn-date-display-widget', esc_html__( 'Date Display Widget', 'date-today-nepali' ), $opts );
 	}
 
 	/**
@@ -34,16 +34,13 @@ class DTN_Widget extends WP_Widget {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param array $args     Display arguments including before_title, after_title,
-	 *                        before_widget, and after_widget.
-	 * @param array $instance The settings for the particular instance of the widget.
+	 * @param array $args     Display arguments.
+	 * @param array $instance Widget instance.
 	 */
-	function widget( $args, $instance ) {
-
+	public function widget( $args, $instance ) {
 		$title            = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$display_language = ! empty( $instance['display_language'] ) ? $instance['display_language'] : 'en' ;
-		$date_format      = ! empty( $instance['date_format'] ) ? $instance['date_format'] : 4 ;
-		$display_format   = ! empty( $instance['display_format'] ) ? $instance['display_format'] : 'd F Y' ;
+		$display_language = ! empty( $instance['display_language'] ) ? $instance['display_language'] : 'en';
+		$display_format   = ! empty( $instance['display_format'] ) ? $instance['display_format'] : 'd F Y';
 
 		echo $args['before_widget'];
 
@@ -53,7 +50,7 @@ class DTN_Widget extends WP_Widget {
 
 		$obj = new NepaliDate();
 
-		$date_arr = explode( '-', date( 'Y-m-d' ) );
+		$date_arr = explode( '-', gmdate( 'Y-m-d' ) );
 
 		$date_details = $obj->getDetails( $date_arr[0], $date_arr[1], $date_arr[2], 'ad', $display_language );
 
@@ -62,7 +59,6 @@ class DTN_Widget extends WP_Widget {
 		echo $formatted_date;
 
 		echo $args['after_widget'];
-
 	}
 
 	/**
@@ -74,8 +70,7 @@ class DTN_Widget extends WP_Widget {
 	 * @param array $old_instance Old settings for this instance.
 	 * @return array Settings to save or bool false to cancel saving.
 	 */
-	function update( $new_instance, $old_instance ) {
-
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
 		$instance['title']            = sanitize_text_field( $new_instance['title'] );
@@ -83,7 +78,6 @@ class DTN_Widget extends WP_Widget {
 		$instance['display_format']   = sanitize_text_field( $new_instance['display_format'] );
 
 		return $instance;
-
 	}
 
 	/**
@@ -93,29 +87,30 @@ class DTN_Widget extends WP_Widget {
 	 *
 	 * @param array $instance Current settings.
 	 */
-	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array(
-			'title'            => '',
-			'display_language' => 'en',
-			'display_format'   => 'd F Y',
-		) );
-		$title            = esc_attr( $instance['title'] );
-		$display_language = esc_attr( $instance['display_language'] );
-		$display_format   = esc_attr( $instance['display_format'] );
+	public function form( $instance ) {
+		$instance = wp_parse_args(
+			(array) $instance,
+			array(
+				'title'            => '',
+				'display_language' => 'en',
+				'display_format'   => 'd F Y',
+			)
+		);
 		?>
+
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'date-today-nepali' ); ?></label>
-			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'date-today-nepali' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'display_language' ) ); ?>"><?php _e( 'Display Language:', 'date-today-nepali' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'display_language' ) ); ?>"><?php esc_html_e( 'Display Language:', 'date-today-nepali' ); ?></label>
 			<select id="<?php echo esc_attr( $this->get_field_id( 'display_language' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'display_language' ) ); ?>">
-				<option value="np" <?php selected( $display_language, 'np' ); ?>><?php _e( 'Nepali', 'date-today-nepali' ); ?></option>
-				<option value="en" <?php selected( $display_language, 'en' ); ?>><?php _e( 'English', 'date-today-nepali' ); ?></option>
+				<option value="np" <?php selected( $instance['display_language'], 'np' ); ?>><?php esc_html_e( 'Nepali', 'date-today-nepali' ); ?></option>
+				<option value="en" <?php selected( $instance['display_language'], 'en' ); ?>><?php esc_html_e( 'English', 'date-today-nepali' ); ?></option>
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>"><?php _e( 'Date Format:', 'date-today-nepali' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>"><?php esc_html_e( 'Date Format:', 'date-today-nepali' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'display_format' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['display_format'] ); ?>" />
 
 			<?php $examples = date_today_nepali_get_example_formats(); ?>

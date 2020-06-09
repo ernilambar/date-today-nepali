@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Date Today Nepali 2.3.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/date-today-nepali\n"
-"POT-Creation-Date: 2020-06-09 12:16:59+00:00\n"
+"POT-Creation-Date: 2020-06-09 12:22:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: node-wp-i18n 1.2.3\n"
 
-#: inc/class-dtn-widget.php:26
+#: inc/class-dtn-widget.php:25
 msgid "Date Today Nepali Widget"
 msgstr ""
 
@@ -22,23 +22,23 @@ msgstr ""
 msgid "Date Display Widget"
 msgstr ""
 
-#: inc/class-dtn-widget.php:107
+#: inc/class-dtn-widget.php:102
 msgid "Title:"
 msgstr ""
 
-#: inc/class-dtn-widget.php:111
+#: inc/class-dtn-widget.php:106
 msgid "Display Language:"
 msgstr ""
 
-#: inc/class-dtn-widget.php:113
+#: inc/class-dtn-widget.php:108
 msgid "Nepali"
 msgstr ""
 
-#: inc/class-dtn-widget.php:114
+#: inc/class-dtn-widget.php:109
 msgid "English"
 msgstr ""
 
-#: inc/class-dtn-widget.php:118
+#: inc/class-dtn-widget.php:113
 msgid "Date Format:"
 msgstr ""
 
