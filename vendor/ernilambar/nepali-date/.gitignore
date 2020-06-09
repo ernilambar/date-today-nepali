@@ -9,8 +9,9 @@ project.properties
 
 # Grunt
 /node_modules/
-/deploy/
-/build/
+
+# Composer
+vendor/
 
 # Docs
 /docs/
