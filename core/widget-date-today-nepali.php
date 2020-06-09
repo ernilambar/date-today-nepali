@@ -5,6 +5,8 @@
  * @package Date_Today_Nepali
  */
 
+use Nilambar\NepaliDate\NepaliDate;
+
 /**
  * DTN widget Class.
  *
@@ -57,62 +59,18 @@ class DTN_Widget extends WP_Widget {
 		echo $args['before_widget'];
 
 		if ( $title ) {
-			echo $args['before_title'] . $title . $args['after_title'];
+			echo $args['before_title'] . esc_html( $title ) . $args['after_title'];
 		}
 
-		$cal = new Nepali_Calendar();
+		$obj = new NepaliDate();
+
 		$date_arr = explode( '-', date( 'Y-m-d' ) );
 
-		$newd = $cal->eng_to_nep( $date_arr[0], $date_arr[1], $date_arr[2] );
+		$date_details = $obj->getDetails( $date_arr[0], $date_arr[1], $date_arr[2], 'ad', $display_language );
 
-		if ( 'np' === $display_language ) {
-			$newd = dtn_convert_to_nepali( $newd );
-		}
-		$today_date = '';
-		switch ( $date_format ) {
-			case 1:
-				// Format: 21 04 2070 !
-				$today_date .= $newd['date'] . $date_separator_value . $newd['month']. $date_separator_value . $newd['year'];
-				break;
-			case 2:
-				// Format: 2070 21 04 !
-				$today_date .= $newd['year'] . $date_separator_value . $newd['date'] . $date_separator_value . $newd['month'];
-				break;
-			case 3:
-				// Format: 2070 04 21 !
-				$today_date .= $newd['year'] . $date_separator_value . $newd['month'] . $date_separator_value . $newd['date'] ;
-				break;
-			case 4:
-				// Format: 21 Shrawan 2070 !
-				$today_date .= $newd['date'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['year'] ;
-				break;
-			case 5:
-				// Format: 2070 Shrawan 21 !
-				$today_date .= $newd['year'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['date'] ;
-				break;
-			case 6:
-				// Format: 21 Shrawan 2070, Monday !
-				$today_date .= $newd['date'] . $date_separator_value . $newd['month_name'] .
-				  $date_separator_value . $newd['year']. ', ' . $newd['day'] ;
-				break;
-			case 7:
-				// Format: Monday, 21 Shrawan 2070 !
-				$today_date .= $newd['day'] . ', ' . $newd['date'] . $date_separator_value . $newd['month_name'] .
-				  $date_separator_value . $newd['year'] ;
-				break;
-			case 8:
-				// Format: 2070 Shrawan 21, Monday !
-				$today_date .= $newd['year'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['date'] . ', ' . $newd['day'] ;
-				break;
-			case 9:
-				// Format: Monday, 2070 Shrawan 21 !
-				$today_date .= $newd['day'] . ', ' . $newd['year'] . $date_separator_value . $newd['month_name'] . $date_separator_value . $newd['date'] ;
-				break;
+		$formatted_date = $obj->getFormattedDate( $date_details, 'd F Y' );
 
-			default:
-				break;
-		}
-		echo $today_date;
+		echo $formatted_date;
 
 		echo $args['after_widget'];
 

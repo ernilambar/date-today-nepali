@@ -27,7 +27,8 @@ define( 'DATE_TODAY_NEPALI_LIB_DIR', DATE_TODAY_NEPALI_DIR . '/lib' );
 define( 'DATE_TODAY_NEPALI_CORE_DIR', DATE_TODAY_NEPALI_DIR . '/core' );
 
 // Include core.
-require_once( DATE_TODAY_NEPALI_CORE_DIR . '/init.php' );
+require_once DATE_TODAY_NEPALI_DIR . '/vendor/autoload.php';
+require_once DATE_TODAY_NEPALI_DIR . '/core/init.php';
 
 /**
  * Load plugin textdomain.
