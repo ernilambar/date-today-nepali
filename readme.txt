@@ -41,9 +41,8 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/dat
 
 == Screenshots ==
 
-1. Date widget when Nepali language is used in Wordpress
-2. Another screenshot in English language
-3. Sample display of date in front end
+1. Widget options
+2. Widget output
 
 == Changelog ==
 
