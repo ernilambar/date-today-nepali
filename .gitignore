@@ -7,7 +7,7 @@ project.properties
 .settings*
 .idea
 
-# Grunt
+# Node
 /node_modules/
 /deploy/
 /build/
@@ -23,3 +23,6 @@ project.properties
 
 # Windows junk
 Thumbs.db
+
+# Environment
+.env
