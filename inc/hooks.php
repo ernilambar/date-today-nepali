@@ -26,3 +26,20 @@ function date_today_nepali_load_widgets() {
 }
 
 add_action( 'widgets_init', 'date_today_nepali_load_widgets' );
+
+/**
+ * Add admin notice.
+ *
+ * @since 2.3.8
+ */
+function date_today_nepali_add_admin_notice() {
+	// Setup notice.
+	\Nilambar\AdminNotice\Notice::init(
+		array(
+			'slug' => 'date-today-nepali',
+			'name' => esc_html__( 'Date Today Nepali', 'date-today-nepali' ),
+		)
+	);
+}
+
+add_action( 'admin_init', 'date_today_nepali_add_admin_notice' );

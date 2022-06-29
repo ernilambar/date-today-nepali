@@ -10,6 +10,7 @@ class ComposerStaticInitc9232562740994ae1a0ece1bae12ce80
         'N' => 
         array (
             'Nilambar\\NepaliDate\\' => 20,
+            'Nilambar\\AdminNotice\\' => 21,
         ),
     );
 
@@ -17,6 +18,10 @@ class ComposerStaticInitc9232562740994ae1a0ece1bae12ce80
         'Nilambar\\NepaliDate\\' => 
         array (
             0 => __DIR__ . '/..' . '/ernilambar/nepali-date/src',
+        ),
+        'Nilambar\\AdminNotice\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ernilambar/wp-admin-notice/src',
         ),
     );
 
