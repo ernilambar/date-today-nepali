@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Nilambar\\NepaliDate\\' => array($vendorDir . '/ernilambar/nepali-date/src'),
+    'Nilambar\\AdminNotice\\' => array($vendorDir . '/ernilambar/wp-admin-notice/src'),
 );
