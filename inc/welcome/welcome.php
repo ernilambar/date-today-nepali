@@ -26,7 +26,7 @@ function date_today_nepali_render_welcome_page() {
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	}
 
-	$plugin_data = get_plugin_data( DATE_TODAY_NEPALI_BASEFILE );
+	$plugin_data = get_plugin_data( DATE_TODAY_NEPALI_BASE_FILEPATH );
 
 	$version     = $plugin_data['Version'];
 	$description = preg_replace( '~<cite(.*?)</cite>~Usi', '', $plugin_data['Description'] );
@@ -42,7 +42,7 @@ function date_today_nepali_render_welcome_page() {
 		</div>
 
 		<p>
-			<a href="https://wordpress.org/support/plugin/date-today-nepali/" class="button button-primary" target="_blank"><?php echo esc_html__( 'Support', 'date-today-nepali' ); ?></a>
+			<a href="https://wordpress.org/support/plugin/date-today-nepali/#new-post" class="button button-primary" target="_blank"><?php echo esc_html__( 'Support', 'date-today-nepali' ); ?></a>
 			<a href="https://wordpress.org/support/plugin/date-today-nepali/reviews/#new-post" class="button" target="_blank"><?php echo esc_html__( 'Leave a Review', 'date-today-nepali' ); ?></a>
 		</p>
 
