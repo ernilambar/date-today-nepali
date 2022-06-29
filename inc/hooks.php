@@ -45,3 +45,30 @@ function date_today_nepali_add_admin_notice() {
 }
 
 add_action( 'admin_init', 'date_today_nepali_add_admin_notice' );
+
+/**
+ * Customize plugin action links.
+ *
+ * @since 2.3.9
+ *
+ * @param array $actions Action links.
+ * @return array Modified action links.
+ */
+function date_today_nepali_custom_action_links( $actions ) {
+	$url = add_query_arg( array(
+			'page' => 'date-today-nepali-welcome',
+		),
+		admin_url( 'options-general.php' )
+	);
+
+	$actions = array_merge(
+		array(
+			'welcome' => '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Welcome', 'date-today-nepali' ) . '</a>',
+		),
+		$actions
+	);
+
+	return $actions;
+}
+
+add_filter( 'plugin_action_links_' . DATE_TODAY_NEPALI_BASE_FILENAME, 'date_today_nepali_custom_action_links' );
