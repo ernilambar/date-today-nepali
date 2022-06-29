@@ -50,3 +50,31 @@ function date_today_nepali_get_example_formats() {
 
 	return $output;
 }
+
+function date_today_nepali_get_blog_feed_items() {
+	$output = array();
+
+	$rss = fetch_feed( 'https://www.nilambar.net/category/wordpress/feed' );
+
+	$maxitems = 0;
+
+	$rss_items = array();
+
+	if ( ! is_wp_error( $rss ) ) {
+		$maxitems  = $rss->get_item_quantity( 5 );
+		$rss_items = $rss->get_items( 0, $maxitems );
+	}
+
+	if ( ! empty( $rss_items ) ) {
+		foreach ( $rss_items as $item ) {
+			$feed_item = array();
+
+			$feed_item['title'] = $item->get_title();
+			$feed_item['url']   = $item->get_permalink();
+
+			$output[] = $feed_item;
+		}
+	}
+
+	return $output;
+}
