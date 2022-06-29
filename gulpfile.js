@@ -5,10 +5,10 @@ require('dotenv').config()
 var rootPath = './';
 
 // Gulp.
-var gulp = require( 'gulp' );
+var gulp = require('gulp');
 
-// Gulp plugins.
-var gulpPlugins = require( 'gulp-load-plugins' )();
+// Zip.
+var zip = require('gulp-zip');
 
 // File system.
 var fs = require('fs');
@@ -39,7 +39,7 @@ gulp.task( 'watch', function() {
     });
 
     // Watch PHP files.
-    gulp.watch( rootPath + '**/**/*.php' ).on('change',browserSync.reload);
+    gulp.watch(rootPath + '**/**/*.php').on('change',browserSync.reload);
 });
 
 // Clean deploy folder.
@@ -49,8 +49,7 @@ gulp.task('clean:deploy', function() {
 
 // Copy to deploy folder.
 gulp.task('copy:deploy', function() {
-	const { zip } = gulpPlugins;
-	return gulp.src(deploy_files_list,{base:'.'})
+	return gulp.src(deploy_files_list, { base: '.' })
 	    .pipe(gulp.dest('deploy/' + pkg.name))
 	    .pipe(zip(pkg.name + '.zip'))
 	    .pipe(gulp.dest('deploy'))
