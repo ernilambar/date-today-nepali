@@ -19,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'DATE_TODAY_NEPALI_BASENAME', basename( dirname( __FILE__ ) ) );
+define( 'DATE_TODAY_NEPALI_BASEFILE', __FILE__ );
 define( 'DATE_TODAY_NEPALI_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'DATE_TODAY_NEPALI_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 
@@ -26,3 +27,4 @@ define( 'DATE_TODAY_NEPALI_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 require_once DATE_TODAY_NEPALI_DIR . '/vendor/autoload.php';
 require_once DATE_TODAY_NEPALI_DIR . '/inc/helpers.php';
 require_once DATE_TODAY_NEPALI_DIR . '/inc/hooks.php';
+require_once DATE_TODAY_NEPALI_DIR . '/inc/welcome/welcome.php';
