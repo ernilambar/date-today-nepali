@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Date Today Nepali 2.3.8\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/date-today-nepali\n"
-"POT-Creation-Date: 2022-06-29 05:45:32+00:00\n"
+"POT-Creation-Date: 2022-06-29 06:26:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,6 +44,78 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Date Today Nepali"
+msgstr ""
+
+#: inc/welcome/welcome.php:39
+msgid "Version: %s"
+msgstr ""
+
+#: inc/welcome/welcome.php:45
+msgid "Support"
+msgstr ""
+
+#: inc/welcome/welcome.php:46
+msgid "Leave a Review"
+msgstr ""
+
+#: inc/welcome/welcome.php:51
+msgid "How to Use (Using Widget)"
+msgstr ""
+
+#: inc/welcome/welcome.php:53
+msgid "Go to Appearance >> Widgets"
+msgstr ""
+
+#: inc/welcome/welcome.php:54
+msgid "Find MT: Posts From Category widget"
+msgstr ""
+
+#: inc/welcome/welcome.php:55
+msgid "Add the widget to the sidebar you want to use"
+msgstr ""
+
+#: inc/welcome/welcome.php:56
+msgid "Fill in the desired fields and we are good to go"
+msgstr ""
+
+#: inc/welcome/welcome.php:61
+msgid "How to Use (Using Shortcode)"
+msgstr ""
+
+#: inc/welcome/welcome.php:63
+msgid "Click here to see shortcode parameters"
+msgstr ""
+
+#: inc/welcome/welcome.php:67
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/welcome/welcome.php:69
+msgid "Advanced Google reCAPTCHA"
+msgstr ""
+
+#: inc/welcome/welcome.php:70
+msgid "Admin Customizer"
+msgstr ""
+
+#: inc/welcome/welcome.php:71
+msgid "WooCommerce Product Tabs"
+msgstr ""
+
+#: inc/welcome/welcome.php:72
+msgid "Post Grid Elementor Addon"
+msgstr ""
+
+#: inc/welcome/welcome.php:73
+msgid "Coming Soon & Maintenance Mode Page"
+msgstr ""
+
+#: inc/welcome/welcome.php:78
+msgid "Recommended Themes"
+msgstr ""
+
+#: inc/welcome/welcome.php:80
+msgid "Hait - Google Core Web Vitals Optimized"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

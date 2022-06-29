@@ -7,6 +7,8 @@
 
 /**
  * Load plugin textdomain.
+ *
+ * @since 1.0.0
  */
 function date_today_nepali_load_textdomain() {
 	load_plugin_textdomain( 'date-today-nepali' );
