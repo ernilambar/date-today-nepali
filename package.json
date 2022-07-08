@@ -4,27 +4,26 @@
   "version": "2.3.9",
   "license": "GPL-2.0+",
   "main_file": "date-today-nepali.php",
+	"repository": {
+		"type": "git",
+		"url": "https://codeberg.org/ernilambar/date-today-nepali"
+	},
   "scripts": {
-    "dev": "gulp",
-    "deploy": "gulp deploy",
     "version": "grunt version",
-		"preinstall": "npx only-allow pnpm",
+    "preinstall": "npx only-allow pnpm",
     "prewpdeploy": "gulp deploy",
-    "pot": "pnpm run textdomain && pnpm run language",
-    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+    "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-    "wpdeploy": "grunt wpdeploy"
+    "wpdeploy": "grunt wpdeploy",
+    "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to --config .copyfiles.json && cd deploy/ && bestzip ../date-today-nepali.zip * && cd .. && shx mv date-today-nepali.zip deploy/"
   },
-  "repository": "github:ernilambar/date-today-nepali",
   "devDependencies": {
-    "browser-sync": "^2.27.10",
-    "del": "^6.1.1",
-    "dotenv": "^16.0.1",
+    "bestzip": "^2.2.1",
+    "copy-files-from-to": "^3.2.2",
     "grunt": "^1.5.3",
     "grunt-replace": "^2.0.2",
     "grunt-wp-deploy": "^2.1.2",
-    "gulp": "^4.0.2",
-    "gulp-zip": "^5.1.0",
-    "node-wp-i18n": "^1.2.6"
+    "node-wp-i18n": "^1.2.6",
+    "shx": "^0.3.4"
   }
 }
