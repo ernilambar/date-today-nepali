@@ -1,0 +1,24 @@
+{
+	"copyFiles": [
+		{
+			"from": [
+				"**",
+				"!*.md",
+				"!*.json",
+				"!*.lock",
+				"!*.yaml",
+				"!*.config.js",
+				"!.git/",
+				"!Gruntfile.js",
+				"!gulpfile.js",
+				"!src/**/*",
+				"!node_modules/**/*",
+				"!deploy/**/*"
+			],
+			"to": "deploy/date-today-nepali/"
+		}
+	],
+	"copyFilesSettings": {
+		"ignoreDotFilesAndFolders": true
+	}
+}
