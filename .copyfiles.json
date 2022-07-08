@@ -15,7 +15,7 @@
 				"!node_modules/**/*",
 				"!deploy/**/*"
 			],
-			"to": "deploy/date-today-nepali/"
+			"to": "deploy/temp/"
 		}
 	],
 	"copyFilesSettings": {
