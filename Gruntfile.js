@@ -51,9 +51,9 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-wp-deploy');
-	grunt.loadNpmTasks('grunt-replace');
+	grunt.loadNpmTasks( 'grunt-wp-deploy' );
+	grunt.loadNpmTasks( 'grunt-replace' );
 
-	grunt.registerTask('wpdeploy', ['wp_deploy']);
-	grunt.registerTask('version', ['replace:readme', 'replace:main']);
+	grunt.registerTask( 'wpdeploy', [ 'wp_deploy' ] );
+	grunt.registerTask( 'version', [ 'replace:readme', 'replace:main' ] );
 };

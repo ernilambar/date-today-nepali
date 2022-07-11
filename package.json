@@ -10,12 +10,11 @@
 	},
   "scripts": {
     "version": "grunt version",
-    "preinstall": "npx only-allow pnpm",
-    "prewpdeploy": "gulp deploy",
+    "prewpdeploy": "bun run deploy",
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "wpdeploy": "grunt wpdeploy",
-    "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to --config .copyfiles.json && cd deploy/ && shx mv temp date-today-nepali && bestzip ../date-today-nepali.zip * && cd .. && shx mv date-today-nepali.zip deploy/"
+		"deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to --config .copyfiles.json && cd deploy/ && shx mv temp $npm_package_name && bestzip ../$npm_package_name.zip * && cd .. && shx mv $npm_package_name.zip deploy/"
   },
   "devDependencies": {
     "bestzip": "^2.2.1",
