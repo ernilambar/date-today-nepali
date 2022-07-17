@@ -12,6 +12,10 @@ class ComposerStaticInitc9232562740994ae1a0ece1bae12ce80
             'Nilambar\\NepaliDate\\' => 20,
             'Nilambar\\AdminNotice\\' => 21,
         ),
+        'D' => 
+        array (
+            'DateTodayNepali\\' => 16,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -22,6 +26,10 @@ class ComposerStaticInitc9232562740994ae1a0ece1bae12ce80
         'Nilambar\\AdminNotice\\' => 
         array (
             0 => __DIR__ . '/..' . '/ernilambar/wp-admin-notice/src',
+        ),
+        'DateTodayNepali\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 

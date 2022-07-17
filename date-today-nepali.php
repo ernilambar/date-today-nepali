@@ -13,6 +13,8 @@
  * @package Date_Today_Nepali
  */
 
+namespace DateTodayNepali;
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -24,8 +26,9 @@ define( 'DATE_TODAY_NEPALI_BASE_FILENAME', plugin_basename( __FILE__ ) );
 define( 'DATE_TODAY_NEPALI_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'DATE_TODAY_NEPALI_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 
-// Include files.
+// Include autoload.
 require_once DATE_TODAY_NEPALI_DIR . '/vendor/autoload.php';
-require_once DATE_TODAY_NEPALI_DIR . '/inc/helpers.php';
-require_once DATE_TODAY_NEPALI_DIR . '/inc/hooks.php';
-require_once DATE_TODAY_NEPALI_DIR . '/inc/welcome/welcome.php';
+
+if ( class_exists( 'DateTodayNepali\Init' ) ) {
+	\DateTodayNepali\Init::register_services();
+}
