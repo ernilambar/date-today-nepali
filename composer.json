@@ -2,5 +2,10 @@
   "require": {
     "ernilambar/nepali-date": "^1.0.5",
     "ernilambar/wp-admin-notice": "^1.0"
-  }
+  },
+	"autoload" : {
+		"psr-4": {
+			"DateTodayNepali\\": "app/"
+		}
+	}
 }

@@ -1,18 +1,22 @@
 <?php
 /**
- * Widget class
+ * Date widget
  *
  * @package Date_Today_Nepali
  */
 
+namespace DateTodayNepali\Widgets;
+
 use Nilambar\NepaliDate\NepaliDate;
+use DateTodayNepali\Common\Utils;
+use \WP_Widget;
 
 /**
- * Widget class.
+ * Date widget class.
  *
  * @since 1.0.0
  */
-class DTN_Widget extends WP_Widget {
+class Dtn extends WP_Widget {
 
 	/**
 	 * Constructor.
@@ -113,7 +117,7 @@ class DTN_Widget extends WP_Widget {
 			<label for="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>"><?php esc_html_e( 'Date Format:', 'date-today-nepali' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'display_format' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'display_format' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['display_format'] ); ?>" />
 
-			<?php $examples = date_today_nepali_get_example_formats(); ?>
+			<?php $examples = Utils::get_example_formats(); ?>
 
 			<?php if ( ! empty( $examples ) ) : ?>
 				<table class="example">

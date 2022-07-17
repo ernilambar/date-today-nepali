@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e91cf5bbfd328e46c55cbde8d7465733d487a7f1',
+        'reference' => 'a3b11de38bb3e2c6225866f2423c5c40b31796c9',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e91cf5bbfd328e46c55cbde8d7465733d487a7f1',
+            'reference' => 'a3b11de38bb3e2c6225866f2423c5c40b31796c9',
             'dev_requirement' => false,
         ),
         'ernilambar/nepali-date' => array(

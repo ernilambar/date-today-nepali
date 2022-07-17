@@ -6,7 +6,6 @@
 				"!*.md",
 				"!*.json",
 				"!*.lock",
-				"!*.lockb",
 				"!*.yaml",
 				"!*.config.js",
 				"!.git/",
