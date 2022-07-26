@@ -10,7 +10,8 @@
   },
   "scripts": {
     "version": "grunt version",
-    "prewpdeploy": "bun run deploy",
+		"prewpdeploy": "pnpm run deploy",
+		"predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "wpdeploy": "grunt wpdeploy",
