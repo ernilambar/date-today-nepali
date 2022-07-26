@@ -7,5 +7,16 @@
 		"psr-4": {
 			"DateTodayNepali\\": "app/"
 		}
+	},
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^2.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  },
+	"scripts": {
+		"pc:info": "phpcs -i",
+		"pc:config": "phpcs --config-show",
+		"lint": "phpcs .",
+		"lint:fix": "phpcbf ."
 	}
 }
