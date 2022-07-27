@@ -7,6 +7,11 @@
 
 namespace DateTodayNepali;
 
+/**
+ * Init class.
+ *
+ * @since 1.0.0
+ */
 final class Init {
 
 	/**
@@ -15,18 +20,16 @@ final class Init {
 	 * @return array Full list of classes.
 	 */
 	public static function get_services() {
-		 return array(
-			 Core\Core::class,
-			 Admin\Admin::class,
-			 Admin\Welcome::class,
-		 );
+		return array(
+			Core\Core::class,
+			Admin\Admin::class,
+			Admin\Welcome::class,
+		);
 	}
 
 	/**
 	 * Loop through the classes, initialize them,
 	 * and call the register() method if it exists
-	 *
-	 * @return
 	 */
 	public static function register_services() {
 		foreach ( self::get_services() as $class ) {
@@ -44,7 +47,7 @@ final class Init {
 	 * @return class instance  New instance of the class.
 	 */
 	private static function instantiate( $class ) {
-		 $service = new $class();
+		$service = new $class();
 
 		return $service;
 	}

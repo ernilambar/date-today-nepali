@@ -15,6 +15,11 @@ use Nilambar\AdminNotice\Notice;
  * @since 1.0.0
  */
 class Admin {
+	/**
+	 * Register.
+	 *
+	 * @since 2.3.8
+	 */
 	public function register() {
 		add_action( 'admin_init', array( $this, 'add_admin_notice' ) );
 		add_filter( 'plugin_action_links_' . DATE_TODAY_NEPALI_BASE_FILENAME, array( $this, 'customize_plugin_action_links' ) );

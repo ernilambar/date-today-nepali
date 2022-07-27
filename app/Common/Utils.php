@@ -60,6 +60,13 @@ class Utils {
 		return $output;
 	}
 
+	/**
+	 * Return blog posts
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return array Posts array.
+	 */
 	public static function get_blog_feed_items() {
 		$output = array();
 

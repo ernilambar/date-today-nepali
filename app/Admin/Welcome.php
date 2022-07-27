@@ -15,15 +15,30 @@ use DateTodayNepali\Common\Utils;
  * @since 1.0.0
  */
 class Welcome {
+	/**
+	 * Register.
+	 *
+	 * @since 2.3.8
+	 */
 	public function register() {
 		add_action( 'admin_menu', array( $this, 'add_welcome_menu' ) );
 		add_action( 'admin_head', array( $this, 'add_welcome_style' ) );
 	}
 
+	/**
+	 * Add welcome menu.
+	 *
+	 * @since 2.3.8
+	 */
 	public function add_welcome_menu() {
 		add_options_page( esc_html__( 'Date Today Nepali', 'date-today-nepali' ), esc_html__( 'Date Today Nepali', 'date-today-nepali' ), 'manage_options', 'date-today-nepali-welcome', array( $this, 'render_welcome' ) );
 	}
 
+	/**
+	 * Render welcome page content.
+	 *
+	 * @since 2.3.8
+	 */
 	public function render_welcome() {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
@@ -42,7 +57,8 @@ class Welcome {
 		<div class="wrap about-wrap ns-wrap">
 			<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 
-			<p class="about-text"><?php echo sprintf( esc_html__( 'Version: %s', 'date-today-nepali' ), $version ); ?></p>
+			<?php // translators: %s Version. ?>
+			<p class="about-text"><?php echo sprintf( esc_html__( 'Version: %s', 'date-today-nepali' ), esc_html( $version ) ); ?></p>
 
 			<div class="about-text">
 				<?php echo wp_kses_post( wpautop( $description ) ); ?>
