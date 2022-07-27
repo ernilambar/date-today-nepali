@@ -15,6 +15,11 @@ use DateTodayNepali\Widgets\Dtn;
  * @since 1.0.0
  */
 class Core {
+	/**
+	 * Register.
+	 *
+	 * @since 2.3.8
+	 */
 	public function register() {
 		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 		add_action( 'widgets_init', array( $this, 'register_widgets' ) );
@@ -25,7 +30,7 @@ class Core {
 	 *
 	 * @since 1.0.0
 	 */
-	function load_textdomain() {
+	public function load_textdomain() {
 		load_plugin_textdomain( 'date-today-nepali' );
 	}
 
@@ -34,7 +39,7 @@ class Core {
 	 *
 	 * @since 1.0.0
 	 */
-	function register_widgets() {
+	public function register_widgets() {
 		register_widget( Dtn::class );
 	}
 }

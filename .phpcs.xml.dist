@@ -8,6 +8,7 @@
 
 	<!-- Exclude files and folders -->
 	<exclude-pattern>*/bower-components/*</exclude-pattern>
+	<exclude-pattern>*/deploy/*</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/languages/*</exclude-pattern>

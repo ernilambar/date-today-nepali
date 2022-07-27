@@ -46,10 +46,10 @@ class Dtn extends WP_Widget {
 		$display_language = ! empty( $instance['display_language'] ) ? $instance['display_language'] : 'en';
 		$display_format   = ! empty( $instance['display_format'] ) ? $instance['display_format'] : 'd F Y';
 
-		echo $args['before_widget'];
+		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		if ( $title ) {
-			echo $args['before_title'] . esc_html( $title ) . $args['after_title'];
+			echo $args['before_title'] . esc_html( $title ) . $args['after_title']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 		$obj = new NepaliDate();
@@ -60,9 +60,9 @@ class Dtn extends WP_Widget {
 
 		$formatted_date = $obj->getFormattedDate( $date_details, esc_attr( $display_format ) );
 
-		echo $formatted_date;
+		echo $formatted_date; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
-		echo $args['after_widget'];
+		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
