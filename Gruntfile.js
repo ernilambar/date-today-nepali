@@ -47,6 +47,21 @@ module.exports = function(grunt) {
 						expand: true, flatten: true, src: ['<%= pkg.main_file %>'], dest: './'
 					}
 				]
+			},
+			define: {
+				options: {
+					patterns: [
+						{
+							match: /define\( \'DATE_TODAY_NEPALI_VERSION\'\, \'(.+)\'/gm,
+							replacement: "define( 'DATE_TODAY_NEPALI_VERSION', '<%= pkg.version %>'"
+						}
+					]
+				},
+				files: [
+					{
+						expand: true, flatten: true, src: ['<%= pkg.main_file %>'], dest: './'
+					}
+				]
 			}
 		}
 	});
@@ -55,5 +70,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-replace' );
 
 	grunt.registerTask( 'wpdeploy', [ 'wp_deploy' ] );
-	grunt.registerTask( 'version', [ 'replace:readme', 'replace:main' ] );
+	grunt.registerTask( 'version', [ 'replace:readme', 'replace:main', 'replace:define' ] );
 };
