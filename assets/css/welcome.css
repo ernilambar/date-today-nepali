@@ -1,0 +1,38 @@
+.ns-wrap .ns-page {
+	display: flex;
+	gap: 1rem;
+}
+.ns-wrap .ns-content {
+	width: 100%;
+}
+.ns-wrap .ns-section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+.ns-wrap .ns-sidebar {
+	flex: 0 0 280px;
+}
+.ns-wrap .card {
+	margin-top: 0;
+	padding: 0.7em 1em 1em;
+}
+.ns-wrap h3 {
+	font-size: 1.3em;
+	margin: 0 0 0.6em;
+}
+.ns-wrap h3 span {
+	font-size: 1em;
+}
+.ns-wrap p,
+.about-wrap .about-text {
+	font-size: 15px;
+}
+.ns-wrap .ns-page ol,
+.ns-wrap .ns-page ul {
+	margin-left: 1em;
+	list-style-position: outside;
+}
+.ns-wrap .ns-page ul {
+	list-style-type: disc;
+}

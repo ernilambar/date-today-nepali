@@ -61,7 +61,7 @@ class Utils {
 	}
 
 	/**
-	 * Return blog posts
+	 * Return blog posts.
 	 *
 	 * @since 1.0.0
 	 *

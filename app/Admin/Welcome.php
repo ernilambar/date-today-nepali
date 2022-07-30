@@ -22,7 +22,10 @@ class Welcome {
 	 */
 	public function register() {
 		add_action( 'admin_menu', array( $this, 'add_welcome_menu' ) );
-		add_action( 'admin_head', array( $this, 'add_welcome_style' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'add_welcome_assets' ) );
+
+		add_action( 'wp_ajax_nopriv_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
+		add_action( 'wp_ajax_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
 	}
 
 	/**
@@ -111,15 +114,9 @@ class Welcome {
 					<div class="ns-box">
 						<h3><span>Recent Blog Posts</span></h3>
 						<div class="ns-box-content">
-							<?php $rss_items = Utils::get_blog_feed_items(); ?>
 
-							<?php if ( ! empty( $rss_items ) ) : ?>
-								<ul>
-									<?php foreach ( $rss_items as $item ) : ?>
-										<li><a href="<?php echo esc_url( $item['url'] ); ?>" target="_blank"><?php echo esc_html( $item['title'] ); ?></a></li>
-									<?php endforeach; ?>
-								</ul>
-							<?php endif; ?>
+							<div id="ns-blog-list"></div><!-- #ns-blog-list -->
+
 						</div> <!-- .ns-box-content -->
 
 					</div><!-- .postbox -->
@@ -131,61 +128,46 @@ class Welcome {
 	}
 
 	/**
-	 * Add styles for welcome page.
+	 * Load assets for welcome page.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $hook Hook name.
+	 */
+	public function add_welcome_assets( $hook ) {
+		if ( 'settings_page_date-today-nepali-welcome' !== $hook ) {
+			return;
+		}
+
+		wp_enqueue_style( 'date-today-nepali-welcome', DATE_TODAY_NEPALI_URL . '/assets/css/welcome.css', array(), DATE_TODAY_NEPALI_VERSION );
+
+		wp_enqueue_script( 'date-today-nepali-blog-posts', DATE_TODAY_NEPALI_URL . '/assets/js/blog-posts.js', array(), DATE_TODAY_NEPALI_VERSION, true );
+
+		$data = array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		);
+
+		wp_localize_script( 'date-today-nepali-blog-posts', 'NSBL', $data );
+	}
+
+	/**
+	 * AJAX callback for blog posts.
 	 *
 	 * @since 1.0.0
 	 */
-	public function add_welcome_style() {
-		$current_screen = get_current_screen();
+	public function get_posts_ajax_callback() {
+		$output = array();
 
-		if ( ! $current_screen ) {
-			return;
+		$posts = Utils::get_blog_feed_items();
+
+		if ( ! empty( $posts ) ) {
+			$output = $posts;
 		}
 
-		if ( 'settings_page_date-today-nepali-welcome' !== $current_screen->id ) {
-			return;
+		if ( ! empty( $output ) ) {
+			wp_send_json_success( $output, 200 );
+		} else {
+			wp_send_json_error( $output, 404 );
 		}
-		?>
-		<style>
-			.ns-wrap .ns-page {
-				display: flex;
-				gap: 1rem;
-			}
-			.ns-wrap .ns-content {
-				width: 100%;
-			}
-			.ns-wrap .ns-section {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 1rem;
-			}
-			.ns-wrap .ns-sidebar {
-				flex: 0 0 280px;
-			}
-			.ns-wrap .card {
-				margin-top: 0;
-				padding: 0.7em 1em 1em;
-			}
-			.ns-wrap h3 {
-				font-size: 1.3em;
-				margin: 0 0 0.6em;
-			}
-			.ns-wrap h3 span {
-				font-size: 1em;
-			}
-			.ns-wrap p,
-			.about-wrap .about-text {
-				font-size: 15px;
-			}
-			.ns-wrap .ns-page ol,
-			.ns-wrap .ns-page ul {
-				margin-left: 1em;
-				list-style-position: outside;
-			}
-			.ns-wrap .ns-page ul {
-				list-style-type: disc;
-			}
-		</style>
-		<?php
 	}
 }
