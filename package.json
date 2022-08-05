@@ -9,19 +9,23 @@
     "url": "https://codeberg.org/ernilambar/date-today-nepali"
   },
   "scripts": {
+    "dev": "grunt dev",
     "version": "grunt version",
-		"prewpdeploy": "pnpm run deploy",
-		"predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
+    "prewpdeploy": "pnpm run deploy",
+    "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "wpdeploy": "grunt wpdeploy",
-		"deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
+    "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
   },
   "devDependencies": {
     "bestzip": "^2.2.1",
     "copy-files-from-to": "^3.2.2",
     "cross-var": "^1.1.0",
+    "dotenv": "^16.0.1",
     "grunt": "^1.5.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-replace": "^2.0.2",
     "grunt-wp-deploy": "^2.1.2",
     "node-wp-i18n": "^1.2.6",

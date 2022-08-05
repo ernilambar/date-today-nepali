@@ -1,8 +1,19 @@
+require('dotenv').config();
+var browserSync = require("browser-sync");
+
 module.exports = function(grunt) {
 	'use strict';
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON( 'package.json' ),
+
+		watch: {
+			options: {
+				spawn: false
+			},
+			files: '*.php',
+			tasks: ['bs-inject']
+		},
 
 		wp_deploy: {
 			deploy: {
@@ -68,6 +79,25 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks( 'grunt-wp-deploy' );
 	grunt.loadNpmTasks( 'grunt-replace' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+
+	// Init BrowserSync manually
+	grunt.registerTask("bs-init", function () {
+		var done = this.async();
+		browserSync({
+			open: true,
+			proxy: process.env.DEV_SERVER_URL,
+		}, function (err, bs) {
+				done();
+		});
+	});
+
+	// Inject CSS files to the browser
+	grunt.registerTask("bs-inject", function () {
+			browserSync.reload();
+	});
+
+	grunt.registerTask('dev', ['bs-init', 'watch']);
 
 	grunt.registerTask( 'wpdeploy', [ 'wp_deploy' ] );
 	grunt.registerTask( 'version', [ 'replace:readme', 'replace:main', 'replace:define' ] );
