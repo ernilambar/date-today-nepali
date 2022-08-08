@@ -115,7 +115,7 @@ class Welcome {
 						<h3><span>Recent Blog Posts</span></h3>
 						<div class="ns-box-content">
 
-							<div id="ns-blog-list"></div><!-- #ns-blog-list -->
+							<div class="ns-blog-list"></div>
 
 						</div> <!-- .ns-box-content -->
 
