@@ -110,12 +110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-welcome.git",
-                "reference": "433759c1ed5c1cddf0f986c33a98543e02cb3592"
+                "reference": "0f6724b7859025719f6bafbf6755396ac6b9569c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/433759c1ed5c1cddf0f986c33a98543e02cb3592",
-                "reference": "433759c1ed5c1cddf0f986c33a98543e02cb3592",
+                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/0f6724b7859025719f6bafbf6755396ac6b9569c",
+                "reference": "0f6724b7859025719f6bafbf6755396ac6b9569c",
                 "shasum": ""
             },
             "require": {
@@ -145,7 +145,7 @@
                 "issues": "https://github.com/ernilambar/wp-welcome/issues",
                 "source": "https://github.com/ernilambar/wp-welcome/tree/1.0.1"
             },
-            "time": "2022-09-21T04:41:49+00:00"
+            "time": "2022-09-23T16:26:55+00:00"
         }
     ],
     "packages-dev": [
