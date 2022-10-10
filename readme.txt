@@ -47,7 +47,7 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 
 == Changelog ==
 
-= 2.4.3 - 25 Sep 2022 =
+= 2.4.3 - 10 Oct 2022 =
 * Update dashboard
 * Minor bug fixes
 

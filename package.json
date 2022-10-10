@@ -18,8 +18,10 @@
     "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
   },
   "wpDeployer": {
+		"repoType": "plugin",
     "username": "rabmalin",
-    "buildDir": "deploy/date-today-nepali"
+    "buildDir": "deploy/date-today-nepali",
+		"deployAssets": false
   },
   "devDependencies": {
     "bestzip": "^2.2.1",
