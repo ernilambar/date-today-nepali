@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Date Today Nepali 2.4.3\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/date-today-nepali\n"
-"POT-Creation-Date: 2022-09-22 16:51:30+00:00\n"
+"POT-Creation-Date: 2022-10-10 10:51:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,50 +18,12 @@ msgstr ""
 msgid "Date Today Nepali"
 msgstr ""
 
-#: app/Admin/Admin.php:54 app/Admin/Admin.php:83
-msgid "Get Support"
+#: app/Admin/Admin.php:48
+#. translators: %s: Version
+msgid "Version: %s"
 msgstr ""
 
-#: app/Admin/Admin.php:59 app/Admin/Admin.php:137
-msgid "Leave a Review"
-msgstr ""
-
-#: app/Admin/Admin.php:73
-msgid "Using Widget"
-msgstr ""
-
-#: app/Admin/Admin.php:85
-msgid ""
-"Got some question or found bug or got some feedbacks? Please visit support "
-"forum in the WordPress.org directory."
-msgstr ""
-
-#: app/Admin/Admin.php:86
-msgid "Visit Support"
-msgstr ""
-
-#: app/Admin/Admin.php:92
-msgid "Our Plugins"
-msgstr ""
-
-#: app/Admin/Admin.php:105
-msgid "Our Themes"
-msgstr ""
-
-#: app/Admin/Admin.php:139
-#. translators: 1: Name
-msgid "Are you are enjoying %1$s? We would appreciate a review."
-msgstr ""
-
-#: app/Admin/Admin.php:140
-msgid "Submit Review"
-msgstr ""
-
-#: app/Admin/Admin.php:149
-msgid "Recent Blog Posts"
-msgstr ""
-
-#: app/Admin/Admin.php:188
+#: app/Admin/Admin.php:190
 msgid "Welcome"
 msgstr ""
 

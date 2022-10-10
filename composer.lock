@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45a0cac5686c4bad422a204f4831cd85",
+    "content-hash": "6a416c020b284f39b2e3b5b2feb04159",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -110,12 +110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-welcome.git",
-                "reference": "0f6724b7859025719f6bafbf6755396ac6b9569c"
+                "reference": "1f80ec69bfe76622e172798281bb06a76fcb2c0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/0f6724b7859025719f6bafbf6755396ac6b9569c",
-                "reference": "0f6724b7859025719f6bafbf6755396ac6b9569c",
+                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/1f80ec69bfe76622e172798281bb06a76fcb2c0c",
+                "reference": "1f80ec69bfe76622e172798281bb06a76fcb2c0c",
                 "shasum": ""
             },
             "require": {
@@ -145,7 +145,7 @@
                 "issues": "https://github.com/ernilambar/wp-welcome/issues",
                 "source": "https://github.com/ernilambar/wp-welcome/tree/1.0.1"
             },
-            "time": "2022-09-23T16:26:55+00:00"
+            "time": "2022-09-30T10:16:27+00:00"
         }
     ],
     "packages-dev": [
@@ -509,7 +509,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.6"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
 }

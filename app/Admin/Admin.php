@@ -43,20 +43,23 @@ class Admin {
 
 		$obj->set_page(
 			array(
-				'menu_title' => esc_html__( 'Date Today Nepali', 'date-today-nepali' ),
-				'menu_slug'  => 'date-today-nepali-welcome',
+				'page_title'    => esc_html__( 'Date Today Nepali', 'date-today-nepali' ),
+				/* translators: %s: Version */
+				'page_subtitle' => sprintf( esc_html__( 'Version: %s', 'date-today-nepali' ), DATE_TODAY_NEPALI_VERSION ),
+				'menu_title'    => esc_html__( 'Date Today Nepali', 'date-today-nepali' ),
+				'menu_slug'     => 'date-today-nepali-welcome',
 			)
 		);
 
 		$obj->set_quick_links(
 			array(
 				array(
-					'text' => esc_html__( 'Get Support', 'date-today-nepali' ),
+					'text' => 'Get Support',
 					'url'  => 'https://wordpress.org/support/plugin/date-today-nepali/#new-post',
 					'type' => 'primary',
 				),
 				array(
-					'text' => esc_html__( 'Leave a Review', 'date-today-nepali' ),
+					'text' => 'Leave a Review',
 					'url'  => 'https://wordpress.org/support/plugin/date-today-nepali/reviews/#new-post',
 					'type' => 'secondary',
 				),
@@ -70,7 +73,7 @@ class Admin {
 				'type'  => 'grid',
 				'items' => array(
 					array(
-						'title'       => esc_html__( 'Using Widget', 'date-today-nepali' ),
+						'title'       => 'Using Widget',
 						'icon'        => 'dashicons dashicons-megaphone',
 						'description' => "<ol>
 															<li>Go to Appearance -> Widgets</li>
@@ -80,16 +83,16 @@ class Admin {
 														</ol>",
 					),
 					array(
-						'title'       => esc_html__( 'Get Support', 'date-today-nepali' ),
+						'title'       => 'Get Support',
 						'icon'        => 'dashicons dashicons-sos',
-						'description' => esc_html__( 'Got some question or found bug or got some feedbacks? Please visit support forum in the WordPress.org directory.', 'date-today-nepali' ),
-						'button_text' => esc_html__( 'Visit Support', 'date-today-nepali' ),
+						'description' => 'Got some question or found bug or got some feedbacks? Please visit support forum in the WordPress.org directory.',
+						'button_text' => 'Visit Support',
 						'button_url'  => 'https://wordpress.org/support/plugin/date-today-nepali/#new-post',
 						'button_type' => 'secondary',
 						'is_new_tab'  => true,
 					),
 					array(
-						'title'       => esc_html__( 'Our Plugins', 'date-today-nepali' ),
+						'title'       => 'Our Plugins',
 						'icon'        => 'dashicons dashicons-admin-plugins',
 						'description' => '<ul>
 															<li><a href="https://wpconcern.com/plugins/woocommerce-product-tabs/" target="_blank">WooCommerce Product Tabs</a></li>
@@ -102,7 +105,7 @@ class Admin {
 															</ul>',
 					),
 					array(
-						'title'       => esc_html__( 'Our Themes', 'date-today-nepali' ),
+						'title'       => 'Our Themes',
 						'icon'        => 'dashicons dashicons-desktop',
 						'description' => '<ul>
 															<li><a href="https://wordpress.org/themes/simple-life/" target="_blank">Simple Life</a></li>
@@ -134,10 +137,9 @@ class Admin {
 	public function render_sidebar( $object ) {
 		$object->render_sidebar_box(
 			array(
-				'title'        => esc_html__( 'Leave a Review', 'date-today-nepali' ),
-				/* translators: 1: Name */
-				'content'      => $object->get_stars() . sprintf( esc_html__( 'Are you are enjoying %1$s? We would appreciate a review.', 'date-today-nepali' ), $object->get_name() ),
-				'button_text'  => esc_html__( 'Submit Review', 'date-today-nepali' ),
+				'title'        => 'Leave a Review',
+				'content'      => $object->get_stars() . sprintf( 'Are you enjoying %s? We would appreciate a review.', $object->get_name() ),
+				'button_text'  => 'Submit Review',
 				'button_url'   => 'https://wordpress.org/support/plugin/date-today-nepali/reviews/#new-post',
 				'button_class' => 'button',
 			),
@@ -146,7 +148,7 @@ class Admin {
 
 		$object->render_sidebar_box(
 			array(
-				'title'   => esc_html__( 'Recent Blog Posts', 'date-today-nepali' ),
+				'title'   => 'Recent Blog Posts',
 				'content' => '<div class="ns-blog-list"></div>',
 			),
 			$object
