@@ -6,7 +6,7 @@ Tags: nepali, date, widget, ClassicPress
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 2.4.5
+Stable tag: 2.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,7 +47,7 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 
 == Changelog ==
 
-= 2.4.5 - 21 Oct 2022 =
+= 2.4.6 - 21 Oct 2022 =
 * Fix ClassicPress compatibility
 
 = 2.4.3 - 10 Oct 2022 =
