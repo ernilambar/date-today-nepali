@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "date-today-nepali/date",
+	"version": "0.1.0",
+	"title": "Date Today Nepali",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Nepali date block",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "date",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"displayLanguage": {
+				"type": "string",
+				"default": "np"
+		},
+		"displayFormat": {
+				"type": "string",
+				"default": "d F Y"
+		}
+	}
+}
