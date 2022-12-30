@@ -15,6 +15,8 @@
 
 namespace DateTodayNepali;
 
+use Nilambar\NepaliDate\NepaliDate;
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -44,3 +46,25 @@ if ( file_exists( DATE_TODAY_NEPALI_DIR . '/vendor/autoload.php' ) ) {
 if ( class_exists( 'DateTodayNepali\Init' ) ) {
 	\DateTodayNepali\Init::register_services();
 }
+
+add_action( 'init', function(){
+	register_block_type( DATE_TODAY_NEPALI_DIR . '/build', array(
+		'render_callback' => function( $attributes ) {
+			ob_start();
+
+			$obj = new NepaliDate();
+
+			$date_arr = explode( '-', gmdate( 'Y-m-d' ) );
+
+			$date_details = $obj->getDetails( $date_arr[0], $date_arr[1], $date_arr[2], 'ad', $attributes['displayLanguage'] );
+
+			$formatted_date = $obj->getFormattedDate( $date_details, esc_attr( $attributes['displayFormat'] ) );
+			?>
+			<div <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>>
+				<?php echo $formatted_date; ?>
+			</div>
+			<?php
+			return ob_get_clean();
+		},
+	) );
+} );

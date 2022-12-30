@@ -9,6 +9,8 @@
     "url": "https://github.com/ernilambar/date-today-nepali"
   },
   "scripts": {
+    "dev": "wp-scripts start --webpack-src-dir=gb-block --output-path=build",
+    "build": "wp-scripts build --webpack-src-dir=gb-block --output-path=build",
     "version": "easy-replace-in-files",
     "prewpdeploy": "pnpm run deploy",
     "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
@@ -24,6 +26,8 @@
     "deployAssets": false
   },
   "devDependencies": {
+    "@wordpress/scripts": "^25.0.0",
+    "@wordpress/server-side-render": "^4.0.0",
     "bestzip": "^2.2.1",
     "copy-files-from-to": "^3.2.2",
     "cross-var": "^1.1.0",
