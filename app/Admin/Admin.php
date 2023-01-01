@@ -11,7 +11,6 @@ use DateTodayNepali\Common\Utils;
 use Nilambar\AdminNotice\Notice;
 use Nilambar\Welcome\Welcome;
 
-
 /**
  * Admin class.
  *

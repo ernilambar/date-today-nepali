@@ -23,6 +23,7 @@ final class Init {
 		return array(
 			Core\Core::class,
 			Admin\Admin::class,
+			Blocks\Block::class,
 		);
 	}
 
