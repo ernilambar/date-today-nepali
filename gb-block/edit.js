@@ -17,13 +17,51 @@ import { __ } from '@wordpress/i18n';
  */
 import { useBlockProps } from '@wordpress/block-editor';
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './editor.scss';
+function FormatMessage() {
+  return (
+    <table class="example">
+			<tbody>
+				<tr>
+					<td><strong>Format</strong></td>
+					<td><strong>Example</strong></td>
+				</tr>
+
+				<tr>
+					<td><code>d F Y</code></td>
+					<td>१८ जेठ २०७७</td>
+				</tr>
+				<tr>
+					<td><code>F d, Y</code></td>
+					<td>जेठ १८, २०७७</td>
+				</tr>
+				<tr>
+					<td><code>Y F d</code></td>
+					<td>२०७७ जेठ १८</td>
+				</tr>
+				<tr>
+					<td><code>l, d F Y</code></td>
+					<td>आइतबार, १८ जेठ २०७७</td>
+				</tr>
+				<tr>
+					<td><code>d.m.y</code></td>
+					<td>१८.०२.७७</td>
+				</tr>
+				<tr>
+					<td><code>Y.m.d</code></td>
+					<td>२०७७.०२.१८</td>
+				</tr>
+				<tr>
+					<td><code>D, d F</code></td>
+					<td>आइत, १८ जेठ</td>
+				</tr>
+				<tr>
+					<td><code>Y F d, l</code></td>
+					<td>२०७७ जेठ १८, आइतबार</td>
+				</tr>
+			</tbody>
+		</table>
+  );
+}
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -54,6 +92,9 @@ export default function Edit({ attributes, setAttributes }) {
 					value={ attributes.displayFormat }
 					onChange={(newval) => setAttributes( {displayFormat: newval})}
 				/>
+
+				<FormatMessage />
+
         </PanelBody>
       </InspectorControls>
 
