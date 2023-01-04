@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'DATE_TODAY_NEPALI_VERSION', '2.4.6' );
-define( 'DATE_TODAY_NEPALI_BASE_NAME', basename( dirname( __FILE__ ) ) );
+define( 'DATE_TODAY_NEPALI_BASE_NAME', basename( __DIR__ ) );
 define( 'DATE_TODAY_NEPALI_BASE_FILEPATH', __FILE__ );
 define( 'DATE_TODAY_NEPALI_BASE_FILENAME', plugin_basename( __FILE__ ) );
 define( 'DATE_TODAY_NEPALI_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
