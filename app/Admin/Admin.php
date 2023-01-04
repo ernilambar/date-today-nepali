@@ -131,26 +131,26 @@ class Admin {
 	 *
 	 * @since 2.4.3
 	 *
-	 * @param Welcome $object Instance of Welcome.
+	 * @param Welcome $welcome_object Instance of Welcome.
 	 */
-	public function render_sidebar( $object ) {
-		$object->render_sidebar_box(
+	public function render_sidebar( $welcome_object ) {
+		$welcome_object->render_sidebar_box(
 			array(
 				'title'        => 'Leave a Review',
-				'content'      => $object->get_stars() . sprintf( 'Are you enjoying %s? We would appreciate a review.', $object->get_name() ),
+				'content'      => $welcome_object->get_stars() . sprintf( 'Are you enjoying %s? We would appreciate a review.', $welcome_object->get_name() ),
 				'button_text'  => 'Submit Review',
 				'button_url'   => 'https://wordpress.org/support/plugin/date-today-nepali/reviews/#new-post',
 				'button_class' => 'button',
 			),
-			$object
+			$welcome_object
 		);
 
-		$object->render_sidebar_box(
+		$welcome_object->render_sidebar_box(
 			array(
 				'title'   => 'Recent Blog Posts',
 				'content' => '<div class="ns-blog-list"></div>',
 			),
-			$object
+			$welcome_object
 		);
 	}
 
