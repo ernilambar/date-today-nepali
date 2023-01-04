@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b68bde081f944960683169e4a5fcce6",
+    "content-hash": "9c23f62fc47377f99d75fe5c1377a863",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -1349,12 +1349,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
-                "reference": "227e89b9fadb9beb408d5d833d18d2117d51eb16"
+                "reference": "dcbb3ec50911a554c9a4a7876dccb11419dda4e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/227e89b9fadb9beb408d5d833d18d2117d51eb16",
-                "reference": "227e89b9fadb9beb408d5d833d18d2117d51eb16",
+                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/dcbb3ec50911a554c9a4a7876dccb11419dda4e9",
+                "reference": "dcbb3ec50911a554c9a4a7876dccb11419dda4e9",
                 "shasum": ""
             },
             "require": {
@@ -1394,7 +1394,7 @@
                 "source": "https://github.com/WordPress/WordPress-Coding-Standards",
                 "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
             },
-            "time": "2022-12-28T10:27:27+00:00"
+            "time": "2023-01-04T10:26:16+00:00"
         }
     ],
     "aliases": [],
