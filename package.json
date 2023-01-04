@@ -15,7 +15,7 @@
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "prewpdeploy": "pnpm run deploy",
     "wpdeploy": "wp-deployer",
-    "predeploy": "composer run pot && shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
+    "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
     "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
   },
   "wpDeployer": {
