@@ -20,11 +20,16 @@ final class Init {
 	 * @return array Full list of classes.
 	 */
 	public static function get_services() {
-		return array(
+		$classes = array(
 			Core\Core::class,
 			Admin\Admin::class,
-			Blocks\Block::class,
 		);
+
+		if ( function_exists( 'register_block_type' ) ) {
+			$classes[] = Blocks\Block::class;
+		}
+
+		return $classes;
 	}
 
 	/**
@@ -47,8 +52,6 @@ final class Init {
 	 * @return class instance   New instance of the class.
 	 */
 	private static function instantiate( $class_name ) {
-		$service = new $class_name();
-
-		return $service;
+		return new $class_name();
 	}
 }
