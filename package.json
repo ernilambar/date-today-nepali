@@ -1,7 +1,7 @@
 {
   "name": "date-today-nepali",
   "title": "Date Today Nepali",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "license": "GPL-2.0+",
   "main_file": "date-today-nepali.php",
   "repository": {
@@ -13,6 +13,7 @@
     "build": "wp-scripts build --webpack-src-dir=gb-block --output-path=build",
     "version": "easy-replace-in-files",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
+		"pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "prewpdeploy": "pnpm run deploy",
     "wpdeploy": "wp-deployer",
     "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
