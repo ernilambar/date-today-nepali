@@ -106,16 +106,16 @@
         },
         {
             "name": "ernilambar/wp-welcome",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-welcome.git",
-                "reference": "43b98c2940d9b1e1bec57a3f31471b39a57c0cc8"
+                "reference": "f3cf2f82d2b5d4701d7c2b95417d2c2a1fdc061e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/43b98c2940d9b1e1bec57a3f31471b39a57c0cc8",
-                "reference": "43b98c2940d9b1e1bec57a3f31471b39a57c0cc8",
+                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/f3cf2f82d2b5d4701d7c2b95417d2c2a1fdc061e",
+                "reference": "f3cf2f82d2b5d4701d7c2b95417d2c2a1fdc061e",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/wp-welcome/issues",
-                "source": "https://github.com/ernilambar/wp-welcome/tree/1.0.3"
+                "source": "https://github.com/ernilambar/wp-welcome/tree/1.0.4"
             },
-            "time": "2022-10-21T09:52:11+00:00"
+            "time": "2023-02-13T07:42:14+00:00"
         }
     ],
     "packages-dev": [
@@ -443,12 +443,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mck89/peast.git",
-                "reference": "eb172dd20cd99ba3a8b11cb432829bbff72f5af6"
+                "reference": "cf06286910b7efc9dce7503553ebee314df3d3d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mck89/peast/zipball/eb172dd20cd99ba3a8b11cb432829bbff72f5af6",
-                "reference": "eb172dd20cd99ba3a8b11cb432829bbff72f5af6",
+                "url": "https://api.github.com/repos/mck89/peast/zipball/cf06286910b7efc9dce7503553ebee314df3d3d3",
+                "reference": "cf06286910b7efc9dce7503553ebee314df3d3d3",
                 "shasum": ""
             },
             "require": {
@@ -462,7 +462,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15.0-dev"
+                    "dev-master": "1.15.1-dev"
                 }
             },
             "autoload": {
@@ -484,9 +484,9 @@
             "description": "Peast is PHP library that generates AST for JavaScript code",
             "support": {
                 "issues": "https://github.com/mck89/peast/issues",
-                "source": "https://github.com/mck89/peast/tree/master"
+                "source": "https://github.com/mck89/peast/tree/v1.15.1"
             },
-            "time": "2022-12-08T11:52:09+00:00"
+            "time": "2023-01-21T13:18:17+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -775,12 +775,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSExtra.git",
-                "reference": "5ab4e9ea784af5690f55a9dbf546e4af0f20cf28"
+                "reference": "a077c4ad65b906768ed2f820701958b57f605be0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/5ab4e9ea784af5690f55a9dbf546e4af0f20cf28",
-                "reference": "5ab4e9ea784af5690f55a9dbf546e4af0f20cf28",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/a077c4ad65b906768ed2f820701958b57f605be0",
+                "reference": "a077c4ad65b906768ed2f820701958b57f605be0",
                 "shasum": ""
             },
             "require": {
@@ -831,7 +831,7 @@
                 "issues": "https://github.com/PHPCSStandards/PHPCSExtra/issues",
                 "source": "https://github.com/PHPCSStandards/PHPCSExtra"
             },
-            "time": "2023-01-04T00:26:36+00:00"
+            "time": "2023-01-09T22:15:31+00:00"
         },
         {
             "name": "phpcsstandards/phpcsutils",
@@ -839,16 +839,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSUtils.git",
-                "reference": "4062c44c5fb432191aa449534b59aea24541dd83"
+                "reference": "4fd2e30c7465112ca2e3646037bfb9e6f0f4d4f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/4062c44c5fb432191aa449534b59aea24541dd83",
-                "reference": "4062c44c5fb432191aa449534b59aea24541dd83",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/4fd2e30c7465112ca2e3646037bfb9e6f0f4d4f3",
+                "reference": "4fd2e30c7465112ca2e3646037bfb9e6f0f4d4f3",
                 "shasum": ""
             },
             "require": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.1 || ^0.5 || ^0.6.2 || ^0.7",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.1 || ^0.5 || ^0.6.2 || ^0.7 || ^1.0",
                 "php": ">=5.4",
                 "squizlabs/php_codesniffer": "^3.7.1 || 4.0.x-dev@dev"
             },
@@ -906,7 +906,7 @@
                 "issues": "https://github.com/PHPCSStandards/PHPCSUtils/issues",
                 "source": "https://github.com/PHPCSStandards/PHPCSUtils"
             },
-            "time": "2023-01-04T03:01:33+00:00"
+            "time": "2023-01-05T12:08:37+00:00"
         },
         {
             "name": "rmccue/requests",
@@ -1032,12 +1032,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "47446ca195426f75f0378ba759a72fc1afabb15a"
+                "reference": "5cc9cac6586fc0c28cd173780ca696e419fefa11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/47446ca195426f75f0378ba759a72fc1afabb15a",
-                "reference": "47446ca195426f75f0378ba759a72fc1afabb15a",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/5cc9cac6586fc0c28cd173780ca696e419fefa11",
+                "reference": "5cc9cac6586fc0c28cd173780ca696e419fefa11",
                 "shasum": ""
             },
             "require": {
@@ -1085,7 +1085,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-01T08:36:10+00:00"
+            "time": "2023-01-20T17:44:14+00:00"
         },
         {
             "name": "wp-cli/i18n-command",
@@ -1093,12 +1093,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/i18n-command.git",
-                "reference": "cadf652532bc5baf70f022a1b88f4b752da38013"
+                "reference": "43d5cf8968dbddf90907083ad048f12be5ca3d43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/cadf652532bc5baf70f022a1b88f4b752da38013",
-                "reference": "cadf652532bc5baf70f022a1b88f4b752da38013",
+                "url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/43d5cf8968dbddf90907083ad048f12be5ca3d43",
+                "reference": "43d5cf8968dbddf90907083ad048f12be5ca3d43",
                 "shasum": ""
             },
             "require": {
@@ -1152,9 +1152,9 @@
             "homepage": "https://github.com/wp-cli/i18n-command",
             "support": {
                 "issues": "https://github.com/wp-cli/i18n-command/issues",
-                "source": "https://github.com/wp-cli/i18n-command/tree/main"
+                "source": "https://github.com/wp-cli/i18n-command/tree/v2.4.2"
             },
-            "time": "2023-01-03T15:02:30+00:00"
+            "time": "2023-02-17T18:14:41+00:00"
         },
         {
             "name": "wp-cli/mustangostang-spyc",
@@ -1213,12 +1213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/php-cli-tools.git",
-                "reference": "a4648310ea2d77a4d2c00043731b4b398021ff21"
+                "reference": "f6be76b7c4ee2ef93c9531b8a37bdb7ce42c3728"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/a4648310ea2d77a4d2c00043731b4b398021ff21",
-                "reference": "a4648310ea2d77a4d2c00043731b4b398021ff21",
+                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/f6be76b7c4ee2ef93c9531b8a37bdb7ce42c3728",
+                "reference": "f6be76b7c4ee2ef93c9531b8a37bdb7ce42c3728",
                 "shasum": ""
             },
             "require": {
@@ -1267,9 +1267,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-cli/php-cli-tools/issues",
-                "source": "https://github.com/wp-cli/php-cli-tools/tree/master"
+                "source": "https://github.com/wp-cli/php-cli-tools/tree/v0.11.17"
             },
-            "time": "2023-01-03T14:51:41+00:00"
+            "time": "2023-01-12T01:18:21+00:00"
         },
         {
             "name": "wp-cli/wp-cli",
@@ -1277,12 +1277,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "39c1da84452fe89bd49d953103b5113f2b6dcc20"
+                "reference": "a3be436a2274271b150bf2d0a52da93dd8a5d979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/39c1da84452fe89bd49d953103b5113f2b6dcc20",
-                "reference": "39c1da84452fe89bd49d953103b5113f2b6dcc20",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/a3be436a2274271b150bf2d0a52da93dd8a5d979",
+                "reference": "a3be436a2274271b150bf2d0a52da93dd8a5d979",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1341,7 @@
                 "issues": "https://github.com/wp-cli/wp-cli/issues",
                 "source": "https://github.com/wp-cli/wp-cli"
             },
-            "time": "2023-01-03T14:50:00+00:00"
+            "time": "2023-02-17T17:58:45+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -1349,15 +1349,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
-                "reference": "dcbb3ec50911a554c9a4a7876dccb11419dda4e9"
+                "reference": "546f59c67854589bb8f6b49a30e642e75ff419ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/dcbb3ec50911a554c9a4a7876dccb11419dda4e9",
-                "reference": "dcbb3ec50911a554c9a4a7876dccb11419dda4e9",
+                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/546f59c67854589bb8f6b49a30e642e75ff419ad",
+                "reference": "546f59c67854589bb8f6b49a30e642e75ff419ad",
                 "shasum": ""
             },
             "require": {
+                "ext-filter": "*",
                 "php": ">=5.4",
                 "phpcsstandards/phpcsextra": "^1.0",
                 "phpcsstandards/phpcsutils": "^1.0",
@@ -1369,6 +1370,9 @@
                 "phpcompatibility/php-compatibility": "^9.0",
                 "phpcsstandards/phpcsdevtools": "^1.2.0",
                 "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "ext-mbstring": "For improved results"
             },
             "default-branch": true,
             "type": "phpcodesniffer-standard",
@@ -1394,7 +1398,7 @@
                 "source": "https://github.com/WordPress/WordPress-Coding-Standards",
                 "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
             },
-            "time": "2023-01-04T10:26:16+00:00"
+            "time": "2023-01-13T13:37:27+00:00"
         }
     ],
     "aliases": [],
