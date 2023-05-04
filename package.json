@@ -13,7 +13,7 @@
     "build": "wp-scripts build --webpack-src-dir=gb-block --output-path=build",
     "version": "easy-replace-in-files",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-		"pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+    "pot": "composer run-script pot",
     "prewpdeploy": "pnpm run deploy",
     "wpdeploy": "wp-deployer",
     "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
@@ -26,13 +26,13 @@
     "deployAssets": false
   },
   "devDependencies": {
-    "@wordpress/scripts": "^25.0.0",
-    "@wordpress/server-side-render": "^4.0.0",
+    "@wordpress/scripts": "^26.3.0",
+    "@wordpress/server-side-render": "^4.9.0",
     "bestzip": "^2.2.1",
-    "copy-files-from-to": "^3.2.2",
+    "copy-files-from-to": "^3.8.0",
     "cross-var": "^1.1.0",
     "easy-replace-in-files": "^1.0.3",
-    "node-wp-i18n": "^1.2.6",
+    "node-wp-i18n": "^1.2.7",
     "shx": "^0.3.4",
     "wp-deployer": "^1.0.3"
   }

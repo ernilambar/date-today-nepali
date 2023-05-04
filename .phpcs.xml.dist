@@ -2,6 +2,9 @@
 <ruleset name="WordPress Coding Standards for plugin">
   <description>Apply WordPress Coding Standards</description>
 
+	<!-- Prevent errors caused by WordPress Coding Standards not supporting PHP 8.0+. See https://github.com/WordPress/WordPress-Coding-Standards/issues/2035 -->
+	<ini name="error_reporting" value="E_ALL &#38; ~E_DEPRECATED" />
+
   <!-- What to scan -->
   <file>.</file>
 
@@ -36,11 +39,6 @@
 
   <!-- For CI, don't fail on warnings -->
   <config name="ignore_warnings_on_exit" value="1"/>
-
-  <!-- Include the WordPress rulesets. -->
-  <rule ref="WordPress">
-    <exclude name="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents"/>
-	</rule>
 
   <rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
     <properties>
