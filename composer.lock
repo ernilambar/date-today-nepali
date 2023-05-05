@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "ernilambar/nepali-date",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/nepali-date.git",
-                "reference": "8ac91a49267e3821bf03f052d3cb6b7876af4a12"
+                "reference": "37261b5568b668a8d5d51a480afb0cc95f7aa708"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/8ac91a49267e3821bf03f052d3cb6b7876af4a12",
-                "reference": "8ac91a49267e3821bf03f052d3cb6b7876af4a12",
+                "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/37261b5568b668a8d5d51a480afb0cc95f7aa708",
+                "reference": "37261b5568b668a8d5d51a480afb0cc95f7aa708",
                 "shasum": ""
             },
             "require": {
@@ -53,9 +53,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/nepali-date/issues",
-                "source": "https://github.com/ernilambar/nepali-date/tree/1.0.5"
+                "source": "https://github.com/ernilambar/nepali-date/tree/1.0.6"
             },
-            "time": "2021-07-20T06:11:00+00:00"
+            "time": "2023-05-05T04:53:37+00:00"
         },
         {
             "name": "ernilambar/wp-admin-notice",
