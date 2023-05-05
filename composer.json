@@ -25,7 +25,7 @@
     "lint:error": "@lint -n",
 		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
     "compat": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --standard=.phpcompat.xml.dist --report-full --report-summary .",
-		"pot": "./vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --exclude=vendor,deploy,node_modules --headers='{\"POT-Creation-Date\":\"\"}'"
+		"pot": "./vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
   },
   "config": {
     "allow-plugins": {
