@@ -59,16 +59,16 @@
         },
         {
             "name": "ernilambar/wp-admin-notice",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-admin-notice.git",
-                "reference": "1fd14ff6d79994750d25b4f529284a6942e117eb"
+                "reference": "99d73f74a17357a60abff104be06e5c07ec72f7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-admin-notice/zipball/1fd14ff6d79994750d25b4f529284a6942e117eb",
-                "reference": "1fd14ff6d79994750d25b4f529284a6942e117eb",
+                "url": "https://api.github.com/repos/ernilambar/wp-admin-notice/zipball/99d73f74a17357a60abff104be06e5c07ec72f7f",
+                "reference": "99d73f74a17357a60abff104be06e5c07ec72f7f",
                 "shasum": ""
             },
             "require": {
@@ -100,9 +100,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/wp-admin-notice/issues/",
-                "source": "https://github.com/ernilambar/wp-admin-notice/tree/1.0.0"
+                "source": "https://github.com/ernilambar/wp-admin-notice/tree/1.0.1"
             },
-            "time": "2022-06-27T07:08:52+00:00"
+            "time": "2023-05-23T10:16:06+00:00"
         },
         {
             "name": "ernilambar/wp-welcome",
@@ -1345,12 +1345,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
-                "reference": "fca9d9ef2dcd042658ccb9df16552f5048e7bb04"
+                "reference": "203b168d7d107cf9c5b878947bf15c2945b297a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/fca9d9ef2dcd042658ccb9df16552f5048e7bb04",
-                "reference": "fca9d9ef2dcd042658ccb9df16552f5048e7bb04",
+                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/203b168d7d107cf9c5b878947bf15c2945b297a3",
+                "reference": "203b168d7d107cf9c5b878947bf15c2945b297a3",
                 "shasum": ""
             },
             "require": {
@@ -1394,7 +1394,7 @@
                 "source": "https://github.com/WordPress/WordPress-Coding-Standards",
                 "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
             },
-            "time": "2023-05-01T08:34:06+00:00"
+            "time": "2023-05-23T06:36:37+00:00"
         }
     ],
     "aliases": [],
