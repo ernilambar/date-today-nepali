@@ -6,7 +6,7 @@ Tags: nepali, date, widget, ClassicPress
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.2
-Stable tag: 2.5.3
+Stable tag: 2.5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 2. Widget output
 
 == Changelog ==
+
+= 2.5.4 - 23 May 2023 =
+* Update Admin Notice package
 
 = 2.5.3 - 5 May 2023 =
 * Update Nepali Date package
