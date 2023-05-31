@@ -28,6 +28,7 @@
 		"pot": "./vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
   },
   "config": {
+		"sort-packages": true,
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
