@@ -13,24 +13,24 @@
 		"build": "wp-scripts build --webpack-src-dir=gb-block --output-path=build",
 		"format:json": "wp-scripts format composer.json package.json",
 		"version": "easy-replace-in-files",
-		"textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
 		"prepare": "composer install",
 		"pot": "composer run-script pot",
-		"prewpdeploy": "bun run deploy",
+		"td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
+		"prewpdeploy": "pnpm run deploy",
 		"wpdeploy": "wp-deployer",
-		"prerelease": "bun run deploy",
+		"prerelease": "pnpm run deploy",
 		"release": "dotenv release-it -- --no-git --no-npm --no-increment",
-		"ready:build": "shx rm -rf build/ && bun run build",
+		"ready:build": "shx rm -rf build/ && pnpm run build",
 		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
-		"predeploy": "bun run ready:vendor && bun run ready:build",
+		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
 		"deploy": "packtor"
 	},
 	"packtor": {
 		"files": [
 			"**/*",
+			"!*.js",
 			"!*.json",
 			"!*.lock",
-			"!*.lockb",
 			"!*.yaml"
 		]
 	},
@@ -57,7 +57,7 @@
 		"easy-replace-in-files": "^1.0.3",
 		"node-wp-i18n": "^1.2.7",
 		"packtor": "^1.0.2",
-		"release-it": "^15.10.3",
+		"release-it": "^15.10.5",
 		"shx": "^0.3.4",
 		"wp-deployer": "^1.0.3"
 	}
