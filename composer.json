@@ -1,4 +1,7 @@
 {
+	"name": "ernilambar/date-today-nepali",
+	"title": "Date Today Nepali",
+	"license": "GPL-2.0-or-later",
 	"require": {
 		"php": ">=5.6",
 		"ernilambar/nepali-date": "^1.0",
@@ -12,19 +15,19 @@
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-		"phpcompatibility/phpcompatibility-wp": "^2.1",
-		"wp-coding-standards/wpcs": "dev-develop",
 		"php-parallel-lint/php-parallel-lint": "^1.3",
-		"wp-cli/i18n-command": "^2.4"
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"wp-cli/i18n-command": "^2.4",
+		"wp-coding-standards/wpcs": "dev-develop"
 	},
 	"scripts": {
-		"pc:info": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
-		"pc:config": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --config-show",
-		"lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --report-full --report-summary .",
-		"lint:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --report-full --report-summary .",
+		"pc:info": "@php ./vendor/bin/phpcs -i",
+		"pc:config": "@php ./vendor/bin/phpcs --config-show",
+		"lint": "@php ./vendor/bin/phpcs --report-full --report-summary .",
+		"lint:fix": "@php ./vendor/bin/phpcbf --report-full --report-summary .",
 		"lint:error": "@lint -n",
 		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
-		"compat": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --standard=.phpcompat.xml.dist --report-full --report-summary .",
+		"compat": "@php ./vendor/bin/phpcs --standard=.phpcompat.xml.dist --report-full --report-summary .",
 		"pot": "./vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
 	},
 	"config": {
