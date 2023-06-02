@@ -16,14 +16,13 @@
 		"textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
 		"prepare": "composer install",
 		"pot": "composer run-script pot",
-		"preinstall": "npx only-allow pnpm",
-		"prewpdeploy": "pnpm run deploy",
+		"prewpdeploy": "bun run deploy",
 		"wpdeploy": "wp-deployer",
-		"prerelease": "pnpm run deploy",
+		"prerelease": "bun run deploy",
 		"release": "dotenv release-it -- --no-git --no-npm --no-increment",
-		"ready:build": "shx rm -rf build/ && pnpm run build",
+		"ready:build": "shx rm -rf build/ && bun run build",
 		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
-		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
+		"predeploy": "bun run ready:vendor && bun run ready:build",
 		"deploy": "packtor"
 	},
 	"packtor": {
@@ -31,6 +30,7 @@
 			"**/*",
 			"!*.json",
 			"!*.lock",
+			"!*.lockb",
 			"!*.yaml"
 		]
 	},
@@ -53,9 +53,6 @@
 	"devDependencies": {
 		"@wordpress/scripts": "^26.5.0",
 		"@wordpress/server-side-render": "^4.11.0",
-		"bestzip": "^2.2.1",
-		"copy-files-from-to": "^3.9.0",
-		"cross-var": "^1.1.0",
 		"dotenv-cli": "^7.2.1",
 		"easy-replace-in-files": "^1.0.3",
 		"node-wp-i18n": "^1.2.7",
