@@ -11,6 +11,7 @@
 	"scripts": {
 		"dev": "wp-scripts start --webpack-src-dir=gb-block --output-path=build",
 		"build": "wp-scripts build --webpack-src-dir=gb-block --output-path=build",
+		"format:json": "wp-scripts format composer.json package.json",
 		"version": "easy-replace-in-files",
 		"textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
 		"prepare": "composer install",
@@ -58,7 +59,7 @@
 		"dotenv-cli": "^7.2.1",
 		"easy-replace-in-files": "^1.0.3",
 		"node-wp-i18n": "^1.2.7",
-		"packtor": "^1.0.1",
+		"packtor": "^1.0.2",
 		"release-it": "^15.10.3",
 		"shx": "^0.3.4",
 		"wp-deployer": "^1.0.3"
