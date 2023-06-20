@@ -1,29 +1,21 @@
 {
 	"name": "date-today-nepali",
-	"title": "Date Today Nepali",
 	"version": "2.5.4",
-	"license": "GPL-2.0+",
+	"description": "Date Today Nepali",
+	"author": "Nilambar Sharma",
+	"license": "GPL-2.0-or-later",
 	"main_file": "date-today-nepali.php",
+	"keywords": [
+		"wordpress",
+		"wordpress-plugin"
+	],
+	"homepage": "https://github.com/ernilambar/date-today-nepali",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ernilambar/date-today-nepali"
+		"url": "https://github.com/ernilambar/date-today-nepali.git"
 	},
-	"scripts": {
-		"dev": "wp-scripts start --webpack-src-dir=gb-block --output-path=build",
-		"build": "wp-scripts build --webpack-src-dir=gb-block --output-path=build",
-		"format:json": "wp-scripts format composer.json package.json",
-		"version": "easy-replace-in-files",
-		"prepare": "composer install",
-		"pot": "composer run-script pot",
-		"td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-		"prewpdeploy": "pnpm run deploy",
-		"wpdeploy": "wp-deployer",
-		"prerelease": "pnpm run deploy",
-		"release": "dotenv release-it -- --no-git --no-npm --no-increment",
-		"ready:build": "shx rm -rf build/ && pnpm run build",
-		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
-		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
-		"deploy": "packtor"
+	"bugs": {
+		"url": "https://github.com/ernilambar/date-today-nepali/issues"
 	},
 	"packtor": {
 		"files": [
@@ -31,7 +23,8 @@
 			"!*.js",
 			"!*.json",
 			"!*.lock",
-			"!*.yaml"
+			"!*.yaml",
+			"!src/**/*"
 		]
 	},
 	"wpDeployer": {
@@ -53,12 +46,33 @@
 	"devDependencies": {
 		"@wordpress/scripts": "^26.5.0",
 		"@wordpress/server-side-render": "^4.11.0",
+		"browser-sync": "^2.29.3",
+		"browser-sync-webpack-plugin": "^2.3.0",
 		"dotenv-cli": "^7.2.1",
 		"easy-replace-in-files": "^1.0.3",
 		"node-wp-i18n": "^1.2.7",
 		"packtor": "^1.0.2",
 		"release-it": "^15.10.5",
 		"shx": "^0.3.4",
+		"spinno": "^1.0.3",
 		"wp-deployer": "^1.0.3"
+	},
+	"scripts": {
+		"dev": "wp-scripts start",
+		"build": "wp-scripts build",
+		"lint:json:fix": "wp-scripts format *.json",
+		"lint:pkg": "wp-scripts lint-pkg-json",
+		"version": "easy-replace-in-files",
+		"prepare": "composer install",
+		"pot": "composer run-script pot",
+		"td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
+		"prewpdeploy": "pnpm run deploy",
+		"wpdeploy": "wp-deployer",
+		"prerelease": "pnpm run deploy",
+		"release": "dotenv release-it -- --no-git --no-npm --no-increment",
+		"ready:build": "shx rm -rf build/ && pnpm run build",
+		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
+		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
+		"deploy": "packtor"
 	}
 }

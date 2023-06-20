@@ -74,12 +74,12 @@ msgstr ""
 msgid "Date Format:"
 msgstr ""
 
-#: gb-block/block.json
+#: src/block.json
 msgctxt "block title"
 msgid "Date Today Nepali"
 msgstr ""
 
-#: gb-block/block.json
+#: src/block.json
 msgctxt "block description"
 msgid "Nepali date block"
 msgstr ""

@@ -148,7 +148,7 @@ class Admin {
 		$welcome_object->render_sidebar_box(
 			array(
 				'title'   => 'Recent Blog Posts',
-				'content' => '<div class="ns-blog-list"></div>',
+				'content' => '<div id="dtn-posts-app"></div>',
 			),
 			$welcome_object
 		);
@@ -206,7 +206,24 @@ class Admin {
 			return;
 		}
 
-		wp_enqueue_script( 'date-today-nepali-blog-posts', DATE_TODAY_NEPALI_URL . '/assets/js/blog-posts.js', array(), DATE_TODAY_NEPALI_VERSION, true );
+		// Posts.
+		$deps_file = NS_NEPALI_DATE_DIR . '/build/posts.asset.php';
+
+		$dependency = array();
+
+		if ( file_exists( $deps_file ) ) {
+			$deps_file  = require $deps_file;
+			$dependency = $deps_file['dependencies'];
+			$version    = $deps_file['version'];
+		}
+
+		$data = array(
+			'ajax_url'     => admin_url( 'admin-ajax.php' ),
+			'posts_action' => 'dtn_nsbl_get_posts',
+		);
+
+		wp_enqueue_script( 'date-today-nepali-posts', DATE_TODAY_NEPALI_URL . '/build/posts.js', $dependency, $version, true );
+		wp_localize_script( 'date-today-nepali-posts', 'DTN_POSTS', $data );
 	}
 
 	/**
