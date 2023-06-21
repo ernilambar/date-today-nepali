@@ -207,7 +207,7 @@ class Admin {
 		}
 
 		// Posts.
-		$script_asset_path = NS_NEPALI_DATE_DIR . '/build/posts.asset.php';
+		$script_asset_path = DATE_TODAY_NEPALI_DIR . '/build/posts.asset.php';
 		$script_asset      = file_exists( $script_asset_path ) ? require $script_asset_path : array(
 			'dependencies' => array(),
 			'version'      => filemtime( __FILE__ ),
