@@ -207,22 +207,18 @@ class Admin {
 		}
 
 		// Posts.
-		$deps_file = NS_NEPALI_DATE_DIR . '/build/posts.asset.php';
-
-		$dependency = array();
-
-		if ( file_exists( $deps_file ) ) {
-			$deps_file  = require $deps_file;
-			$dependency = $deps_file['dependencies'];
-			$version    = $deps_file['version'];
-		}
+		$script_asset_path = NS_NEPALI_DATE_DIR . '/build/posts.asset.php';
+		$script_asset      = file_exists( $script_asset_path ) ? require $script_asset_path : array(
+			'dependencies' => array(),
+			'version'      => filemtime( __FILE__ ),
+		);
 
 		$data = array(
 			'ajax_url'     => admin_url( 'admin-ajax.php' ),
 			'posts_action' => 'dtn_nsbl_get_posts',
 		);
 
-		wp_enqueue_script( 'date-today-nepali-posts', DATE_TODAY_NEPALI_URL . '/build/posts.js', $dependency, $version, true );
+		wp_enqueue_script( 'date-today-nepali-posts', DATE_TODAY_NEPALI_URL . '/build/posts.js', $script_asset['dependencies'], $script_asset['version'], true );
 		wp_localize_script( 'date-today-nepali-posts', 'DTN_POSTS', $data );
 	}
 
