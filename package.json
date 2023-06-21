@@ -60,6 +60,8 @@
 	"scripts": {
 		"dev": "wp-scripts start",
 		"build": "wp-scripts build",
+		"lint:js": "wp-scripts lint-js ./src *.js",
+		"lint:js:fix": "wp-scripts lint-js ./src *.js --fix",
 		"lint:json:fix": "wp-scripts format *.json",
 		"lint:pkg": "wp-scripts lint-pkg-json",
 		"version": "easy-replace-in-files",
