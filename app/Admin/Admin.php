@@ -17,6 +17,7 @@ use Nilambar\Welcome\Welcome;
  * @since 1.0.0
  */
 class Admin {
+
 	/**
 	 * Register.
 	 *
@@ -27,9 +28,28 @@ class Admin {
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
 		add_action( 'wp_welcome_init', array( $this, 'add_welcome_page' ) );
 		add_filter( 'plugin_action_links_' . DATE_TODAY_NEPALI_BASE_FILENAME, array( $this, 'plugin_links' ) );
+		add_action( 'rest_api_init', array( $this, 'register_routes' ) );
+	}
 
-		add_action( 'wp_ajax_nopriv_dtn_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
-		add_action( 'wp_ajax_dtn_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
+	public function register_routes() {
+		register_rest_route(
+			'date-today-nepali/v1',
+			'/posts/',
+			array(
+				'methods'  => 'GET',
+				'callback' => array( $this, 'get_rest_posts_callback' ),
+			)
+		);
+	}
+
+	public function get_rest_posts_callback() {
+		$posts = Utils::get_blog_feed_items();
+
+		if ( ! empty( $posts ) ) {
+			return new \WP_REST_Response( $posts, 200 );
+		}
+
+		return new \WP_Error( 'not_found', 'Not found' );
 	}
 
 	/**
@@ -214,33 +234,10 @@ class Admin {
 		);
 
 		$data = array(
-			'ajax_url'     => admin_url( 'admin-ajax.php' ),
-			'posts_action' => 'dtn_nsbl_get_posts',
+			'rest_url' => rest_url( 'date-today-nepali/v1/posts' ),
 		);
 
 		wp_enqueue_script( 'date-today-nepali-posts', DATE_TODAY_NEPALI_URL . '/build/posts.js', $script_asset['dependencies'], $script_asset['version'], true );
 		wp_localize_script( 'date-today-nepali-posts', 'DTN_POSTS', $data );
 	}
-
-	/**
-	 * AJAX callback for blog posts.
-	 *
-	 * @since 2.4.3
-	 */
-	public function get_posts_ajax_callback() {
-		$output = array();
-
-		$posts = Utils::get_blog_feed_items();
-
-		if ( ! empty( $posts ) ) {
-			$output = $posts;
-		}
-
-		if ( ! empty( $output ) ) {
-			wp_send_json_success( $output, 200 );
-		} else {
-			wp_send_json_error( $output, 404 );
-		}
-	}
-
 }

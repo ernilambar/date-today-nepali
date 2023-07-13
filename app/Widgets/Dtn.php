@@ -9,7 +9,7 @@ namespace DateTodayNepali\Widgets;
 
 use Nilambar\NepaliDate\NepaliDate;
 use DateTodayNepali\Common\Utils;
-use \WP_Widget;
+use WP_Widget;
 
 /**
  * Date widget class.
