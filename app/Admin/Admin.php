@@ -36,8 +36,9 @@ class Admin {
 			'date-today-nepali/v1',
 			'/posts/',
 			array(
-				'methods'  => 'GET',
-				'callback' => array( $this, 'get_rest_posts_callback' ),
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'get_rest_posts_callback' ),
+				'permission_callback' => '__return_true',
 			)
 		);
 	}
