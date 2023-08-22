@@ -34,7 +34,7 @@ class Block {
 		register_block_type(
 			DATE_TODAY_NEPALI_DIR . '/build',
 			array(
-				'render_callback' => function( $attributes ) {
+				'render_callback' => function ( $attributes ) {
 					ob_start();
 
 					$obj = new NepaliDate();
