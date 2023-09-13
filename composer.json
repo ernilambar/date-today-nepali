@@ -1,6 +1,6 @@
 {
 	"name": "ernilambar/date-today-nepali",
-	"title": "Date Today Nepali",
+	"description": "Date Today Nepali",
 	"license": "GPL-2.0-or-later",
 	"require": {
 		"php": ">=5.6",
@@ -8,32 +8,34 @@
 		"ernilambar/wp-admin-notice": "^1.0",
 		"ernilambar/wp-welcome": "^1.0"
 	},
-	"autoload": {
-		"psr-4": {
-			"DateTodayNepali\\": "app/"
-		}
-	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"ergebnis/composer-normalize": "^2.31",
 		"php-parallel-lint/php-parallel-lint": "^1.3",
 		"phpcompatibility/phpcompatibility-wp": "^2.1",
 		"wp-cli/i18n-command": "^2.4",
 		"wp-coding-standards/wpcs": "^3.0"
 	},
-	"scripts": {
-		"pc:info": "@php ./vendor/bin/phpcs -i",
-		"pc:config": "@php ./vendor/bin/phpcs --config-show",
-		"lint": "@php ./vendor/bin/phpcs --report-full --report-summary .",
-		"lint:fix": "@php ./vendor/bin/phpcbf --report-full --report-summary .",
-		"lint:error": "@lint -n",
-		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
-		"compat": "@php ./vendor/bin/phpcs --standard=.phpcompat.xml.dist --report-full --report-summary .",
-		"pot": "./vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
+	"autoload": {
+		"psr-4": {
+			"DateTodayNepali\\": "app/"
+		}
 	},
 	"config": {
-		"sort-packages": true,
 		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true
-		}
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"ergebnis/composer-normalize": true
+		},
+		"sort-packages": true
+	},
+	"scripts": {
+		"compat": "@php ./vendor/bin/phpcs --standard=.phpcompat.xml.dist --report-full --report-summary .",
+		"lint": "@php ./vendor/bin/phpcs --report-full --report-summary .",
+		"lint:error": "@lint -n",
+		"lint:fix": "@php ./vendor/bin/phpcbf --report-full --report-summary .",
+		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
+		"pc:config": "@php ./vendor/bin/phpcs --config-show",
+		"pc:info": "@php ./vendor/bin/phpcs -i",
+		"pot": "./vendor/bin/wp i18n make-pot ./ ./languages/date-today-nepali.pot --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
 	}
 }
