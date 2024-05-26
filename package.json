@@ -54,7 +54,6 @@
 		"lint:json:fix": "wp-scripts format *.json",
 		"lint:pkg": "wp-scripts lint-pkg-json",
 		"version": "easy-replace-in-files",
-		"prepare": "composer install",
 		"pot": "composer run-script pot",
 		"td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
 		"prewpdeploy": "pnpm run deploy",
