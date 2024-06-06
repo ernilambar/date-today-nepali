@@ -25,6 +25,7 @@
 			"dealerdirect/phpcodesniffer-composer-installer": true,
 			"ergebnis/composer-normalize": true
 		},
+		"optimize-autoloader": true,
 		"sort-packages": true
 	},
 	"scripts": {
@@ -34,6 +35,11 @@
 		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
 		"pc:config": "@php ./vendor/bin/phpcs --config-show",
 		"pc:info": "@php ./vendor/bin/phpcs -i",
-		"pot": "wp i18n make-pot . --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
+		"pot": "wp i18n make-pot . --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'",
+		"test": [
+			"@lint",
+			"@lint:php",
+			"@compat"
+		]
 	}
 }
