@@ -4,7 +4,7 @@ const path = require( 'path' );
 
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config.js' );
 
-const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
+const BrowserSyncPlugin = require( 'browser-sync-v3-webpack-plugin' );
 
 module.exports = {
 	...defaultConfig,
