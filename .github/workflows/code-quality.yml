@@ -27,8 +27,5 @@ jobs:
         with:
           composer-options: '--prefer-dist --no-progress --no-interaction'
 
-      - name: PHP Lint
-        run: composer run-script lint
-
-      - name: PHP Compatibility
-        run: composer run-script compat
+      - name: Run tests
+        run: composer run-script test

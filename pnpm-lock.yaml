@@ -26,9 +26,6 @@ importers:
       easy-replace-in-files:
         specifier: ^1.0.3
         version: 1.0.3
-      node-wp-i18n:
-        specifier: ^1.2.7
-        version: 1.2.7
       packtor:
         specifier: ^1.0.2
         version: 1.0.2
@@ -2111,9 +2108,6 @@ packages:
   bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
 
-  bluebird@3.7.2:
-    resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
-
   body-parser@1.20.1:
     resolution: {integrity: sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
@@ -3298,9 +3292,6 @@ packages:
   gettext-parser@1.4.0:
     resolution: {integrity: sha512-sedZYLHlHeBop/gZ1jdg59hlUEcpcZJofLq2JFwJT1zTqAU3l2wFv6IsuwFHGqbiT9DWzMUW4/em2+hspnmMMA==}
 
-  gettext-parser@3.1.1:
-    resolution: {integrity: sha512-vNhWcqXEtZPs5Ft1ReA34g7ByWotpcOIeJvXVy2jF3/G2U9v6W0wG4Z4hXzcU8R//jArqkgHcVCGgGqa4vxVlQ==}
-
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
@@ -4447,10 +4438,6 @@ packages:
 
   node-releases@2.0.13:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
-
-  node-wp-i18n@1.2.7:
-    resolution: {integrity: sha512-4X+890+Irj8sY+6WKkFx+4wk/GGu9mGLDY1PVPF9AWF1zTKWClLA83QikcQKX55rjjKpN1jSZEQoEANNVSSBYw==}
-    hasBin: true
 
   noms@0.0.0:
     resolution: {integrity: sha512-lNDU9VJaOPxUmXcLb+HQFeUgQQPtMI24Gt6hgfuMHRJgMRHMF/qZ4HJD3GDru4sSw9IQl2jPjAYnQrdIeLbwow==}
@@ -5824,10 +5811,6 @@ packages:
 
   tiny-emitter@2.1.0:
     resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
-
-  tmp@0.2.1:
-    resolution: {integrity: sha512-76SUhtfqR2Ijn+xllcI5P1oyannHNHByD80W1q447gU3mp9G9PSpGdWmjUOHRDPiHYacIk66W7ubDTuPF3BEtQ==}
-    engines: {node: '>=8.17.0'}
 
   tmpl@1.0.5:
     resolution: {integrity: sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==}
@@ -9263,8 +9246,6 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  bluebird@3.7.2: {}
-
   body-parser@1.20.1:
     dependencies:
       bytes: 3.1.2
@@ -10736,12 +10717,6 @@ snapshots:
       encoding: 0.1.13
       safe-buffer: 5.2.1
 
-  gettext-parser@3.1.1:
-    dependencies:
-      encoding: 0.1.13
-      readable-stream: 3.6.2
-      safe-buffer: 5.2.1
-
   glob-parent@5.1.2:
     dependencies:
       is-glob: 4.0.3
@@ -12049,16 +12024,6 @@ snapshots:
   node-int64@0.4.0: {}
 
   node-releases@2.0.13: {}
-
-  node-wp-i18n@1.2.7:
-    dependencies:
-      bluebird: 3.7.2
-      gettext-parser: 3.1.1
-      glob: 7.2.3
-      lodash: 4.17.21
-      minimist: 1.2.8
-      mkdirp: 1.0.4
-      tmp: 0.2.1
 
   noms@0.0.0:
     dependencies:
@@ -13616,10 +13581,6 @@ snapshots:
   thunky@1.1.0: {}
 
   tiny-emitter@2.1.0: {}
-
-  tmp@0.2.1:
-    dependencies:
-      rimraf: 3.0.2
 
   tmpl@1.0.5: {}
 
