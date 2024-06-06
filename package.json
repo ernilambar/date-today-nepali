@@ -34,7 +34,7 @@
 		"deployAssets": false
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^27.9.0",
+		"@wordpress/scripts": "~27.9.0",
 		"@wordpress/server-side-render": "^5.0.0",
 		"browser-sync": "^3.0.2",
 		"browser-sync-v3-webpack-plugin": "^0.1.0",
