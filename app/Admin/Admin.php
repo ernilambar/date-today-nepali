@@ -115,19 +115,17 @@ class Admin {
 						'title'       => 'Our Plugins',
 						'icon'        => 'dashicons dashicons-admin-plugins',
 						'description' => '<ul>
-															<li><a href="https://wpconcern.com/plugins/woocommerce-product-tabs/" target="_blank">WooCommerce Product Tabs</a></li>
-															<li><a href="https://wpconcern.com/plugins/nifty-coming-soon-and-under-construction-page/" target="_blank">Coming Soon &amp; Maintenance Mode Page</a></li>
-															<li><a href="https://wpconcern.com/plugins/post-grid-elementor-addon/" target="_blank">Post Grid Elementor Addon</a></li>
-															<li><a href="https://wpconcern.com/plugins/advanced-google-recaptcha/" target="_blank">Advanced Google reCAPTCHA</a></li>
-															<li><a href="https://wpconcern.com/plugins/majestic-before-after-image/" target="_blank">Majestic Before After Image</a></li>
-															<li><a href="https://wpconcern.com/plugins/admin-customizer/" target="_blank">Admin Customizer</a></li>
-															<li><a href="https://wordpress.org/plugins/prime-addons-for-elementor/" target="_blank">Prime Addons for Elementor</a></li>
+															<li><a href="https://wordpress.org/plugins/ns-featured-posts/" target="_blank">NS Featured Posts</a></li>
+															<li><a href="https://wordpress.org/plugins/ns-category-widget/" target="_blank">NS Category Widget</a></li>
+															<li><a href="https://wordpress.org/plugins/admin-customizer/" target="_blank">Admin Customizer</a></li>
+															<li><a href="https://wordpress.org/plugins/date-today-nepali/" target="_blank">Date Today Nepali</a></li>
 															</ul>',
 					),
 					array(
 						'title'       => 'Our Themes',
 						'icon'        => 'dashicons dashicons-desktop',
 						'description' => '<ul>
+															<li><a href="https://wordpress.org/themes/niya/" target="_blank">Niya</a></li>
 															<li><a href="https://wordpress.org/themes/simple-life/" target="_blank">Simple Life</a></li>
 															<li><a href="https://wordpress.org/themes/obulma/" target="_blank">Obulma</a></li>
 															<li><a href="https://wordpress.org/themes/blue-planet/" target="_blank">Blue Planet</a></li>

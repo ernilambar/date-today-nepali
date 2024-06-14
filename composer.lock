@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90557a392170d0963d9d2775d0e5a308",
+    "content-hash": "7d51aeb1b7662afb1e8a321ef9cd633e",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -1120,16 +1120,16 @@
         },
         {
             "name": "wp-cli/i18n-command",
-            "version": "2.6.1",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/i18n-command.git",
-                "reference": "7538d684d4f06b0e10c8a0166ce4e6d9e1687aa1"
+                "reference": "9cf9b40f6bad64ade8660cc26bf1f28f2d223268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/7538d684d4f06b0e10c8a0166ce4e6d9e1687aa1",
-                "reference": "7538d684d4f06b0e10c8a0166ce4e6d9e1687aa1",
+                "url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/9cf9b40f6bad64ade8660cc26bf1f28f2d223268",
+                "reference": "9cf9b40f6bad64ade8660cc26bf1f28f2d223268",
                 "shasum": ""
             },
             "require": {
@@ -1157,7 +1157,6 @@
                     "i18n make-pot",
                     "i18n make-json",
                     "i18n make-mo",
-                    "i18n make-php",
                     "i18n update-po"
                 ]
             },
@@ -1183,9 +1182,9 @@
             "homepage": "https://github.com/wp-cli/i18n-command",
             "support": {
                 "issues": "https://github.com/wp-cli/i18n-command/issues",
-                "source": "https://github.com/wp-cli/i18n-command/tree/2.6.1"
+                "source": "https://github.com/wp-cli/i18n-command/tree/v2.5.0"
             },
-            "time": "2024-02-28T11:27:34+00:00"
+            "time": "2023-11-16T17:09:37+00:00"
         },
         {
             "name": "wp-cli/mustangostang-spyc",
@@ -1439,12 +1438,12 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^5.6 || ^7.2 || ^8.0"
+        "php": "^7.0 || ^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"

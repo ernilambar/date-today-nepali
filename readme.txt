@@ -2,11 +2,11 @@
 
 Contributors: rabmalin
 Donate link: https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
-Tags: nepali, date, widget, ClassicPress
-Requires at least: 4.9
-Requires PHP: 5.6
-Tested up to: 6.4
-Stable tag: 2.5.6
+Tags: nepali, date, widget
+Requires at least: 6.3
+Requires PHP: 7.0
+Tested up to: 6.6
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,10 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 2. Widget output
 
 == Changelog ==
+
+= 3.0.0 - 14 Jun 2024 =
+* Requirement: PHP 7.0; WP 6.3
+* Update dependencies
 
 = 2.5.6 - 20 Dec 2023 =
 * Add blueprint
@@ -135,4 +139,4 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 * First release
 
 == Upgrade Notice ==
-Date Today Nepali
+Breaking: Bumped minimum requirement of WP and PHP
