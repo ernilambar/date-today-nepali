@@ -6,9 +6,9 @@
   <file>.</file>
 
   <!-- Exclude files and folders -->
-  <exclude-pattern>*/bower-components/*</exclude-pattern>
 	<exclude-pattern>*/build/*</exclude-pattern>
   <exclude-pattern>*/deploy/*</exclude-pattern>
+  <exclude-pattern>*/devtools/*</exclude-pattern>
   <exclude-pattern>*/languages/*</exclude-pattern>
   <exclude-pattern>*/node_modules/*</exclude-pattern>
   <exclude-pattern>*/tests/*</exclude-pattern>
@@ -30,5 +30,5 @@
   <rule ref="PHPCompatibilityWP" />
 
   <!-- PHP version check. -->
-  <config name="testVersion" value="5.6-"/>
+  <config name="testVersion" value="7.0-"/>
 </ruleset>
