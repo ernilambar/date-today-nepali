@@ -9,9 +9,9 @@
   <file>.</file>
 
   <!-- Exclude files and folders -->
-  <exclude-pattern>*/bower-components/*</exclude-pattern>
   <exclude-pattern>*/build/*</exclude-pattern>
   <exclude-pattern>*/deploy/*</exclude-pattern>
+  <exclude-pattern>*/devtools/*</exclude-pattern>
   <exclude-pattern>*/languages/*</exclude-pattern>
   <exclude-pattern>*/node_modules/*</exclude-pattern>
   <exclude-pattern>*/tests/*</exclude-pattern>
@@ -30,7 +30,7 @@
   <arg name="parallel" value="8"/><!-- Enables parallel processing when available for faster results. -->
 
   <!-- Minimum support WP Version. -->
-  <config name="minimum_supported_wp_version" value="4.9"/>
+  <config name="minimum_supported_wp_version" value="6.3"/>
 
   <!-- Don't worry about files that don't contain any code -->
   <rule ref="Internal.NoCodeFound">
