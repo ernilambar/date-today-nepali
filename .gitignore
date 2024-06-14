@@ -45,9 +45,13 @@ npm-debug.log
 # Sass
 .sass-cache/
 
+# Vendor
+vendor/
+devtools/vendor/
+devtools/composer.lock
+
 # Project folders
 /docs/
 /build/
 /deploy/
-/vendor/
 /node_modules/
