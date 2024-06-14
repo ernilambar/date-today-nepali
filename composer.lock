@@ -8,25 +8,20 @@
     "packages": [
         {
             "name": "ernilambar/nepali-date",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/nepali-date.git",
-                "reference": "37261b5568b668a8d5d51a480afb0cc95f7aa708"
+                "reference": "886dcb25b10760b4f9c35083d0a1d3ef6fb98584"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/37261b5568b668a8d5d51a480afb0cc95f7aa708",
-                "reference": "37261b5568b668a8d5d51a480afb0cc95f7aa708",
+                "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/886dcb25b10760b4f9c35083d0a1d3ef6fb98584",
+                "reference": "886dcb25b10760b4f9c35083d0a1d3ef6fb98584",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
-                "phpunit/phpunit": "^9",
-                "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
             "autoload": {
@@ -49,13 +44,15 @@
             "description": "Nepali Date",
             "homepage": "https://github.com/ernilambar/nepali-date",
             "keywords": [
-                "date"
+                "bikram-sambat",
+                "date",
+                "nepali"
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/nepali-date/issues",
-                "source": "https://github.com/ernilambar/nepali-date/tree/1.0.6"
+                "source": "https://github.com/ernilambar/nepali-date/tree/1.0.7"
             },
-            "time": "2023-05-05T04:53:37+00:00"
+            "time": "2024-06-14T05:45:58+00:00"
         },
         {
             "name": "ernilambar/wp-admin-notice",
@@ -1059,20 +1056,23 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v6.0.19",
+            "version": "v7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "5cc9cac6586fc0c28cd173780ca696e419fefa11"
+                "reference": "fbb0ba67688b780efbc886c1a0a0948dcf7205d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/5cc9cac6586fc0c28cd173780ca696e419fefa11",
-                "reference": "5cc9cac6586fc0c28cd173780ca696e419fefa11",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/fbb0ba67688b780efbc886c1a0a0948dcf7205d6",
+                "reference": "fbb0ba67688b780efbc886c1a0a0948dcf7205d6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2"
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "symfony/filesystem": "^6.4|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -1100,7 +1100,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v6.0.19"
+                "source": "https://github.com/symfony/finder/tree/v7.1.1"
             },
             "funding": [
                 {
@@ -1116,7 +1116,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-20T17:44:14+00:00"
+            "time": "2024-05-31T14:57:53+00:00"
         },
         {
             "name": "wp-cli/i18n-command",
