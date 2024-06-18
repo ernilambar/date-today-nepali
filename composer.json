@@ -6,7 +6,7 @@
 		"php": "^7.0 || ^8.0",
 		"ernilambar/nepali-date": "^1.0",
 		"ernilambar/wp-admin-notice": "^1.0",
-		"ernilambar/wp-welcome": "^1.0"
+		"ernilambar/wp-welcome": "^2.0"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,

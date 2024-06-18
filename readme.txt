@@ -4,9 +4,9 @@ Contributors: rabmalin
 Donate link: https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
 Tags: nepali, date, widget
 Requires at least: 6.3
-Requires PHP: 7.0
+Requires PHP: 7.2
 Tested up to: 6.6
-Stable tag: 3.0.0
+Stable tag: 3.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,10 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 2. Widget output
 
 == Changelog ==
+
+= 3.1.0 - 18 Jun 2024 =
+* Requirement: PHP 7.2
+* Update welcome library
 
 = 3.0.0 - 14 Jun 2024 =
 * Requirement: PHP 7.0; WP 6.3
