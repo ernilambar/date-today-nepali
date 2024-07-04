@@ -20,10 +20,10 @@ final class Init {
 	 * @return array Full list of classes.
 	 */
 	public static function get_services() {
-		$classes = array(
+		$classes = [
 			Core\Core::class,
 			Admin\Admin::class,
-		);
+		];
 
 		if ( function_exists( 'register_block_type' ) ) {
 			$classes[] = Blocks\Block::class;

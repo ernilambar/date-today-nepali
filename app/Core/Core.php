@@ -21,8 +21,8 @@ class Core {
 	 * @since 2.3.8
 	 */
 	public function register() {
-		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
-		add_action( 'widgets_init', array( $this, 'register_widgets' ) );
+		add_action( 'plugins_loaded', [ $this, 'load_textdomain' ] );
+		add_action( 'widgets_init', [ $this, 'register_widgets' ] );
 	}
 
 	/**
