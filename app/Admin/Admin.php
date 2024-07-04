@@ -24,25 +24,37 @@ class Admin {
 	 * @since 2.3.8
 	 */
 	public function register() {
-		add_action( 'admin_init', array( $this, 'add_admin_notice' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
-		add_action( 'wp_welcome_init', array( $this, 'add_welcome_page' ) );
-		add_filter( 'plugin_action_links_' . DATE_TODAY_NEPALI_BASE_FILENAME, array( $this, 'plugin_links' ) );
-		add_action( 'rest_api_init', array( $this, 'register_routes' ) );
+		add_action( 'admin_init', [ $this, 'add_admin_notice' ] );
+		add_action( 'admin_enqueue_scripts', [ $this, 'load_assets' ] );
+		add_action( 'wp_welcome_init', [ $this, 'add_welcome_page' ] );
+		add_filter( 'plugin_action_links_' . DATE_TODAY_NEPALI_BASE_FILENAME, [ $this, 'plugin_links' ] );
+		add_action( 'rest_api_init', [ $this, 'register_routes' ] );
 	}
 
+	/**
+	 * Register routes.
+	 *
+	 * @since 3.0.0
+	 */
 	public function register_routes() {
 		register_rest_route(
 			'date-today-nepali/v1',
 			'/posts/',
-			array(
+			[
 				'methods'             => 'GET',
-				'callback'            => array( $this, 'get_rest_posts_callback' ),
+				'callback'            => [ $this, 'get_rest_posts_callback' ],
 				'permission_callback' => '__return_true',
-			)
+			]
 		);
 	}
 
+	/**
+	 * Callback for rest posts.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @return WP_REST_Response|WP_Error Response object if valid; otherwise WP_Error object.
+	 */
 	public function get_rest_posts_callback() {
 		$posts = Utils::get_blog_feed_items();
 
@@ -62,37 +74,37 @@ class Admin {
 		$obj = new Welcome( 'plugin', 'date-today-nepali' );
 
 		$obj->set_page(
-			array(
+			[
 				'page_title'    => esc_html__( 'Date Today Nepali', 'date-today-nepali' ),
 				/* translators: %s: Version */
 				'page_subtitle' => sprintf( esc_html__( 'Version: %s', 'date-today-nepali' ), DATE_TODAY_NEPALI_VERSION ),
 				'menu_title'    => esc_html__( 'Date Today Nepali', 'date-today-nepali' ),
 				'menu_slug'     => 'date-today-nepali-welcome',
-			)
+			]
 		);
 
 		$obj->set_quick_links(
-			array(
-				array(
+			[
+				[
 					'text' => 'Get Support',
 					'url'  => 'https://wordpress.org/support/plugin/date-today-nepali/#new-post',
 					'type' => 'primary',
-				),
-				array(
+				],
+				[
 					'text' => 'Leave a Review',
 					'url'  => 'https://wordpress.org/support/plugin/date-today-nepali/reviews/#new-post',
 					'type' => 'secondary',
-				),
-			)
+				],
+			]
 		);
 
 		$obj->add_tab(
-			array(
+			[
 				'id'    => 'getting-started',
 				'title' => 'Getting Started',
 				'type'  => 'grid',
-				'items' => array(
-					array(
+				'items' => [
+					[
 						'title'       => 'Using Widget',
 						'icon'        => 'dashicons dashicons-megaphone',
 						'description' => "<ol>
@@ -101,8 +113,8 @@ class Admin {
 															<li>Add the widget to the sidebar you want to use.</li>
 															<li>Customize the widget options and we are good to go.</li>
 														</ol>",
-					),
-					array(
+					],
+					[
 						'title'       => 'Get Support',
 						'icon'        => 'dashicons dashicons-sos',
 						'description' => 'Got some question or found bug or got some feedbacks? Please visit support forum in the WordPress.org directory.',
@@ -110,8 +122,8 @@ class Admin {
 						'button_url'  => 'https://wordpress.org/support/plugin/date-today-nepali/#new-post',
 						'button_type' => 'secondary',
 						'is_new_tab'  => true,
-					),
-					array(
+					],
+					[
 						'title'       => 'Our Plugins',
 						'icon'        => 'dashicons dashicons-admin-plugins',
 						'description' => '<ul>
@@ -120,8 +132,8 @@ class Admin {
 															<li><a href="https://wordpress.org/plugins/admin-customizer/" target="_blank">Admin Customizer</a></li>
 															<li><a href="https://wordpress.org/plugins/date-today-nepali/" target="_blank">Date Today Nepali</a></li>
 															</ul>',
-					),
-					array(
+					],
+					[
 						'title'       => 'Our Themes',
 						'icon'        => 'dashicons dashicons-desktop',
 						'description' => '<ul>
@@ -130,16 +142,16 @@ class Admin {
 															<li><a href="https://wordpress.org/themes/obulma/" target="_blank">Obulma</a></li>
 															<li><a href="https://wordpress.org/themes/blue-planet/" target="_blank">Blue Planet</a></li>
 														</ul>',
-					),
+					],
 
-				),
-			)
+				],
+			]
 		);
 
 		$obj->set_sidebar(
-			array(
-				'render_callback' => array( $this, 'render_sidebar' ),
-			)
+			[
+				'render_callback' => [ $this, 'render_sidebar' ],
+			]
 		);
 
 		$obj->run();
@@ -154,21 +166,21 @@ class Admin {
 	 */
 	public function render_sidebar( $welcome_object ) {
 		$welcome_object->render_sidebar_box(
-			array(
+			[
 				'title'        => 'Leave a Review',
 				'content'      => $welcome_object->get_stars() . sprintf( 'Are you enjoying %s? We would appreciate a review.', $welcome_object->get_name() ),
 				'button_text'  => 'Submit Review',
 				'button_url'   => 'https://wordpress.org/support/plugin/date-today-nepali/reviews/#new-post',
 				'button_class' => 'button',
-			),
+			],
 			$welcome_object
 		);
 
 		$welcome_object->render_sidebar_box(
-			array(
+			[
 				'title'   => 'Recent Blog Posts',
 				'content' => '<div id="dtn-posts-app"></div>',
-			),
+			],
 			$welcome_object
 		);
 	}
@@ -180,10 +192,10 @@ class Admin {
 	 */
 	public function add_admin_notice() {
 		Notice::init(
-			array(
+			[
 				'slug' => 'date-today-nepali',
 				'name' => esc_html__( 'Date Today Nepali', 'date-today-nepali' ),
-			)
+			]
 		);
 	}
 
@@ -197,16 +209,16 @@ class Admin {
 	 */
 	public function plugin_links( $actions ) {
 		$url = add_query_arg(
-			array(
+			[
 				'page' => 'date-today-nepali-welcome',
-			),
+			],
 			admin_url( 'options-general.php' )
 		);
 
 		$actions = array_merge(
-			array(
+			[
 				'welcome' => '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Welcome', 'date-today-nepali' ) . '</a>',
-			),
+			],
 			$actions
 		);
 
@@ -227,14 +239,14 @@ class Admin {
 
 		// Posts.
 		$script_asset_path = DATE_TODAY_NEPALI_DIR . '/build/posts.asset.php';
-		$script_asset      = file_exists( $script_asset_path ) ? require $script_asset_path : array(
-			'dependencies' => array(),
+		$script_asset      = file_exists( $script_asset_path ) ? require $script_asset_path : [
+			'dependencies' => [],
 			'version'      => filemtime( __FILE__ ),
-		);
+		];
 
-		$data = array(
+		$data = [
 			'rest_url' => rest_url( 'date-today-nepali/v1/posts' ),
-		);
+		];
 
 		wp_enqueue_script( 'date-today-nepali-posts', DATE_TODAY_NEPALI_URL . '/build/posts.js', $script_asset['dependencies'], $script_asset['version'], true );
 		wp_localize_script( 'date-today-nepali-posts', 'DTN_POSTS', $data );

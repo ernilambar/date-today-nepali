@@ -22,7 +22,7 @@ class Block {
 	 * @since 2.5.0
 	 */
 	public function register() {
-		add_action( 'init', array( $this, 'register_blocks' ) );
+		add_action( 'init', [ $this, 'register_blocks' ] );
 	}
 
 	/**
@@ -33,7 +33,7 @@ class Block {
 	public function register_blocks() {
 		register_block_type(
 			DATE_TODAY_NEPALI_DIR . '/build',
-			array(
+			[
 				'render_callback' => function ( $attributes ) {
 					ob_start();
 
@@ -51,7 +51,7 @@ class Block {
 					<?php
 					return ob_get_clean();
 				},
-			)
+			]
 		);
 	}
 }

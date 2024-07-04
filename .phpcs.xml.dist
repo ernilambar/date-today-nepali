@@ -40,6 +40,13 @@
   <!-- For CI, don't fail on warnings -->
   <config name="ignore_warnings_on_exit" value="1"/>
 
+	<rule ref="WordPress">
+    <exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+
+	<!-- Optional: enforce short arrays. -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
   <rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
     <properties>
       <property name="blank_line_check" value="true"/>

@@ -24,11 +24,11 @@ class Dtn extends WP_Widget {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		$opts = array(
+		$opts = [
 			'classname'                   => 'dtn_widget',
 			'description'                 => esc_html__( 'Date Today Nepali Widget', 'date-today-nepali' ),
 			'customize_selective_refresh' => true,
-		);
+		];
 
 		parent::__construct( 'dtn-date-display-widget', esc_html__( 'Date Display Widget', 'date-today-nepali' ), $opts );
 	}
@@ -94,11 +94,11 @@ class Dtn extends WP_Widget {
 	public function form( $instance ) {
 		$instance = wp_parse_args(
 			(array) $instance,
-			array(
+			[
 				'title'            => '',
 				'display_language' => 'en',
 				'display_format'   => 'd F Y',
-			)
+			]
 		);
 		?>
 
