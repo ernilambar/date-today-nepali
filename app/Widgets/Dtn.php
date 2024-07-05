@@ -7,8 +7,8 @@
 
 namespace DateTodayNepali\Widgets;
 
-use Nilambar\NepaliDate\NepaliDate;
 use DateTodayNepali\Common\Utils;
+use Nilambar\NepaliDate\NepaliDate;
 use WP_Widget;
 
 /**

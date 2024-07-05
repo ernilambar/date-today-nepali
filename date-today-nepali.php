@@ -43,5 +43,5 @@ if ( file_exists( DATE_TODAY_NEPALI_DIR . '/vendor/autoload.php' ) ) {
 }
 
 if ( class_exists( 'DateTodayNepali\Init' ) ) {
-	\DateTodayNepali\Init::register_services();
+	Init::register_services();
 }
