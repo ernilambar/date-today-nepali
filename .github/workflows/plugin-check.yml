@@ -35,5 +35,5 @@ jobs:
       - name: Run plugin check
         uses: wordpress/plugin-check-action@v1
         with:
-          build-dir: './deploy/ns-nepali-date'
+          build-dir: './deploy/date-today-nepali'
           wp-version: 'trunk'
