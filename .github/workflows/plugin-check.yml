@@ -38,3 +38,4 @@ jobs:
       uses: wordpress/plugin-check-action@v1
       with:
         build-dir: './deploy/date-today-nepali'
+        wp-version: 'trunk'
