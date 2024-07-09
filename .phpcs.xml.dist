@@ -92,6 +92,12 @@
 		</properties>
 	</rule>
 
+	<!-- Loads the PHP Compatibility ruleset. -->
+	<rule ref="PHPCompatibilityWP" />
+
+	<!-- PHP version check. -->
+	<config name="testVersion" value="7.2-"/>
+
 	<!-- Disallows grouped use declarations. -->
 	<rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse" />
 	<!-- Disallows leading backslash in use statement. -->

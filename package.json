@@ -42,7 +42,7 @@
 		"dotenv": "^16.4.5",
 		"easy-replace-in-files": "^1.0.3",
 		"packtor": "^1.0.2",
-		"shx": "^0.3.4",
+		"rimraf": "^6.0.0",
 		"spinno": "^1.0.3",
 		"wp-deployer": "^1.0.3"
 	},
@@ -57,9 +57,9 @@
 		"pot": "composer run-script pot",
 		"prewpdeploy": "pnpm run deploy",
 		"wpdeploy": "wp-deployer",
-		"ready:build": "shx rm -rf build/ && pnpm run build",
-		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
-		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
+		"clean": "rimraf build deploy vendor",
+		"vendor": "composer install --no-dev --no-scripts -o",
+		"predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
 		"deploy": "packtor"
 	}
 }
