@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Date Today Nepali 3.0.0\n"
+"Project-Id-Version: Date Today Nepali 3.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/date-today-nepali\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,34 +15,39 @@ msgstr ""
 "X-Domain: date-today-nepali\n"
 
 #. Plugin Name of the plugin
-#: app/Admin/Admin.php:66
-#: app/Admin/Admin.php:69
-#: app/Admin/Admin.php:185
+#: date-today-nepali.php
+#: app/Admin/Admin.php:78
+#: app/Admin/Admin.php:81
+#: app/Admin/Admin.php:197
 msgid "Date Today Nepali"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: date-today-nepali.php
 msgid "https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html"
 msgstr ""
 
 #. Description of the plugin
+#: date-today-nepali.php
 msgid "A small widget plugin to display Nepali date."
 msgstr ""
 
 #. Author of the plugin
+#: date-today-nepali.php
 msgid "Nilambar Sharma"
 msgstr ""
 
 #. Author URI of the plugin
+#: date-today-nepali.php
 msgid "https://www.nilambar.net/"
 msgstr ""
 
 #. translators: %s: Version
-#: app/Admin/Admin.php:68
+#: app/Admin/Admin.php:80
 msgid "Version: %s"
 msgstr ""
 
-#: app/Admin/Admin.php:208
+#: app/Admin/Admin.php:220
 msgid "Welcome"
 msgstr ""
 

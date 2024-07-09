@@ -17,32 +17,31 @@
 	},
 	"config": {
 		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true,
 			"ergebnis/composer-normalize": true
 		},
 		"optimize-autoloader": true,
 		"sort-packages": true
 	},
 	"scripts": {
-		"phpcs": [
-      "composer --working-dir=devtools update --no-interaction",
-      "devtools/vendor/bin/phpcs --standard=.phpcs.xml.dist"
-    ],
+		"lint": [
+			"@lint-php",
+			"@phpcs"
+		],
+		"lint-php": [
+			"composer --working-dir=devtools update --no-interaction",
+			"devtools/vendor/bin/parallel-lint --colors --exclude .git --exclude vendor --exclude node_modules --exclude devtools --exclude deploy ."
+		],
 		"phpcbf": [
-      "composer --working-dir=devtools update --no-interaction",
-      "devtools/vendor/bin/phpcbf --standard=.phpcs.xml.dist"
-    ],
-		"compat": [
-      "composer --working-dir=devtools update --no-interaction",
-      "devtools/vendor/bin/phpcs --standard=.phpcompat.xml.dist"
-    ],
+			"composer --working-dir=devtools update --no-interaction",
+			"devtools/vendor/bin/phpcbf --standard=.phpcs.xml.dist"
+		],
+		"phpcs": [
+			"composer --working-dir=devtools update --no-interaction",
+			"devtools/vendor/bin/phpcs --standard=.phpcs.xml.dist"
+		],
 		"pot": [
-      "composer --working-dir=devtools update --no-interaction",
-      "wp i18n make-pot . --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
-    ],
-		"test": [
-			"@phpcs",
-			"@compat"
+			"composer --working-dir=devtools update --no-interaction",
+			"devtools/vendor/bin/wp i18n make-pot . --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
 		]
 	}
 }
