@@ -24,7 +24,7 @@ class Admin {
 	 * @since 2.3.8
 	 */
 	public function register() {
-		add_action( 'admin_init', [ $this, 'add_admin_notice' ] );
+		add_action( 'admin_init', array( $this, 'add_admin_notice' ) );
 		add_action( 'admin_enqueue_scripts', [ $this, 'load_assets' ] );
 		add_action( 'wp_welcome_init', [ $this, 'add_welcome_page' ] );
 		add_filter( 'plugin_action_links_' . DATE_TODAY_NEPALI_BASE_FILENAME, [ $this, 'plugin_links' ] );
@@ -41,7 +41,7 @@ class Admin {
 			'date-today-nepali/v1',
 			'/posts/',
 			[
-				'methods'             => 'GET',
+				'methods'              => 'GET',
 				'callback'            => [ $this, 'get_rest_posts_callback' ],
 				'permission_callback' => '__return_true',
 			]

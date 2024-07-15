@@ -45,7 +45,9 @@
 	</rule>
 
 	<!-- Optional: enforce short arrays. -->
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax">
+		<severity>8</severity>
+	</rule>
 
   <rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
     <properties>

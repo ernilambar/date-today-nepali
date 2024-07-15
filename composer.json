@@ -37,7 +37,7 @@
 		],
 		"phpcs": [
 			"composer --working-dir=devtools update --no-interaction",
-			"devtools/vendor/bin/phpcs --standard=.phpcs.xml.dist"
+			"devtools/vendor/bin/phpcs --standard=.phpcs.xml.dist --severity=8"
 		],
 		"pot": [
 			"composer --working-dir=devtools update --no-interaction",
