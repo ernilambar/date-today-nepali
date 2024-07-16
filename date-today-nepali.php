@@ -4,12 +4,14 @@
  * Plugin URI: https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
  * Description: A small widget plugin to display Nepali date.
  * Version: 3.1.0
+ * Requires at least: 6.3
+ * Requires PHP: 7.2
  * Author: Nilambar Sharma
  * Author URI: https://www.nilambar.net/
- * Text Domain: date-today-nepali
- * Domain Path: /languages
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain: date-today-nepali
+ * Domain Path: /languages
  *
  * @package Date_Today_Nepali
  */
