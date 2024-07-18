@@ -12,7 +12,7 @@ A small widget plugin to display Nepali date.
 
 == Description ==
 
-Date Today Nepali is a small Wordpress plugin for displaying Nepali date in your website. This plugin converts current date to BS (Bikram Sambat) and displays in the widget. You can either display it in English or Nepali language. Several date formats are available.
+Date Today Nepali is a small WordPress plugin for displaying Nepali date in your website. This plugin converts current date to BS (Bikram Sambat) and displays in the widget. You can either display it in English or Nepali language. Several date formats are available.
 
 This plugin uses [Nepali-English Date conversion PHP class](https://sourceforge.net/projects/nepalidateconve/) for date conversion.
 
