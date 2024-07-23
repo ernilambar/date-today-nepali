@@ -103,20 +103,20 @@
         },
         {
             "name": "ernilambar/wp-welcome",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-welcome.git",
-                "reference": "abe5a2a15c9417517fbac4dcbf14ed8f8b2fb345"
+                "reference": "1c1278388de1c89148788615cca19d03887ec8a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/abe5a2a15c9417517fbac4dcbf14ed8f8b2fb345",
-                "reference": "abe5a2a15c9417517fbac4dcbf14ed8f8b2fb345",
+                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/1c1278388de1c89148788615cca19d03887ec8a4",
+                "reference": "1c1278388de1c89148788615cca19d03887ec8a4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2"
+                "php": ">=7.2.24"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
@@ -146,9 +146,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/wp-welcome/issues",
-                "source": "https://github.com/ernilambar/wp-welcome/tree/2.0.0"
+                "source": "https://github.com/ernilambar/wp-welcome/tree/2.0.2"
             },
-            "time": "2024-06-18T11:08:12+00:00"
+            "time": "2024-07-23T09:26:30+00:00"
         }
     ],
     "packages-dev": [],
