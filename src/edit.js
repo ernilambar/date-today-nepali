@@ -100,20 +100,26 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Settings' ) }>
+				<PanelBody title={ __( 'Settings', 'date-today-nepali' ) }>
 					<SelectControl
-						label="Language"
+						label={ __( 'Language', 'date-today-nepali' ) }
 						value={ attributes.displayLanguage }
 						options={ [
-							{ label: 'Nepali', value: 'np' },
-							{ label: 'English', value: 'en' },
+							{
+								label: __( 'Nepali', 'date-today-nepali' ),
+								value: 'np',
+							},
+							{
+								label: __( 'English', 'date-today-nepali' ),
+								value: 'en',
+							},
 						] }
 						onChange={ ( newval ) =>
 							setAttributes( { displayLanguage: newval } )
 						}
 					/>
 					<TextControl
-						label="Date Format"
+						label={ __( 'Date Format', 'date-today-nepali' ) }
 						value={ attributes.displayFormat }
 						onChange={ ( newval ) =>
 							setAttributes( { displayFormat: newval } )

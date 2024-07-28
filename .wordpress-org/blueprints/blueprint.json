@@ -1,24 +1,22 @@
 {
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-  "landingPage": "\/wp-admin\/options-general.php?page=date-today-nepali-welcome",
-  "phpExtensionBundles": [
-    "kitchen-sink"
-  ],
-  "steps": [
-    {
-      "step": "login",
-      "username": "admin",
-      "password": "password"
-    },
-    {
-      "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "wordpress.org/plugins",
-        "slug": "date-today-nepali"
-      },
-      "options": {
-        "activate": true
-      }
-    }
-  ]
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/options-general.php?page=date-today-nepali-welcome",
+	"phpExtensionBundles": [ "kitchen-sink" ],
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "date-today-nepali"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
 }

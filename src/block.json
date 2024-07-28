@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "date-today-nepali/date",
-	"version": "0.1.0",
+	"version": "3.1.1",
 	"title": "Date Today Nepali",
 	"category": "widgets",
 	"icon": "calendar",
@@ -14,12 +14,12 @@
 	"editorScript": "file:./index.js",
 	"attributes": {
 		"displayLanguage": {
-				"type": "string",
-				"default": "en"
+			"type": "string",
+			"default": "en"
 		},
 		"displayFormat": {
-				"type": "string",
-				"default": "d F Y"
+			"type": "string",
+			"default": "d F Y"
 		}
 	}
 }
