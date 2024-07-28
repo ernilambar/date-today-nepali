@@ -4,7 +4,7 @@ Contributors: rabmalin
 Donate link: https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
 Tags: nepali, date, widget
 Tested up to: 6.6
-Stable tag: 3.1.1
+Stable tag: 3.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,9 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 2. Widget output
 
 == Changelog ==
+
+= 3.1.2 - 28 Jul 2024 =
+* Fix admin notice
 
 = 3.1.1 - 22 Jul 2024 =
 * Fix styling in admin page
