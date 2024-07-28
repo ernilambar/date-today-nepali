@@ -68,15 +68,21 @@ msgid "Display Language:"
 msgstr ""
 
 #: app/Widgets/Dtn.php:112
+#: src/edit.js:108
 msgid "Nepali"
 msgstr ""
 
 #: app/Widgets/Dtn.php:113
+#: src/edit.js:109
 msgid "English"
 msgstr ""
 
 #: app/Widgets/Dtn.php:117
 msgid "Date Format:"
+msgstr ""
+
+#: src/edit.js:103
+msgid "Settings"
 msgstr ""
 
 #: src/block.json
