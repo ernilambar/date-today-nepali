@@ -13,6 +13,12 @@
 			"to": "Version: $$npm_package_version$$"
 		},
 		{
+			"files": "src/block.json",
+			"from": "\"version\":\\s\"(.+)\"",
+			"type": "regex",
+			"to": "\"version\": \"$$npm_package_version$$\""
+		},
+		{
 			"files": "$$package__main_file$$",
 			"from": "define\\( \\'DATE_TODAY_NEPALI_VERSION\\'\\, \\'(.+)\\'",
 			"type": "regex",
