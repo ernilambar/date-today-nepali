@@ -2,7 +2,7 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Date Today Nepali 3.1.1\n"
+"Project-Id-Version: Date Today Nepali 3.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/date-today-nepali\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,12 +68,12 @@ msgid "Display Language:"
 msgstr ""
 
 #: app/Widgets/Dtn.php:112
-#: src/edit.js:108
+#: src/edit.js:109
 msgid "Nepali"
 msgstr ""
 
 #: app/Widgets/Dtn.php:113
-#: src/edit.js:109
+#: src/edit.js:113
 msgid "English"
 msgstr ""
 
@@ -83,6 +83,14 @@ msgstr ""
 
 #: src/edit.js:103
 msgid "Settings"
+msgstr ""
+
+#: src/edit.js:105
+msgid "Language"
+msgstr ""
+
+#: src/edit.js:122
+msgid "Date Format"
 msgstr ""
 
 #: src/block.json
