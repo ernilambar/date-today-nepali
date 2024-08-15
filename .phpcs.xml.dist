@@ -91,7 +91,7 @@
 	</rule>
 
 	<!-- Loads the PHP Compatibility ruleset. -->
-	<rule ref="PHPCompatibilityWP" />
+	<rule ref="PHPCompatibility" />
 
 	<!-- PHP version check. -->
 	<config name="testVersion" value="7.2-"/>
