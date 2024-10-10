@@ -29,6 +29,7 @@ class Admin {
 		add_action( 'wp_welcome_init', [ $this, 'add_welcome_page' ] );
 		add_filter( 'plugin_action_links_' . DATE_TODAY_NEPALI_BASE_FILENAME, [ $this, 'plugin_links' ] );
 		add_action( 'rest_api_init', [ $this, 'register_routes' ] );
+		register_setting( 'hello', 'world' );
 	}
 
 	/**

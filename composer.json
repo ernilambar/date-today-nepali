@@ -10,12 +10,22 @@
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"ernilambar/coding-standard": "*",
 		"php-parallel-lint/php-parallel-lint": "^1.4",
 		"phpcompatibility/php-compatibility": "dev-develop#2b7b6e8f5d0ccae3bd41c25bcf1298884a5e1f62",
 		"slevomat/coding-standard": "^8.15",
 		"wp-cli/i18n-command": "^2.6",
 		"wp-coding-standards/wpcs": "^3.1"
 	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "/Users/nilambarsharma/Code/projects/coding-standard",
+			"options": {
+				"symlink": true
+			}
+		}
+	],
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"autoload": {

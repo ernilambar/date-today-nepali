@@ -30,6 +30,9 @@ define( 'DATE_TODAY_NEPALI_BASE_FILENAME', plugin_basename( __FILE__ ) );
 define( 'DATE_TODAY_NEPALI_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'DATE_TODAY_NEPALI_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 
+define( 'ALLOW_UNFILTERED_UPLOADS', true );
+define( 'HEADER_IMAGE', 'asdf.com' );
+
 if ( ! defined( 'WP_WELCOME_DIR' ) ) {
 	define( 'WP_WELCOME_DIR', DATE_TODAY_NEPALI_DIR . '/vendor/ernilambar/wp-welcome' );
 }
