@@ -39,5 +39,5 @@ jobs:
       - name: Run plugin check
         uses: wordpress/plugin-check-action@v1
         with:
-          build-dir: './deploy/date-today-nepali'
+          build-dir: './deploy/${{ github.event.repository.name }}'
           wp-version: 'trunk'

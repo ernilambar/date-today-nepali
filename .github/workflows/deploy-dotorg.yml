@@ -55,7 +55,7 @@ jobs:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SLUG: ${{ github.event.repository.name }}
           VERSION: ${{ steps.get-version.outputs.version }}
-          BUILD_DIR: './deploy/date-today-nepali'
+          BUILD_DIR: './deploy/${{ github.event.repository.name }}'
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v1
