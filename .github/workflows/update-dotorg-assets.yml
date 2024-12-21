@@ -1,13 +1,6 @@
 name: Update assets on WordPress.org
 
-on:
-  push:
-    branches:
-      - main
-    # Only run if relevant files changed.
-    paths:
-      - '.wordpress-org/**'
-      - 'readme.txt'
+on: workflow_dispatch
 
 jobs:
   update:
