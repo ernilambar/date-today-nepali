@@ -90,6 +90,8 @@
 		</properties>
 	</rule>
 
+	<rule ref="NilambarCodingStandard" />
+
 	<!-- Loads the PHP Compatibility ruleset. -->
 	<rule ref="PHPCompatibility">
 		<exclude name="PHPCompatibility.FunctionUse.NewFunctions.str_containsFound"/>
