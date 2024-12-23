@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f6f3123a976d1437ef48965575db4e2",
+    "content-hash": "3267d4c57771a025863cb1ad401b4900",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -297,16 +297,16 @@
         },
         {
             "name": "ernilambar/coding-standard",
-            "version": "0.1.2",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/coding-standard.git",
-                "reference": "938a17be220353706113d8f50e2282c6a84a17b7"
+                "reference": "ebc29899e6c9519c73c9efcc4c4127f8a9ccc94e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/coding-standard/zipball/938a17be220353706113d8f50e2282c6a84a17b7",
-                "reference": "938a17be220353706113d8f50e2282c6a84a17b7",
+                "url": "https://api.github.com/repos/ernilambar/coding-standard/zipball/ebc29899e6c9519c73c9efcc4c4127f8a9ccc94e",
+                "reference": "ebc29899e6c9519c73c9efcc4c4127f8a9ccc94e",
                 "shasum": ""
             },
             "require": {
@@ -323,6 +323,7 @@
                 "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
                 "slevomat/coding-standard": "^8.15"
             },
+            "default-branch": true,
             "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -343,9 +344,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/coding-standard/issues",
-                "source": "https://github.com/ernilambar/coding-standard/tree/0.1.2"
+                "source": "https://github.com/ernilambar/coding-standard/tree/main"
             },
-            "time": "2024-12-22T06:40:55+00:00"
+            "time": "2024-12-23T07:43:25+00:00"
         },
         {
             "name": "gettext/gettext",
@@ -1498,6 +1499,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "ernilambar/coding-standard": 20,
         "phpcompatibility/php-compatibility": 20
     },
     "prefer-stable": true,
