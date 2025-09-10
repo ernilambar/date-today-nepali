@@ -10,6 +10,8 @@ namespace DateTodayNepali\Admin;
 use DateTodayNepali\Common\Utils;
 use Nilambar\AdminNotice\Notice;
 use Nilambar\Welcome\Welcome;
+use WP_Error;
+use WP_REST_Response;
 
 /**
  * Admin class.
@@ -59,10 +61,10 @@ class Admin {
 		$posts = Utils::get_blog_feed_items();
 
 		if ( ! empty( $posts ) ) {
-			return new \WP_REST_Response( $posts, 200 );
+			return new WP_REST_Response( $posts, 200 );
 		}
 
-		return new \WP_Error( 'not_found', 'Not found' );
+		return new WP_Error( 'not_found', 'Not found' );
 	}
 
 	/**
