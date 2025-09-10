@@ -4,18 +4,18 @@
 	"license": "GPL-2.0-or-later",
 	"require": {
 		"php": ">=7.2.24",
-		"ernilambar/nepali-date": "^1.0",
-		"ernilambar/wp-admin-notice": "^2.0",
-		"ernilambar/wp-welcome": "^2.0"
+		"ernilambar/nepali-date": "^1",
+		"ernilambar/wp-admin-notice": "^2",
+		"ernilambar/wp-welcome": "^2"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^1",
 		"ernilambar/coding-standard": "^1",
 		"php-parallel-lint/php-parallel-lint": "^1.4",
 		"phpcompatibility/php-compatibility": "dev-develop#2b7b6e8f5d0ccae3bd41c25bcf1298884a5e1f62",
-		"slevomat/coding-standard": "^8.15",
+		"slevomat/coding-standard": "^8",
 		"wp-cli/i18n-command": "^2.6",
-		"wp-coding-standards/wpcs": "^3.1"
+		"wp-coding-standards/wpcs": "^3.2"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
@@ -30,7 +30,6 @@
 			"ergebnis/composer-normalize": true
 		},
 		"optimize-autoloader": true,
-		"process-timeout": 7200,
 		"sort-packages": true
 	},
 	"scripts": {
