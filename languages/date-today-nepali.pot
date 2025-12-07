@@ -2,7 +2,7 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Date Today Nepali 3.1.4\n"
+"Project-Id-Version: Date Today Nepali 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/date-today-nepali\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,9 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: date-today-nepali.php
-#: app/Admin/Admin.php:78
-#: app/Admin/Admin.php:81
-#: app/Admin/Admin.php:197
+#: app/Admin/Admin.php:80
+#: app/Admin/Admin.php:83
+#: app/Admin/Admin.php:199
 msgid "Date Today Nepali"
 msgstr ""
 
@@ -43,12 +43,12 @@ msgid "https://www.nilambar.net/"
 msgstr ""
 
 #. translators: %s: Version
-#: app/Admin/Admin.php:80
+#: app/Admin/Admin.php:82
 #, php-format
 msgid "Version: %s"
 msgstr ""
 
-#: app/Admin/Admin.php:220
+#: app/Admin/Admin.php:222
 msgid "Welcome"
 msgstr ""
 
