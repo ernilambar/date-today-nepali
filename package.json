@@ -59,6 +59,7 @@
 		"pot": "composer run-script pot",
 		"prewpdeploy": "pnpm run deploy",
 		"wpdeploy": "wp-deployer",
+		"wpassets": "wp-deployer --assets",
 		"clean": "rimraf build deploy vendor",
 		"vendor": "composer install --no-dev --no-scripts -o",
 		"predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
