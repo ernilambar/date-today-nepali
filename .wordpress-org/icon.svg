@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Date Today Nepali plugin icon</title>
+  <desc id="desc">Minimal icon showing BS to AD date conversion and the Nepali word आज on a gray background.</desc>
+
+  <defs>
+    <style>
+      @font-face {
+        font-family: "NotoNepaliSubset";
+        src: url("data:font/woff2;base64,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") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .bg { fill: #e0e0e2; }
+      .card { fill: #f8f8f9; }
+      .red { fill: #dc2c2c; }
+      .dark { fill: #36404e; }
+      .ink { fill: #242c38; }
+      .muted { fill: #d4d6db; }
+      .white { fill: #ffffff; }
+      .font {
+        font-family: "NotoNepaliSubset", sans-serif;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .shadow { fill: #000000; opacity: 0.12; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="128" height="128"/>
+
+  <!-- Shadows -->
+  <rect class="shadow" x="12" y="20" width="44" height="44" rx="9"/>
+  <rect class="shadow" x="72" y="20" width="44" height="44" rx="9"/>
+  <rect class="shadow" x="33" y="78" width="62" height="42" rx="10"/>
+
+  <!-- Top cards -->
+  <rect class="card" x="12" y="18" width="44" height="44" rx="9"/>
+  <rect class="card" x="72" y="18" width="44" height="44" rx="9"/>
+  <rect class="red" x="12" y="18" width="44" height="13" rx="9"/>
+  <rect class="red" x="12" y="24" width="44" height="7"/>
+  <rect class="red" x="72" y="18" width="44" height="13" rx="9"/>
+  <rect class="red" x="72" y="24" width="44" height="7"/>
+
+  <!-- Bottom card -->
+  <rect class="card" x="33" y="76" width="62" height="42" rx="10"/>
+  <rect class="dark" x="33" y="76" width="62" height="13" rx="10"/>
+  <rect class="dark" x="33" y="82" width="62" height="7"/>
+
+  <!-- Rings -->
+  <rect x="21" y="11" width="5" height="13" rx="2.5" fill="#2b3442"/>
+  <rect x="40" y="11" width="5" height="13" rx="2.5" fill="#2b3442"/>
+  <rect x="81" y="11" width="5" height="13" rx="2.5" fill="#2b3442"/>
+  <rect x="100" y="11" width="5" height="13" rx="2.5" fill="#2b3442"/>
+  <rect x="41" y="71" width="5" height="13" rx="2.5" fill="#f5f5f5"/>
+  <rect x="77" y="71" width="5" height="13" rx="2.5" fill="#f5f5f5"/>
+
+  <!-- Labels -->
+  <text class="font white" x="34" y="25.5" font-size="12">BS</text>
+  <text class="font white" x="94" y="25.5" font-size="12">AD</text>
+
+  <!-- Years -->
+  <text class="font ink" x="34" y="46.5" font-size="21">२०८१</text>
+  <text class="font ink" x="94" y="46.5" font-size="21">2024</text>
+
+  <!-- Separator suggesting conversion -->
+  <rect x="60" y="36" width="8" height="8" rx="4" fill="#b5b9bf"/>
+  <rect x="61" y="37" width="6" height="6" rx="3" fill="#cdd0d5"/>
+
+  <!-- Bottom label -->
+  <text class="font white" x="64" y="87" font-size="19">आज</text>
+
+  <!-- Grid -->
+  <g class="muted">
+    <rect x="41" y="97" width="4" height="4" rx="1"/>
+    <rect x="48" y="97" width="4" height="4" rx="1"/>
+    <rect x="55" y="97" width="4" height="4" rx="1"/>
+    <rect x="62" y="97" width="4" height="4" rx="1"/>
+    <rect x="69" y="97" width="4" height="4" rx="1"/>
+    <rect x="76" y="97" width="4" height="4" rx="1"/>
+    <rect x="83" y="97" width="4" height="4" rx="1"/>
+
+    <rect x="41" y="107" width="4" height="4" rx="1"/>
+    <rect x="48" y="107" width="4" height="4" rx="1"/>
+    <rect x="55" y="107" width="4" height="4" rx="1"/>
+    <rect x="62" y="107" width="4" height="4" rx="1"/>
+    <rect x="69" y="107" width="4" height="4" rx="1"/>
+    <rect x="76" y="107" width="4" height="4" rx="1"/>
+    <rect x="83" y="107" width="4" height="4" rx="1"/>
+  </g>
+</svg>
