@@ -4,8 +4,8 @@ Contributors: nilambar
 Donate link: https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
 Tags: nepali, date, widget
 Requires at least: 6.3
-Tested up to: 6.9
-Stable tag: 4.0.0
+Tested up to: 7.0
+Stable tag: 4.0.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -15,8 +15,6 @@ A small widget plugin to display Nepali date.
 == Description ==
 
 Date Today Nepali is a small WordPress plugin for displaying Nepali date in your website. This plugin converts current date to BS (Bikram Sambat) and displays in the widget. You can either display it in English or Nepali language. Several date formats are available.
-
-This plugin uses [Nepali-English Date conversion PHP class](https://sourceforge.net/projects/nepalidateconve/) for date conversion.
 
 == Installation ==
 
@@ -46,6 +44,9 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 2. Widget output
 
 == Changelog ==
+
+= 4.0.1 - 22 Dec 2025 =
+* WP 7.0 compatibility
 
 = 4.0.0 - 7 Dec 2025 =
 * Min PHP requirement 7.4
