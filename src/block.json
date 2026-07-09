@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "date-today-nepali/date",
-	"version": "4.0.1",
+	"version": "4.0.2",
 	"title": "Date Today Nepali",
 	"category": "widgets",
 	"icon": "calendar",

@@ -2,10 +2,10 @@
 
 Contributors: nilambar
 Donate link: https://www.nilambar.net/2013/10/date-today-nepali-wordpress-plugin.html
-Tags: nepali, date, widget
+Tags: nepali, date, widget, nepali date, bikram sambat
 Requires at least: 6.3
 Tested up to: 7.0
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -24,16 +24,26 @@ Date Today Nepali is a small WordPress plugin for displaying Nepali date in your
 1. Select 'date-today-nepali.zip' from your computer
 1. Install
 1. Activate the plugin on the WordPress Plugin Dashboard
-1. Place the 'Date Display Widget' Widget into a Widget area through the 'Appearance -> Widgets' menu in WordPress.
+1. To use the block: edit any post or page, search for 'Date Today Nepali' in the block inserter, and configure language and date format in the block sidebar.
+1. To use the widget: go to Appearance > Widgets, add the 'Date Display Widget' to any widget area, and configure language and date format from the widget settings.
 
 = Using FTP =
 
 1. Extract 'date-today-nepali.zip' to your computer
 1. Upload the 'date-today-nepali' directory to your '/wp-content/plugins/' directory
 1. Activate the plugin on the WordPress Plugins dashboard
-1. Place the 'Date Display Widget' Widget into a Widget area through the 'Appearance -> Widgets' menu in WordPress.
+1. To use the block: edit any post or page, search for 'Date Today Nepali' in the block inserter, and configure language and date format in the block sidebar.
+1. To use the widget: go to Appearance > Widgets, add the 'Date Display Widget' to any widget area, and configure language and date format from the widget settings.
 
 == Frequently Asked Questions ==
+= How do I add the Nepali date block to my page? =
+
+Edit any post or page, open the block inserter (+), and search for 'Date Today Nepali'. Add the block and configure the language and date format from the block sidebar.
+
+= How do I display the Nepali date in a widget area? =
+
+Go to Appearance > Widgets, add the 'Date Display Widget' to any widget area, and configure the language and date format from the widget settings.
+
 = There is something cool you could add... =
 
 Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/date-today-nepali/) and let us know.
@@ -44,6 +54,9 @@ Nice, make a post on the [Support Forum](https://wordpress.org/support/plugin/da
 2. Widget output
 
 == Changelog ==
+
+= 4.0.2 - 08 Jul 2026 =
+* Upgrade block API version
 
 = 4.0.1 - 22 Dec 2025 =
 * WP 7.0 compatibility
