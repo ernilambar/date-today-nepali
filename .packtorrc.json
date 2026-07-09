@@ -1,0 +1,11 @@
+{
+	"files": [
+		"app/**/*",
+		"build/**/*",
+		"languages/**/*",
+		"vendor/**/*",
+		"date-today-nepali.php",
+		"composer.json",
+		"readme.txt"
+	]
+}
