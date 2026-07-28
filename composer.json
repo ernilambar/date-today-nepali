@@ -16,7 +16,7 @@
 		"slevomat/coding-standard": "^8",
 		"wp-cli/i18n-command": "^2.7",
 		"wp-cli/wp-cli": "^2.13",
-		"wp-coding-standards/wpcs": "^3.3"
+		"wp-coding-standards/wpcs": "^3.4"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
